@@ -113,7 +113,6 @@ const styles = StyleSheet.create({
     },
     right: {
         alignItems: "flex-end",
-        // borderWidth: 1
     },
     btmBrdr: {
         backgroundColor: b3,

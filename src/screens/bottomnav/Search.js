@@ -1,9 +1,9 @@
-import { Dimensions, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import BgGradient from '../../utility/BgGradient';
 import Header from '../../components/Header';
 import SearchButton from '../../components/SearchButton';
-import { b3, white } from '../../config/colors';
+import { b1, b3, black, blue, white } from '../../config/colors';
 import OneWay from '../../components/OneWay';
 
 const { width, height } = Dimensions.get("window");
@@ -84,8 +84,33 @@ const Search = () => {
                 </View>
 
                 <SearchButton />
-            </View>
 
+                <View style={{ marginHorizontal: 15, marginTop: 18 }}>
+                    <View style={styles.pBarWrap}>
+                        <View style={styles.proLogoWrap}>
+                            <Image style={{ marginHorizontal: 10 }} source={require("../../assets/icons/prologo.png")} />
+                            <Text style={styles.proLogoTxt}>Welcome Back, Kevin!</Text>
+                        </View>
+
+                        <Image style={styles.arwImg} source={require("../../assets/icons/right-arrow.png")} />
+                    </View>
+                </View>
+
+                <View style={{ marginHorizontal: 15, marginTop: 18 }}>
+                    <View style={styles.addBarWrap}>
+                        <Image style={{ marginLeft: 7 }} source={require("../../assets/icons/proimg.png")} />
+
+                        <View>
+                            <Text style={styles.addTxtB}>Looking for last-minute deals?</Text>
+                            <Text style={styles.addTxt}>Speak to a travel expert and a get assistance 24/7</Text>
+                        </View>
+
+                        <TouchableOpacity style={styles.callImgWrap}>
+                            <Image style={styles.callImg} source={require("../../assets/icons/mobile.png")} />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+            </View>
         </SafeAreaView>
     )
 };
@@ -99,14 +124,13 @@ const styles = StyleSheet.create({
     body: {
         marginTop: 25,
         flex: 1,
-        // borderWidth: 1,
     },
     headMenuWrap: {
         flexDirection: 'row',
         alignItems: "center",
         justifyContent: 'space-between',
         marginHorizontal: 15,
-        marginBottom: 25,
+        marginBottom: 15,
     },
     hMenuItemActive: {
         borderBottomWidth: 2.5,
@@ -155,5 +179,62 @@ const styles = StyleSheet.create({
         color: b3,
         fontFamily: 'NunitoSans_10pt-Bold',
         fontSize: 15,
+    },
+    pBarWrap: {
+        backgroundColor: white,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: 'space-between',
+        borderRadius: 4,
+        paddingVertical: 12,
+        elevation: 4,
+    },
+    callImg: {
+        width: 26,
+        height: 26,
+    },
+    callImgWrap: {
+        width: 45,
+        height: 45,
+        backgroundColor: blue,
+        borderRadius: 50,
+        alignItems: 'center',
+        justifyContent: "center",
+        marginRight: 7,
+    },
+    arwImg: {
+        width: 20,
+        height: 20,
+        tintColor: b3,
+        marginRight: 10
+    },
+    proLogoWrap: {
+        flexDirection: "row",
+        alignItems: "center",
+    },
+    proLogoTxt: {
+        color: black,
+        fontFamily: "NunitoSans_10pt-Regular",
+        fontSize: 15,
+        marginLeft: 15,
+    },
+    addBarWrap: {
+        backgroundColor: white,
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: 'space-between',
+        paddingVertical: 12,
+        elevation: 3,
+    },
+    addTxtB: {
+        color: b1,
+        fontFamily: "NunitoSans_10pt-Bold",
+        fontSize: 13,
+        marginBottom: 5
+    },
+    addTxt: {
+        color: b1,
+        fontFamily: "NunitoSans_10pt-Regular",
+        fontSize: 11,
     },
 });
