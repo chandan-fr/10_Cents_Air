@@ -1,8 +1,7 @@
-import { Dimensions, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { b2, white } from '../config/colors';
 
-const { width, height } = Dimensions.get("window");
 
 const SearchButton = () => {
     return (

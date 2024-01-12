@@ -8,8 +8,8 @@ const Header = () => {
   return (
     <View style={styles.body}>
       <View style={{ flex: 1 }}>
-        <TouchableOpacity style={[styles.imgWrap, { position: 'relative' }]}>
-          <Image style={styles.img} source={require("../assets/icons/bell.png")} />
+        <TouchableOpacity style={styles.bellWrap}>
+          <Image style={styles.bell} source={require("../assets/icons/bell.png")} />
           <View style={styles.bellDot} />
         </TouchableOpacity>
       </View>
@@ -19,8 +19,8 @@ const Header = () => {
       </View>
 
       <View style={styles.rightWrap}>
-        <TouchableOpacity style={styles.imgWrap}>
-          <Image style={styles.img} source={require("../assets/icons/beacon.png")} />
+        <TouchableOpacity style={styles.beaconWrap}>
+          <Image style={styles.beacon} source={require("../assets/icons/beacon.png")} />
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.piWrap}>
@@ -41,16 +41,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  img: {
+  bell: {
     width: 26,
     height: 26,
   },
-  imgWrap: {
+  bellWrap: {
     width: 29,
     height: 29,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 3,
+    position: 'relative',
   },
   bellDot: {
     backgroundColor: blue,
@@ -85,5 +86,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: 'space-between',
     flex: 1,
+  },
+  beacon:{
+    width: 22,
+    height: 22,
+  },
+  beaconWrap:{
+    width: 26,
+    height: 26,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 15,
   },
 });
