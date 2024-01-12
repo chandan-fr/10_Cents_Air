@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Assistant-SemiBold.ttf",
+      "sha1": "318b02078143b40f7ec5f9cf85c288105e194fbd"
+    },
+    {
+      "path": "src/assets/fonts/LondonBetween.ttf",
+      "sha1": "3675bceeb3d8c7b3f2d8a4c26a651ce265fa8d60"
+    },
+    {
+      "path": "src/assets/fonts/NunitoSans_10pt-Bold.ttf",
+      "sha1": "1a43f6ab652eb0c71cd0d748bd8d4bf360903fe1"
+    },
+    {
+      "path": "src/assets/fonts/NunitoSans_10pt-Medium.ttf",
+      "sha1": "947e59a8d3586d17a5f8698ae2f371e580411cdb"
+    },
+    {
+      "path": "src/assets/fonts/NunitoSans_10pt-SemiBold.ttf",
+      "sha1": "0ec94b38226fe45cb85bad4cb5f884512bae6eb7"
+    },
+    {
+      "path": "src/assets/fonts/Rubik-Regular.ttf",
+      "sha1": "9d7091d63f35c9d28518b06566442a02b306980a"
+    }
+  ]
+}
