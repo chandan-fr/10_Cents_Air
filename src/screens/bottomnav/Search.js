@@ -8,6 +8,7 @@ import OneWay from '../../components/OneWay';
 import RoundTrip from '../../components/RoundTrip';
 import MultiCity from '../../components/MultiCity';
 import DealItem from '../../components/DealItem';
+import LinearGradient from 'react-native-linear-gradient';
 
 const { width, height } = Dimensions.get("window");
 
@@ -18,7 +19,7 @@ const Search = () => {
 
     return (
         <SafeAreaView style={styles.parent}>
-            <BgGradient width={width} height={height} />
+            <BgGradient width={width} height={height * 0.62} />
             <Header />
 
             <View style={styles.body}>
@@ -54,6 +55,7 @@ const Search = () => {
                 </View>
 
                 <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false} >
+                    {selectedMidMenu === "m" && <BgGradient width={width} height={height} />}
                     {/* trip option nav bar */}
                     <View style={styles.mainMenuWrap}>
                         <View style={styles.mmContWrap}>
@@ -86,12 +88,14 @@ const Search = () => {
                         </View>
 
                         {/* trip option content */}
-                        <View style={{ marginHorizontal: 10, marginTop: 10, }}>
+                        <View style={{ marginHorizontal: 10, marginTop: 0, }}>
                             {selectedMidMenu === "o" && <OneWay />}
                             {selectedMidMenu === "r" && <RoundTrip />}
-                            {selectedMidMenu === "m" && <MultiCity />}
+                            {/* {selectedMidMenu === "m" && <MultiCity />} */}
                         </View>
                     </View>
+
+                    {selectedMidMenu === "m" && <MultiCity />}
 
                     {/* search button */}
                     <SearchButton />
@@ -109,7 +113,7 @@ const Search = () => {
                     </View>
 
                     {/* calling option */}
-                    <View style={{ marginHorizontal: 15, marginTop: 18 }}>
+                    <View style={{ marginHorizontal: 15, marginVertical: 18 }}>
                         <View style={styles.addBarWrap}>
                             <Image style={{ marginLeft: 7 }} source={require("../../assets/icons/proimg.png")} />
 
@@ -271,7 +275,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginHorizontal: 7,
         borderRadius: 10,
-        marginTop: 30,
+        marginTop: 12,
     },
     dealHeadTxt: {
         fontFamily: "NunitoSans_10pt-Bold",

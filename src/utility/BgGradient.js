@@ -7,8 +7,9 @@ const BgGradient = ({ width, height }) => {
             colors={["rgba(67, 89, 112, 1)", "rgba(102, 152, 197, 0.75)"]}
             style={{
                 width: width,
-                height: height * 0.62,
+                height: height,
                 position: "absolute",
+                zIndex: -1
             }}
         />
     )

@@ -180,7 +180,7 @@ export default OneWay;
 
 const styles = StyleSheet.create({
     main: {
-        // borderWidth: 1,
+        marginTop: 10,
     },
     topWrap: {
         flexDirection: 'row',
