@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     main: {
         alignItems: 'center',
         justifyContent: "center",
+        zIndex: -1,
     },
     btnWrap: {
         backgroundColor: b2,

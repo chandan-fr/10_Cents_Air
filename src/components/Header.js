@@ -7,6 +7,7 @@ import { blue, white } from '../config/colors';
 const Header = () => {
   return (
     <View style={styles.body}>
+      {/* left bell icon */}
       <View style={{ flex: 1 }}>
         <TouchableOpacity style={styles.bellWrap}>
           <Image style={styles.bell} source={require("../assets/icons/bell.png")} />
@@ -14,10 +15,12 @@ const Header = () => {
         </TouchableOpacity>
       </View>
 
+      {/* name icon */}
       <View style={{ flex: 2, alignItems: "center" }}>
         <Text style={styles.heading}>10 Cents Air</Text>
       </View>
 
+      {/* right icon */}
       <View style={styles.rightWrap}>
         <TouchableOpacity style={styles.beaconWrap}>
           <Image style={styles.beacon} source={require("../assets/icons/beacon.png")} />
@@ -87,11 +90,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flex: 1,
   },
-  beacon:{
+  beacon: {
     width: 22,
     height: 22,
   },
-  beaconWrap:{
+  beaconWrap: {
     width: 26,
     height: 26,
     alignItems: 'center',
