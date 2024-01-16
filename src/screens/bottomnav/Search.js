@@ -8,7 +8,6 @@ import OneWay from '../../components/OneWay';
 import RoundTrip from '../../components/RoundTrip';
 import MultiCity from '../../components/MultiCity';
 import DealItem from '../../components/DealItem';
-import LinearGradient from 'react-native-linear-gradient';
 
 const { width, height } = Dimensions.get("window");
 
@@ -54,8 +53,30 @@ const Search = () => {
                     </TouchableOpacity>
                 </View>
 
+                {/* extra nav bar */}
+                {/* <View style={[styles.headMenuWrap, { marginHorizontal: 100 }]}>
+                    <TouchableOpacity
+                        style={selectedHMenu == "hp" ? styles.hMenuItemActive : styles.hMenuItem}
+                        onPress={() => setSelectedHMenu("hp")}
+                    >
+                        <Text numberOfLines={2} style={[styles.hMenuTxt, { width: 60, textAlign: "center" }]}>
+                            Holiday Packages
+                        </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={selectedHMenu == "gt" ? styles.hMenuItemActive : styles.hMenuItem}
+                        onPress={() => setSelectedHMenu("gt")}
+                    >
+                        <Text numberOfLines={2} style={[styles.hMenuTxt, { width: 50, textAlign: "center" }]}>
+                            Group Tickets
+                        </Text>
+                    </TouchableOpacity>
+                </View> */}
+
                 <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false} >
-                    {selectedMidMenu === "m" && <BgGradient width={width} height={height} />}
+                    {selectedMidMenu === "m" && <View style={{ marginVertical: 3 }} />}
+                    {selectedMidMenu === "m" && <BgGradient width={width} height={height + height} />}
                     {/* trip option nav bar */}
                     <View style={styles.mainMenuWrap}>
                         <View style={styles.mmContWrap}>
@@ -97,6 +118,33 @@ const Search = () => {
 
                     {selectedMidMenu === "m" && <MultiCity />}
 
+                    {/* add flight button */}
+                    {selectedMidMenu === "m" && <View
+                        style={{
+                            alignItems: 'center',
+                            justifyContent: "center",
+                            zIndex: -1,
+                            marginBottom: 20,
+                        }}
+                    >
+                        <TouchableOpacity
+                            style={{
+                                borderWidth: 1,
+                                borderColor: white,
+                                alignItems: "center",
+                                justifyContent: "center",
+                                paddingVertical: 10,
+                                paddingHorizontal: 75,
+                                borderRadius: 4,
+                            }}
+                        >
+                            <Text style={{ fontFamily: "LondonBetween", color: white, fontSize: 18 }}>
+                                Add Flight
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+                    }
+
                     {/* search button */}
                     <SearchButton />
 
@@ -113,7 +161,7 @@ const Search = () => {
                     </View>
 
                     {/* calling option */}
-                    <View style={{ marginHorizontal: 15, marginVertical: 18 }}>
+                    <View style={{ marginHorizontal: 15, marginTop: 18, marginBottom: 10 }}>
                         <View style={styles.addBarWrap}>
                             <Image style={{ marginLeft: 7 }} source={require("../../assets/icons/proimg.png")} />
 

@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../config/colors';
 
@@ -182,6 +182,66 @@ const RoundTrip = () => {
                     </View>
                 </View>
             </View>
+
+            {/* extra search option section */}
+            <View style={styles.searchWrap}>
+                <View
+                    style={{
+                        flexDirection: "row",
+                        borderBottomWidth: 1,
+                        alignItems: 'center',
+                        borderColor: b3,
+                        paddingRight: 10,
+                    }}
+                >
+                    <Image
+                        style={{ width: 20, height: 20, tintColor: blue, }}
+                        source={require("../assets/icons/search.png")}
+                    />
+
+                    <TextInput
+                        placeholder='Search Preferred Airline'
+                        placeholderTextColor={b3}
+                        style={{
+                            height: 35,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginLeft: 10,
+                            color: b1,
+                        }}
+                    />
+                </View>
+
+                <View style={{ marginTop: 20, marginLeft: 8, alignItems: "flex-start" }}>
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <View style={styles.radio} />
+                        <Text style={styles.searchTxt}>Return to or from another city/airport?</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                        <View style={styles.radio} />
+                        <Text style={styles.searchTxt}>Direct Flights</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{ marginTop: 20, alignItems: "flex-start", marginBottom: 15 }}>
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <Text style={styles.searchTxt}>Select Group Type</Text>
+                        <Image
+                            style={styles.arrow}
+                            source={require("../assets/icons/right-arrow.png")}
+                        />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                        <Text style={styles.searchTxt}>Select currency</Text>
+                        <Image
+                            style={styles.arrow}
+                            source={require("../assets/icons/right-arrow.png")}
+                        />
+                    </TouchableOpacity>
+                </View>
+            </View>
         </View>
     )
 }
@@ -244,7 +304,7 @@ const styles = StyleSheet.create({
         width: 200,
         height: 146,
         position: 'absolute',
-        zIndex: -99,
+        zIndex: 99,
         top: 5,
         borderWidth: 1,
         left: 90,
@@ -256,7 +316,7 @@ const styles = StyleSheet.create({
         width: 180,
         height: 146,
         position: 'absolute',
-        zIndex: -99,
+        zIndex: 99,
         top: 5,
         borderWidth: 1,
         right: 60,
@@ -328,5 +388,28 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 1,
         paddingHorizontal: 20
+    },
+    searchWrap: {
+        // marginTop: 5,
+        alignItems: "flex-start",
+    },
+    searchTxt: {
+        fontFamily: "NunitoSans_10pt-Regular",
+        fontSize: 12,
+        color: b3,
+    },
+    radio: {
+        width: 20,
+        height: 20,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: blue,
+        marginRight: 10,
+    },
+    arrow:{
+        width: 15,
+        height: 15,
+        transform:[{rotate: "90deg"}],
+        marginLeft: 10,
     },
 });
