@@ -85,7 +85,7 @@ const Flights = ({ navigation, data, width, height }) => {
             }
 
             {/* search button */}
-            <SearchButton />
+            <SearchButton navigation={navigation} />
 
             {/* prifile option */}
             <View style={{ marginHorizontal: 15, marginTop: 18, zIndex: -1 }}>

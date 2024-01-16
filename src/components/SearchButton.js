@@ -3,10 +3,10 @@ import React from 'react'
 import { b2, white } from '../config/colors';
 
 
-const SearchButton = () => {
+const SearchButton = ({ navigation }) => {
     return (
         <View style={styles.main}>
-            <TouchableOpacity style={styles.btnWrap}>
+            <TouchableOpacity style={styles.btnWrap} onPress={() => navigation.navigate("flightsearch")}>
                 <Text style={styles.btnText}>Search</Text>
             </TouchableOpacity>
         </View>

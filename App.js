@@ -5,6 +5,7 @@ import WelcomeScreen from './src/screens/WelcomeScreen';
 import TabNavigation from './src/screens/bottomnav/TabNavigation';
 import { StatusBar } from 'react-native';
 import TravelDate from './src/screens/stacknav/TravelDate';
+import FlightSearch from './src/screens/stacknav/FlightSearch';
 
 const RootStack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ const App = () => {
         <RootStack.Screen name='wlscrn' component={WelcomeScreen} />
         <RootStack.Screen name='tab' component={TabNavigation} />
         <RootStack.Screen name='traveldate' component={TravelDate} />
+        <RootStack.Screen name='flightsearch' component={FlightSearch} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
