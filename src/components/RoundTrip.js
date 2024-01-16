@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'reac
 import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../config/colors';
 
-const RoundTrip = () => {
+const RoundTrip = ({ navigation }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
@@ -42,7 +42,7 @@ const RoundTrip = () => {
                 <View style={styles.left}>
                     <Text style={styles.tbTxt}>Depart</Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("traveldate")}>
                         <Text style={styles.midTxt}>Select Date</Text>
                     </TouchableOpacity>
 
@@ -52,7 +52,7 @@ const RoundTrip = () => {
                 <View style={styles.right}>
                     <Text style={styles.tbTxt}>Return</Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("traveldate")}>
                         <Text style={styles.midTxt}>Select Date</Text>
                     </TouchableOpacity>
 
@@ -406,10 +406,10 @@ const styles = StyleSheet.create({
         borderColor: blue,
         marginRight: 10,
     },
-    arrow:{
+    arrow: {
         width: 15,
         height: 15,
-        transform:[{rotate: "90deg"}],
+        transform: [{ rotate: "90deg" }],
         marginLeft: 10,
     },
 });

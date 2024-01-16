@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../config/colors';
 
-const OneWay = () => {
+const OneWay = ({ navigation }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
@@ -42,7 +42,7 @@ const OneWay = () => {
                 <View style={styles.left}>
                     <Text style={styles.tbTxt}>Depart</Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={()=> navigation.navigate("traveldate")}>
                         <Text style={styles.midTxt}>Select Date</Text>
                     </TouchableOpacity>
 
@@ -70,13 +70,13 @@ const OneWay = () => {
                                 </View>
 
                                 <View style={styles.btn}>
-                                    <TouchableOpacity onPress={()=> setIsTravel(false)}>
+                                    <TouchableOpacity onPress={() => setIsTravel(false)}>
                                         <Text style={styles.btnTxt}>-</Text>
                                     </TouchableOpacity>
 
                                     <Text style={styles.btnTxt}>1</Text>
 
-                                    <TouchableOpacity onPress={()=> setIsTravel(false)}>
+                                    <TouchableOpacity onPress={() => setIsTravel(false)}>
                                         <Text style={styles.btnTxt}>+</Text>
                                     </TouchableOpacity>
                                 </View>
@@ -100,7 +100,7 @@ const OneWay = () => {
                                     </TouchableOpacity>
                                 </View> */}
 
-                                <TouchableOpacity style={styles.addBtn} onPress={()=> setIsTravel(false)}>
+                                <TouchableOpacity style={styles.addBtn} onPress={() => setIsTravel(false)}>
                                     <Text style={styles.addBtnTxt}>Add</Text>
                                 </TouchableOpacity>
                             </View>
@@ -123,7 +123,7 @@ const OneWay = () => {
                                     </TouchableOpacity>
                                 </View> */}
 
-                                <TouchableOpacity style={styles.addBtn} onPress={()=> setIsTravel(false)}>
+                                <TouchableOpacity style={styles.addBtn} onPress={() => setIsTravel(false)}>
                                     <Text style={styles.addBtnTxt}>Add</Text>
                                 </TouchableOpacity>
                             </View>

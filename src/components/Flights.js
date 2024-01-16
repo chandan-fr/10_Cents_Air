@@ -8,7 +8,7 @@ import RoundTrip from './RoundTrip';
 import MultiCity from './MultiCity';
 import DealItem from './DealItem';
 
-const Flights = ({ data, width, height }) => {
+const Flights = ({ navigation, data, width, height }) => {
     const [selectedMidMenu, setSelectedMidMenu] = useState("o");
 
     return (
@@ -49,13 +49,13 @@ const Flights = ({ data, width, height }) => {
 
                 {/* trip option content */}
                 <View style={{ marginHorizontal: 10, marginTop: 0, }}>
-                    {selectedMidMenu === "o" && <OneWay />}
-                    {selectedMidMenu === "r" && <RoundTrip />}
+                    {selectedMidMenu === "o" && <OneWay navigation={navigation} />}
+                    {selectedMidMenu === "r" && <RoundTrip navigation={navigation} />}
                     {/* {selectedMidMenu === "m" && <MultiCity />} */}
                 </View>
             </View>
 
-            {selectedMidMenu === "m" && <MultiCity />}
+            {selectedMidMenu === "m" && <MultiCity navigation={navigation} />}
 
             {/* add flight button */}
             {selectedMidMenu === "m" && <View

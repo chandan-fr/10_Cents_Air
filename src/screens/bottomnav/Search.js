@@ -2,12 +2,12 @@ import { Dimensions, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } fr
 import React, { useState } from 'react'
 import BgGradient from '../../utility/BgGradient';
 import Header from '../../components/Header';
-import { b1, b3, black, blue, white } from '../../config/colors';
+import { white } from '../../config/colors';
 import Flights from '../../components/Flights';
 
 const { width, height } = Dimensions.get("window");
 
-const Search = () => {
+const Search = ({ navigation }) => {
     const [selectedHMenu, setSelectedHMenu] = useState("f");
     const data = [1, 1, 1, 1, 1];
 
@@ -70,7 +70,7 @@ const Search = () => {
                 </View> */}
 
                 {/* Flights */}
-                {selectedHMenu === "f" && <Flights data={data} width={width} height={height} />}
+                {selectedHMenu === "f" && <Flights navigation={navigation} data={data} width={width} height={height} />}
             </View>
         </SafeAreaView>
     )

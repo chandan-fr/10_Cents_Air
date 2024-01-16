@@ -2,13 +2,13 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../config/colors';
 
-const MultiCity = () => {
+const MultiCity = ({ navigation }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
     return (
         <View>
-            <View style={[styles.main, {marginTop: -25}]}>
+            <View style={[styles.main, { marginTop: -25 }]}>
                 <Text style={styles.fHdTxt}>Flight 1</Text>
                 {/* top selection row */}
                 <View style={styles.topWrap}>
@@ -44,7 +44,7 @@ const MultiCity = () => {
                     <View style={styles.left}>
                         <Text style={styles.tbTxt}>Depart</Text>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate("traveldate")}>
                             <Text style={styles.midTxt}>Select Date</Text>
                         </TouchableOpacity>
 
@@ -495,7 +495,7 @@ const styles = StyleSheet.create({
         paddingVertical: 1,
         paddingHorizontal: 20
     },
-    fHdTxt:{
+    fHdTxt: {
         fontFamily: 'LondonBetween',
         color: b3,
         fontSize: 15,
