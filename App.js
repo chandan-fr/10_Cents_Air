@@ -6,6 +6,7 @@ import TabNavigation from './src/screens/bottomnav/TabNavigation';
 import { StatusBar } from 'react-native';
 import TravelDate from './src/screens/stacknav/TravelDate';
 import FlightSearch from './src/screens/stacknav/FlightSearch';
+import Filters from './src/screens/stacknav/Filters';
 
 const RootStack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const App = () => {
         <RootStack.Screen name='tab' component={TabNavigation} />
         <RootStack.Screen name='traveldate' component={TravelDate} />
         <RootStack.Screen name='flightsearch' component={FlightSearch} />
+        <RootStack.Screen name='filters' component={Filters} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

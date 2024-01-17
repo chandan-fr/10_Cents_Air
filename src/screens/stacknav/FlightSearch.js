@@ -711,7 +711,10 @@ const FlightSearch = ({ navigation }) => {
                     </View>
 
                     <View style={styles.filterWrap}>
-                        <TouchableOpacity style={{ paddingVertical: 18, paddingHorizontal: 6 }}>
+                        <TouchableOpacity
+                            style={{ paddingVertical: 18, paddingHorizontal: 6 }}
+                            onPress={() => navigation.navigate("filters")}
+                        >
                             <Image
                                 style={{ width: 28, height: 28, }}
                                 source={require("../../assets/icons/filter.png")}
