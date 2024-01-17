@@ -14,7 +14,7 @@ const WelcomeScreen = ({ navigation }) => {
       setcurInd(curInd + 1);
       ref.current?.scrollTo({ animated: true, x: curInd + 1 });
     } else {
-      navigation.replace("home");
+      navigation.replace("tab");
     }
   };
 

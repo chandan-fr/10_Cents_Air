@@ -9,5 +9,6 @@ const blueShade1 = "#28A5FF"
 const blueShade2 = "#2C96F7"
 const black = "#000000";
 const green = "#008A04";
+const gs1 = "#18A160";
 
-module.exports = { white, b1, b2, b3, blue, black, blueShade1, blueShade2, bs1, w1, green };
+module.exports = { white, b1, b2, b3, blue, black, blueShade1, blueShade2, bs1, w1, green, gs1 };

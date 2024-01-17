@@ -1,10 +1,14 @@
-import { Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React from 'react'
-import { b1, b3, blue, white } from '../../config/colors';
+import { Dimensions, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import React, { useRef } from 'react'
+import { b1, b3, blue, gs1, white } from '../../config/colors';
 import { genCurrentDate } from '../../config/CurrentDate';
+import SortBottomSheet from '../../utility/SortBottomSheet';
+
+const { width } = Dimensions.get("window");
 
 const FlightSearch = ({ navigation }) => {
     const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    const sortRef = useRef();
 
     return (
         <SafeAreaView style={styles.parent}>
@@ -53,10 +57,671 @@ const FlightSearch = ({ navigation }) => {
                         </ScrollView>
                     </View>
 
-                    <TouchableOpacity style={styles.arrowWrap}>
+                    <TouchableOpacity style={[styles.arrowWrap, { right: 4 }]}>
                         <Image style={styles.arrow} source={require("../../assets/icons/right-arrow.png")} />
                     </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.arrowWrap}>
+                        <Image
+                            style={[styles.arrow, { transform: [{ rotate: "180deg" }] }]}
+                            source={require("../../assets/icons/right-arrow.png")}
+                        />
+                    </TouchableOpacity>
                 </View>
+
+                {/* flight option scroll */}
+                <View style={styles.flightOptnWrap}>
+                    <ScrollView style={{}}>
+                        <View style={{ rowGap: 10 }}>
+                            <View style={[styles.flightOptnCont, { marginTop: 5 }]}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            {/* ================================================================== */}
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.flightOptnCont}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={[styles.flightOptnCont, { marginBottom: 10, }]}>
+                                <View
+                                    style={{
+                                        flexDirection: "row",
+                                        alignItems: "center",
+                                        justifyContent: "space-between"
+                                    }}
+                                >
+                                    <View style={{ flex: 1 }}>
+                                        <View style={{ flexDirection: "row", alignItems: "center" }}>
+                                            <Image
+                                                style={{ width: 25, height: 25 }}
+                                                source={require("../../assets/icons/indigo.png")}
+                                            />
+                                            <Text style={styles.indigo}>Indigo</Text>
+                                        </View>
+
+                                        <View style={styles.midRow}>
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DAC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    14:10
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    -BOM-
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 13, color: b1, marginTop: 8 }]}>
+                                                    10h 20m
+                                                </Text>
+                                            </View>
+
+                                            <View>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b3 }]}>
+                                                    DXC
+                                                </Text>
+                                                <Text style={[styles.ns600, { fontSize: 15, color: b1, marginTop: 8 }]}>
+                                                    22:30
+                                                </Text>
+                                            </View>
+                                        </View>
+
+                                        <Text style={[styles.ns400, { color: b3 }]}>Layover- 04h 30m</Text>
+                                    </View>
+
+                                    <View style={{ flex: 0.5, alignItems: "flex-end", marginTop: 50 }}>
+                                        <Text style={[styles.ns600, { color: b1, fontSize: 16 }]}>
+                                            $ 430
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 10 }}>
+                                    <Image
+                                        style={{ width: 18, height: 18, tintColor: gs1 }}
+                                        source={require("../../assets/icons/discount-solid.png")}
+                                    />
+                                    <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
+                                        Use CASUPER code to get special $50 OFF
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
+                    </ScrollView>
+                </View>
+
+                {/* sticky bottom */}
+                <View style={styles.stickyBtm}>
+                    <View style={styles.leftWrap}>
+                        <View style={{ flexDirection: "row", columnGap: 5, flex: 1 }}>
+                            <TouchableOpacity
+                                style={[styles.filterBtnComn, { backgroundColor: "#848484" }]}
+                                onPress={() => sortRef.current.open()}
+                            >
+                                <Text style={[styles.ns600,]}>Prices</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.filterBtnComn}>
+                                <Text style={[styles.ns600,]}>Non- stop only</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity style={styles.filterBtnComn}>
+                                <Text style={[styles.ns600,]}>Morning 6.00 - 12PM</Text>
+                            </TouchableOpacity>
+                        </View>
+
+                        <Text
+                            style={[
+                                styles.ns600,
+                                { color: white, fontSize: 12, marginVertical: 3, marginLeft: 11 }
+                            ]}
+                        >
+                            SORT
+                        </Text>
+                    </View>
+
+                    <View style={styles.filterWrap}>
+                        <TouchableOpacity style={{ paddingVertical: 18, paddingHorizontal: 6 }}>
+                            <Image
+                                style={{ width: 28, height: 28, }}
+                                source={require("../../assets/icons/filter.png")}
+                            />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+                {/* bottom sheet */}
+                <SortBottomSheet sortRef={sortRef} />
             </View>
         </SafeAreaView>
     )
@@ -132,6 +797,73 @@ const styles = StyleSheet.create({
     },
     arrowWrap: {
         position: "absolute",
-        right: 6,
+    },
+    flightOptnWrap: {
+        flex: 1,
+        marginTop: 15,
+        marginHorizontal: 13,
+    },
+    flightOptnCont: {
+        backgroundColor: white,
+        elevation: 5,
+        paddingHorizontal: 10,
+        paddingVertical: 7,
+        borderRadius: 8,
+    },
+    indigo: {
+        fontFamily: "LondonBetween",
+        fontSize: 20,
+        color: b1,
+        marginLeft: 10,
+    },
+    ns400: {
+        fontFamily: "NunitoSans_10pt-Regular",
+        fontSize: 13,
+    },
+    ns600: {
+        fontFamily: "NunitoSans_10pt-Bold",
+    },
+    midRow: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: 'space-between',
+        marginTop: 10
+    },
+    stickyBtm: {
+        backgroundColor: b1,
+        opacity: 0.9,
+        position: "absolute",
+        width: width - 20,
+        bottom: 10,
+        marginHorizontal: 10,
+        borderRadius: 8,
+        flexDirection: "row",
+    },
+    filterWrap: {
+        backgroundColor: "#848484",
+        alignSelf: "flex-end",
+        borderTopRightRadius: 8,
+        borderBottomRightRadius: 8,
+    },
+    leftWrap: {
+        flex: 1,
+        borderTopLeftRadius: 8,
+        borderBottomLeftRadius: 8,
+        marginRight: 5,
+        paddingLeft: 8,
+    },
+    filterBtnComn: {
+        paddingHorizontal: 6,
+        borderWidth: 1,
+        alignItems: "center",
+        justifyContent: 'center',
+        borderColor: "#848484",
+        borderRadius: 2,
+        paddingVertical: 6,
+        marginTop: 8
+    },
+    filterTxt: {
+        color: white,
+        fontSize: 12
     },
 });
