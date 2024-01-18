@@ -73,7 +73,10 @@ const FlightSearch = ({ navigation }) => {
                 <View style={styles.flightOptnWrap}>
                     <ScrollView style={{}}>
                         <View style={{ rowGap: 10 }}>
-                            <View style={[styles.flightOptnCont, { marginTop: 5 }]}>
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={()=> navigation.navigate("selectfair")}
+                            >
                                 <View
                                     style={{
                                         flexDirection: "row",
@@ -138,7 +141,7 @@ const FlightSearch = ({ navigation }) => {
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
                             {/* ================================================================== */}
                             <View style={styles.flightOptnCont}>

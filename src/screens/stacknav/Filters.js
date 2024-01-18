@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, ScrollView, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, TouchableOpacity, ScrollView, Dimensions, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import { b1, b3, blue, green, white } from '../../config/colors';
 import ToggleSwitch from 'toggle-switch-react-native';
@@ -13,6 +13,7 @@ const Filters = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.parent}>
+            <StatusBar translucent={true} barStyle={"dark-content"} />
             <View style={styles.Wrap}>
                 {/* nav */}
                 <View style={styles.nav}>
@@ -60,7 +61,7 @@ const Filters = ({ navigation }) => {
                             />
                         </View>
 
-                        <View style={[styles.toggleCont, { marginTop: 10 }]}>
+                        <View style={[styles.toggleCont, { marginTop: 30 }]}>
                             <Text style={[styles.lbB1, { fontSize: 18 }]}>Hide multi airline</Text>
 
                             <ToggleSwitch
