@@ -78,7 +78,7 @@ const SelectFair = ({ navigation }) => {
                 </View>
 
                 <View style={{ marginTop: 60, alignItems: "center" }}>
-                    <TouchableOpacity style={styles.bookNow}>
+                    <TouchableOpacity style={styles.bookNow} onPress={()=> navigation.navigate("flightreview")}>
                         <Text style={[styles.ns600, { color: white, fontSize: 16 }]}>
                             Book Now
                         </Text>
