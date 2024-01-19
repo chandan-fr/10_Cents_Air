@@ -1,9 +1,13 @@
 import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Image, StatusBar, ScrollView, TextInput } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react'
 import { b1, b2, b3, blue, gs1, gs2, white } from '../../config/colors';
 import LinearGradient from 'react-native-linear-gradient';
+import FareBreakSheet from '../../utility/FareBreakSheet';
+
 
 const FlightReview = ({ navigation }) => {
+    const fareRef = useRef();
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <StatusBar translucent={true} barStyle={"dark-content"} />
@@ -775,7 +779,10 @@ const FlightReview = ({ navigation }) => {
                             marginTop: 6, paddingBottom: 6, paddingHorizontal: 4
                         }}
                     >
-                        <TouchableOpacity style={{ flexDirection: 'row', alignItems: "center", marginLeft: 15 }}>
+                        <TouchableOpacity
+                            style={{ flexDirection: 'row', alignItems: "center", marginLeft: 15 }}
+                            onPress={()=> fareRef.current.open()}
+                        >
                             <Text style={[styles.ns700, { fontSize: 20, marginRight: 10 }]}>$ 495</Text>
                             <Image
                                 style={{ width: 15, height: 15, transform: [{ rotate: "-90deg" }] }}
@@ -783,13 +790,16 @@ const FlightReview = ({ navigation }) => {
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.continue} onPress={() => navigation.navigate("flightreview")}>
+                        <TouchableOpacity style={styles.continue}>
                             <Text style={{ color: white, fontSize: 18, fontFamily: "LondonTwo" }}>
                                 Continue
                             </Text>
                         </TouchableOpacity>
                     </View>
                 </View>
+
+                {/* bottom sheet */}
+                <FareBreakSheet fareRef={fareRef} />
             </View>
         </SafeAreaView>
     )
