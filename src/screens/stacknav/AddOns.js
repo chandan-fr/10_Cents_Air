@@ -1,6 +1,6 @@
-import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Image, StatusBar, ScrollView, TextInput, Dimensions, ImageBackground } from 'react-native'
+import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Image, StatusBar, Dimensions } from 'react-native'
 import React, { useState } from 'react'
-import { b1, b2, b3, blue, gs3, red, white } from '../../config/colors';
+import { b1, b2, b3, blue, red, white } from '../../config/colors';
 import DirectTab from '../../components/DirectTab';
 import Meals from '../../components/Meals';
 import Extras from '../../components/Extras';
@@ -9,6 +9,7 @@ const { width, height } = Dimensions.get("window");
 
 const AddOns = ({ navigation }) => {
     const [addOns, setAddOns] = useState("d");
+    const [flight, setFlight] = useState("dac");
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: white }}>
@@ -24,7 +25,7 @@ const AddOns = ({ navigation }) => {
                         <Text style={[styles.lbB1, { fontSize: 19, marginLeft: 45 }]}>Add Ons</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}} onPress={() => navigation.goBack()}>
+                    <TouchableOpacity style={{}}>
                         <Text style={[styles.lbB1, { fontSize: 16, color: blue }]}>
                             Skip to Payments
                         </Text>
@@ -72,7 +73,12 @@ const AddOns = ({ navigation }) => {
                     style={{ marginTop: 15, flexDirection: 'row', alignItems: 'center', justifyContent: "space-between" }}
                 >
                     <TouchableOpacity
-                        style={[styles.flightSeat, { borderRightWidth: 0.4 }]}
+                        style={[
+                            styles.flightSeat, { borderRightWidth: 0.4 },
+                            flight === "dac" && addOns !== "d" ? { borderBottomColor: blue, borderBottomWidth: 2 } : { borderBottomColor: white, borderBottomWidth: 2 },
+                            addOns === "m" || addOns === "e" ? { paddingBottom: 4 } : { paddingBottom: 4 }
+                        ]}
+                        onPress={() => setFlight("dac")}
                     >
                         <View style={{ flexDirection: 'row', alignItems: "center", marginLeft: 20 }}>
                             <Image
@@ -85,17 +91,24 @@ const AddOns = ({ navigation }) => {
                             </Text>}
                         </View>
 
-                        {addOns === "m" && <Text style={[styles.ns600, { fontSize: 14, marginLeft: 45, marginTop: 5 }]}>
+                        {addOns === "d" && <View style={{ paddingBottom: 8 }} />}
+
+                        {addOns === "m" && <Text style={[styles.ns600, { fontSize: 13, marginLeft: 45, marginTop: 5 }]}>
                             <Text style={{ color: red }}>0</Text> of 1 meals selected
                         </Text>}
-                        {addOns === "e" && <Text style={[styles.ns600, { fontSize: 14, marginLeft: 45, marginTop: 5 }]}>
+
+                        {addOns === "e" && <Text style={[styles.ns600, { fontSize: 13, marginLeft: 45, marginTop: 5 }]}>
                             <Text style={{ color: red }}>0</Text> of 1 baggage selected
                         </Text>}
                     </TouchableOpacity>
 
-
                     <TouchableOpacity
-                        style={[styles.flightSeat, { borderLeftWidth: 0.4 }]}
+                        style={[
+                            styles.flightSeat, { borderLeftWidth: 0.4 },
+                            flight === "dxc" && addOns !== "d" ? { borderBottomColor: blue, borderBottomWidth: 2 } : { borderBottomColor: white, borderBottomWidth: 2 },
+                            addOns === "m" || addOns === "e" ? { paddingBottom: 4 } : { paddingBottom: 4 }
+                        ]}
+                        onPress={() => setFlight("dxc")}
                     >
                         <View style={{ flexDirection: 'row', alignItems: "center", marginLeft: 20 }}>
                             <Image
@@ -108,10 +121,12 @@ const AddOns = ({ navigation }) => {
                             </Text>}
                         </View>
 
-                        {addOns === "m" && <Text style={[styles.ns600, { fontSize: 14, marginLeft: 45, marginTop: 5 }]}>
+                        {addOns === "d" && <View style={{ paddingBottom: 8 }} />}
+
+                        {addOns === "m" && <Text style={[styles.ns600, { fontSize: 13, marginLeft: 45, marginTop: 5 }]}>
                             <Text style={{ color: red }}>0</Text> of 1 meals selected
                         </Text>}
-                        {addOns === "e" && <Text style={[styles.ns600, { fontSize: 14, marginLeft: 45, marginTop: 5 }]}>
+                        {addOns === "e" && <Text style={[styles.ns600, { fontSize: 13, marginLeft: 45, marginTop: 5 }]}>
                             <Text style={{ color: red }}>0</Text> of 1 baggage selected
                         </Text>}
                     </TouchableOpacity>
@@ -122,7 +137,7 @@ const AddOns = ({ navigation }) => {
                 {/* meals */}
                 {addOns === "m" && <Meals width={width} />}
                 {/* extras */}
-                {addOns === "e" && <Extras />}
+                {addOns === "e" && <Extras width={width} />}
 
                 {/* bottom */}
                 <View style={styles.bottom}>
@@ -132,7 +147,7 @@ const AddOns = ({ navigation }) => {
                             marginTop: 6, paddingBottom: 6, paddingHorizontal: 4,
                         }}
                     >
-                        <TouchableOpacity
+                        <View
                             style={{ alignItems: "flex-start", marginLeft: 15 }}
                         // onPress={() => fareRef.current.open()}
                         >
@@ -162,19 +177,19 @@ const AddOns = ({ navigation }) => {
                                         style={{ width: 15, height: 15, }}
                                         source={require("../../assets/icons/diamond.png")}
                                     />
-                                    <Text style={[styles.ns400]}>$ 100</Text>
+                                    <Text style={[styles.ns400]}>$ 120</Text>
                                 </View>
                             </View>
 
                             {/* final price */}
-                            <View style={{ flexDirection: 'row', alignItems: "center" }}>
+                            <TouchableOpacity style={{ flexDirection: 'row', alignItems: "center" }}>
                                 <Text style={[styles.ns700, { fontSize: 19, marginRight: 10 }]}>$ 495</Text>
                                 <Image
                                     style={{ width: 15, height: 15, transform: [{ rotate: "-90deg" }] }}
                                     source={require("../../assets/icons/right-arrow.png")}
                                 />
-                            </View>
-                        </TouchableOpacity>
+                            </TouchableOpacity>
+                        </View>
 
                         <TouchableOpacity
                             style={styles.next}
@@ -281,7 +296,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         flex: 1,
         borderTopWidth: 0.8,
-        paddingVertical: 12,
+        paddingTop: 12,
         backgroundColor: white,
         elevation: 3,
     },

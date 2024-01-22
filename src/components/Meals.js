@@ -79,10 +79,10 @@ const Meals = ({ width }) => {
                 </View>
 
                 {/* meal item */}
-                <View style={[styles.commonWrap, { marginTop: 10, rowGap: 10, paddingVertical: 20 }]}>
+                <View style={[styles.commonWrap, { marginTop: 10, rowGap: 20, paddingVertical: 20 }]}>
                     <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: 'space-between' }}>
                         <View style={{ flex: 1.3 }}>
-                            <Text style={[styles.ns600, { fontSize: 17 }]}>Low calorie veg meal + beverage</Text>
+                            <Text style={[styles.ns600]}>Low calorie veg meal + beverage</Text>
                         </View>
 
                         <View
@@ -111,7 +111,7 @@ const Meals = ({ width }) => {
 
                     <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: 'space-between' }}>
                         <View style={{ flex: 1.3 }}>
-                            <Text style={[styles.ns600, { fontSize: 17 }]}>
+                            <Text style={[styles.ns600]}>
                                 Diabetic veg meal +
                                 beverage
                             </Text>
@@ -135,7 +135,7 @@ const Meals = ({ width }) => {
 
                     <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: 'space-between' }}>
                         <View style={{ flex: 1.3 }}>
-                            <Text style={[styles.ns600, { fontSize: 17 }]}>
+                            <Text style={[styles.ns600]}>
                                 Vegan meal + beverage
                             </Text>
                         </View>
@@ -158,7 +158,7 @@ const Meals = ({ width }) => {
 
                     <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: 'space-between' }}>
                         <View style={{ flex: 1.3 }}>
-                            <Text style={[styles.ns600, { fontSize: 17 }]}>
+                            <Text style={[styles.ns600]}>
                                 6E Eats choice of the day(veg) +
                                 beverage
                             </Text>
@@ -182,7 +182,7 @@ const Meals = ({ width }) => {
 
                     <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: 'space-between' }}>
                         <View style={{ flex: 1.3 }}>
-                            <Text style={[styles.ns600, { fontSize: 17 }]}>
+                            <Text style={[styles.ns600]}>
                                 Regional favourite(veg) +
                                 beverage
                             </Text>
@@ -206,7 +206,7 @@ const Meals = ({ width }) => {
 
                     <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: 'space-between' }}>
                         <View style={{ flex: 1.3 }}>
-                            <Text style={[styles.ns600, { fontSize: 17 }]}>High calorie veg meal + beverage</Text>
+                            <Text style={[styles.ns600]}>High calorie veg meal + beverage</Text>
                         </View>
 
                         <View
@@ -268,6 +268,5 @@ const styles = StyleSheet.create({
         borderRadius: 2,
         borderWidth: 0.7,
         borderColor: blue,
-        // paddingHorizontal: 15,
     },
 });
