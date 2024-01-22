@@ -781,7 +781,7 @@ const FlightReview = ({ navigation }) => {
                     >
                         <TouchableOpacity
                             style={{ flexDirection: 'row', alignItems: "center", marginLeft: 15 }}
-                            onPress={()=> fareRef.current.open()}
+                            onPress={() => fareRef.current.open()}
                         >
                             <Text style={[styles.ns700, { fontSize: 20, marginRight: 10 }]}>$ 495</Text>
                             <Image
@@ -790,7 +790,7 @@ const FlightReview = ({ navigation }) => {
                             />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.continue}>
+                        <TouchableOpacity style={styles.continue} onPress={() => navigation.navigate("addons")}>
                             <Text style={{ color: white, fontSize: 18, fontFamily: "LondonTwo" }}>
                                 Continue
                             </Text>

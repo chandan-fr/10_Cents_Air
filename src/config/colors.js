@@ -11,5 +11,6 @@ const black = "#000000";
 const green = "#008A04";
 const gs1 = "#18A160";
 const gs2 = "#306D3F";
+const gs3 = "#31BD2F";
 
-module.exports = { white, b1, b2, b3, blue, black, blueShade1, blueShade2, bs1, w1, green, gs1, gs2 };
+module.exports = { white, b1, b2, b3, blue, black, blueShade1, blueShade2, bs1, w1, green, gs1, gs2, gs3 };
