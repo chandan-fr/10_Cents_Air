@@ -7,6 +7,9 @@ const SortBottomSheet = ({ sortRef }) => {
     return (
         <RBSheet
             ref={sortRef}
+            animationType='slide'
+            openDuration={1000}
+            closeDuration={300}
             closeOnDragDown={true}
             closeOnPressMask={false}
             customStyles={{
@@ -31,7 +34,7 @@ const SortBottomSheet = ({ sortRef }) => {
                 <View style={styles.navWrap}>
                     <Text style={[styles.ns600, { textTransform: "uppercase" }]}>Sort By</Text>
 
-                    <TouchableOpacity style={styles.cross} onPress={()=> sortRef.current.close()}>
+                    <TouchableOpacity style={styles.cross} onPress={() => sortRef.current.close()}>
                         <Image
                             style={{ width: 20, height: 20, tintColor: b3 }}
                             source={require("../assets/icons/cross.png")}

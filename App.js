@@ -10,6 +10,7 @@ import Filters from './src/screens/stacknav/Filters';
 import SelectFair from './src/screens/stacknav/SelectFair';
 import FlightReview from './src/screens/stacknav/FlightReview';
 import AddOns from './src/screens/stacknav/AddOns';
+import Payments from './src/screens/stacknav/Payments';
 
 const RootStack = createNativeStackNavigator();
 
@@ -27,6 +28,7 @@ const App = () => {
         <RootStack.Screen name='selectfair' component={SelectFair} />
         <RootStack.Screen name='flightreview' component={FlightReview} />
         <RootStack.Screen name='addons' component={AddOns} />
+        <RootStack.Screen name='payments' component={Payments} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

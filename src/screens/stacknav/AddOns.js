@@ -193,7 +193,7 @@ const AddOns = ({ navigation }) => {
 
                         <TouchableOpacity
                             style={styles.next}
-                        // onPress={() => navigation.navigate("addons")}
+                            onPress={() => navigation.navigate("payments")}
                         >
                             <Text style={{ color: white, fontSize: 18, fontFamily: "LondonTwo" }}>
                                 Next

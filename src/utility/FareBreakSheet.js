@@ -8,6 +8,9 @@ const FareBreakSheet = ({ fareRef }) => {
     return (
         <RBSheet
             ref={fareRef}
+            animationType='slide'
+            openDuration={1000}
+            closeDuration={300}
             closeOnDragDown={true}
             closeOnPressMask={false}
             customStyles={{
