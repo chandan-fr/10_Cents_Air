@@ -129,7 +129,229 @@ const Payments = ({ navigation }) => {
                 </View>
 
                 <View style={styles.hr} />
-                
+
+                {/* payment options */}
+                <View style={{ marginHorizontal: 3, rowGap: 1, borderRadius: 4, marginTop: 5, borderWidth: 1, borderColor: "#D2D6DD" }}>
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 20, borderBottomWidth: 1, paddingVertical: 16, borderBlockColor: "#D2D6DD",
+                        }}
+                    >
+                        <View style={{ flexDirection: 'row', alignItems: "center", flex: 1 }}>
+                            <View style={{ marginRight: 30 }}>
+                                <Image
+                                    style={{
+                                        width: 35, height: 35, tintColor: violet
+                                    }}
+                                    source={require("../../assets/icons/wallet.png")}
+                                />
+                            </View>
+
+                            <View style={{ alignItems: 'flex-start', flex: 1 }}>
+                                <Text style={[styles.ns700, { fontSize: 16 }]}>
+                                    Mobile Wallets
+                                </Text>
+
+                                <Text style={[styles.ns400, { fontSize: 14, color: b3 }]}>
+                                    AmazonPay,Mobikwik,Payzapp
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ marginLeft: 20 }}>
+                            <Image
+                                style={{
+                                    width: 18, height: 18, tintColor: "#777777"
+                                }}
+                                source={require("../../assets/icons/right-arrow.png")}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    {/* ================================================================================== */}
+
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 20, borderBottomWidth: 1, paddingVertical: 16, borderBlockColor: "#D2D6DD",
+                        }}
+                    >
+                        <View style={{ flexDirection: 'row', alignItems: "center", flex: 1 }}>
+                            <View style={{ marginRight: 30 }}>
+                                <Image
+                                    style={{
+                                        width: 35, height: 35,
+                                    }}
+                                    source={require("../../assets/icons/snpl.png")}
+                                />
+                            </View>
+
+                            <View style={{ alignItems: 'flex-start', flex: 1 }}>
+                                <Text style={[styles.ns700, { fontSize: 16 }]}>
+                                    Book Now Pay Later
+                                </Text>
+
+                                <Text style={[styles.ns400, { fontSize: 14, color: b3 }]}>
+                                    Tripmoney, Lazypay, Simpl, ZestMoney, ICICI, HDFC and more
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ marginLeft: 20 }}>
+                            <Image
+                                style={{
+                                    width: 18, height: 18, tintColor: "#777777"
+                                }}
+                                source={require("../../assets/icons/right-arrow.png")}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 20, borderBottomWidth: 1, paddingVertical: 16, borderBlockColor: "#D2D6DD",
+                        }}
+                    >
+                        <View style={{ flexDirection: 'row', alignItems: "center", flex: 1 }}>
+                            <View style={{ marginRight: 30 }}>
+                                <Image
+                                    style={{
+                                        width: 35, height: 35, tintColor: violet
+                                    }}
+                                    source={require("../../assets/icons/bank.png")}
+                                />
+                            </View>
+
+                            <View style={{ alignItems: 'flex-start', flex: 1 }}>
+                                <Text style={[styles.ns700, { fontSize: 16 }]}>
+                                    Net Banking
+                                </Text>
+
+                                <Text style={[styles.ns400, { fontSize: 14, color: b3 }]}>
+                                    All Major Banks Available
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ marginLeft: 20 }}>
+                            <Image
+                                style={{
+                                    width: 18, height: 18, tintColor: "#777777"
+                                }}
+                                source={require("../../assets/icons/right-arrow.png")}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 20, borderBottomWidth: 1, paddingVertical: 16, borderBlockColor: "#D2D6DD",
+                        }}
+                    >
+                        <View style={{ flexDirection: 'row', alignItems: "center", flex: 1 }}>
+                            <View style={{ marginRight: 30 }}>
+                                <Image
+                                    style={{
+                                        width: 35, height: 35, tintColor: violet
+                                    }}
+                                    source={require("../../assets/icons/discount.png")}
+                                />
+                            </View>
+
+                            <View style={{ alignItems: 'flex-start', flex: 1 }}>
+                                <Text style={[styles.ns700, { fontSize: 16 }]}>
+                                    EMI
+                                </Text>
+
+                                <Text style={[styles.ns400, { fontSize: 14, color: b3 }]}>
+                                    Credit/Debit Card EMI available
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ marginLeft: 20 }}>
+                            <Image
+                                style={{
+                                    width: 18, height: 18, tintColor: "#777777"
+                                }}
+                                source={require("../../assets/icons/right-arrow.png")}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 20, borderBottomWidth: 1, paddingVertical: 16, borderBlockColor: "#D2D6DD",
+                        }}
+                    >
+                        <View style={{ flexDirection: 'row', alignItems: "center", flex: 2 }}>
+                            <View style={{ marginRight: 30 }}>
+                                <Image
+                                    style={{
+                                        width: 35, height: 35, tintColor: violet
+                                    }}
+                                    source={require("../../assets/icons/wallet.png")}
+                                />
+                            </View>
+
+                            <View style={{ alignItems: 'flex-start' }}>
+                                <Text style={[styles.ns700, { fontSize: 16 }]}>
+                                    Mobile Wallets
+                                </Text>
+
+                                <Text style={[styles.ns400, { fontSize: 14, color: b3 }]}>
+                                    AmazonPay,Mobikwik,Payzapp
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ marginLeft: 20 }}>
+                            <Image
+                                style={{
+                                    width: 18, height: 18, tintColor: "#777777"
+                                }}
+                                source={require("../../assets/icons/right-arrow.png")}
+                            />
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={{
+                            flexDirection: 'row', justifyContent: 'space-between', alignItems: "center", paddingHorizontal: 20, borderBottomWidth: 1, paddingVertical: 16, borderBlockColor: "#D2D6DD",
+                        }}
+                        onPress={() => navigation.navigate("success")}
+                    >
+                        <View style={{ flexDirection: 'row', alignItems: "center", flex: 2 }}>
+                            <View style={{ marginRight: 30 }}>
+                                <Image
+                                    style={{
+                                        width: 35, height: 35, tintColor: violet
+                                    }}
+                                    source={require("../../assets/icons/wallet.png")}
+                                />
+                            </View>
+
+                            <View style={{ alignItems: 'flex-start' }}>
+                                <Text style={[styles.ns700, { fontSize: 16 }]}>
+                                    Mobile Wallets
+                                </Text>
+
+                                <Text style={[styles.ns400, { fontSize: 14, color: b3 }]}>
+                                    AmazonPay,Mobikwik,Payzapp
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View style={{ marginLeft: 20 }}>
+                            <Image
+                                style={{
+                                    width: 18, height: 18, tintColor: "#777777"
+                                }}
+                                source={require("../../assets/icons/right-arrow.png")}
+                            />
+                        </View>
+                    </TouchableOpacity>
+                </View>
+
                 <CustomBottomSheet
                     ref={tsRef}
                     component={paymentDetails}
