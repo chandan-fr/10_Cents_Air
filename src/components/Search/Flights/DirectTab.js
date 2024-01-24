@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native'
 import React from 'react'
-import { b1, gs3, white } from '../config/colors';
+import { b1, gs3, white } from '../../../config/colors';
 
 const DirectTab = () => {
     return (

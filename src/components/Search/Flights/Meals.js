@@ -1,6 +1,6 @@
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { b1, blue } from '../config/colors';
+import { b1, blue } from '../../../config/colors';
 
 const Meals = ({ width }) => {
     return (

@@ -1,8 +1,8 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import { b1, b3, blue, w1, white } from '../config/colors';
+import { b1, b3, blue, w1, white } from '../../../config/colors';
 
-const OneWay = ({ navigation }) => {
+const RoundTrip = ({ navigation }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
@@ -38,15 +38,25 @@ const OneWay = ({ navigation }) => {
             <View style={styles.btmBrdr} />
 
             {/* middle selection row */}
-            <View style={{ marginTop: 7, alignItems: 'flex-start' }}>
+            <View style={[styles.topWrap, { marginTop: 7 }]}>
                 <View style={styles.left}>
                     <Text style={styles.tbTxt}>Depart</Text>
 
-                    <TouchableOpacity onPress={()=> navigation.navigate("traveldate")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("traveldate")}>
                         <Text style={styles.midTxt}>Select Date</Text>
                     </TouchableOpacity>
 
                     <Text style={styles.tbTxt}>Day</Text>
+                </View>
+
+                <View style={styles.right}>
+                    <Text style={styles.tbTxt}>Return</Text>
+
+                    <TouchableOpacity onPress={() => navigation.navigate("traveldate")}>
+                        <Text style={styles.midTxt}>Select Date</Text>
+                    </TouchableOpacity>
+
+                    <Text style={styles.tbTxt}>Book Return</Text>
                 </View>
             </View>
 
@@ -172,11 +182,71 @@ const OneWay = ({ navigation }) => {
                     </View>
                 </View>
             </View>
+
+            {/* extra search option section */}
+            <View style={styles.searchWrap}>
+                <View
+                    style={{
+                        flexDirection: "row",
+                        borderBottomWidth: 1,
+                        alignItems: 'center',
+                        borderColor: b3,
+                        paddingRight: 10,
+                    }}
+                >
+                    <Image
+                        style={{ width: 20, height: 20, tintColor: blue, }}
+                        source={require("../assets/icons/search.png")}
+                    />
+
+                    <TextInput
+                        placeholder='Search Preferred Airline'
+                        placeholderTextColor={b3}
+                        style={{
+                            height: 35,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginLeft: 10,
+                            color: b1,
+                        }}
+                    />
+                </View>
+
+                <View style={{ marginTop: 20, marginLeft: 8, alignItems: "flex-start" }}>
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <View style={styles.radio} />
+                        <Text style={styles.searchTxt}>Return to or from another city/airport?</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                        <View style={styles.radio} />
+                        <Text style={styles.searchTxt}>Direct Flights</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={{ marginTop: 20, alignItems: "flex-start", marginBottom: 15 }}>
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <Text style={styles.searchTxt}>Select Group Type</Text>
+                        <Image
+                            style={styles.arrow}
+                            source={require("../assets/icons/right-arrow.png")}
+                        />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                        <Text style={styles.searchTxt}>Select currency</Text>
+                        <Image
+                            style={styles.arrow}
+                            source={require("../assets/icons/right-arrow.png")}
+                        />
+                    </TouchableOpacity>
+                </View>
+            </View>
         </View>
     )
-};
+}
 
-export default OneWay;
+export default RoundTrip
 
 const styles = StyleSheet.create({
     main: {
@@ -318,5 +388,28 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 1,
         paddingHorizontal: 20
+    },
+    searchWrap: {
+        // marginTop: 5,
+        alignItems: "flex-start",
+    },
+    searchTxt: {
+        fontFamily: "NunitoSans_10pt-Regular",
+        fontSize: 12,
+        color: b3,
+    },
+    radio: {
+        width: 20,
+        height: 20,
+        borderRadius: 20,
+        borderWidth: 1,
+        borderColor: blue,
+        marginRight: 10,
+    },
+    arrow: {
+        width: 15,
+        height: 15,
+        transform: [{ rotate: "90deg" }],
+        marginLeft: 10,
     },
 });

@@ -1,8 +1,8 @@
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import BgGradient from '../utility/BgGradient';
-import SearchButton from './SearchButton';
-import { b1, b3, black, blue, white } from '../config/colors';
+import BgGradient from '../../../utility/BgGradient';
+import SearchButton from '../../SearchButton';
+import { b1, b3, black, blue, white } from '../../../config/colors';
 import OneWay from './OneWay';
 import RoundTrip from './RoundTrip';
 import MultiCity from './MultiCity';

@@ -1,6 +1,6 @@
 import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { b1, b3, green, white } from '../config/colors';
+import { b1, b3, green, white } from '../../../config/colors';
 import LinearGradient from 'react-native-linear-gradient';
 
 const { width } = Dimensions.get("window");

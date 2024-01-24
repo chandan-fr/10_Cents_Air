@@ -13,6 +13,7 @@ const gs1 = "#18A160";
 const gs2 = "#306D3F";
 const gs3 = "#31BD2F";
 const red = "#DE5151";
+const rs1 = "#FFC9C9";
 const violet = "#7B58DE";
 
 module.exports = {

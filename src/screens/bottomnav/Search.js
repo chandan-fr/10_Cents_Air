@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import BgGradient from '../../utility/BgGradient';
 import Header from '../../components/Header';
 import { white } from '../../config/colors';
-import Flights from '../../components/Flights';
+import Flights from '../../components/Search/Flights/Flights';
 
 const { width, height } = Dimensions.get("window");
 

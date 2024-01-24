@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const MtFlights = ({ navigation }) => {
+const MtFlights = ({ navigation, route }) => {
     return (
         <View>
             <Text>MtFlights</Text>

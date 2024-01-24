@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import { b1, b3, blue, w1, white } from '../config/colors';
+import { b1, b3, blue, w1, white } from '../../../config/colors';
 
 const MultiCity = ({ navigation }) => {
     const [isClass, setIsClass] = useState(false);
