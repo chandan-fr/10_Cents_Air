@@ -2,13 +2,14 @@ import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { b1, b3, green, white } from '../../../config/colors';
 import LinearGradient from 'react-native-linear-gradient';
+import image from '../../../config/ImageAssets';
 
 const { width } = Dimensions.get("window");
 
 const DealItem = () => {
     return (
         <View style={styles.main}>
-            <Image style={styles.img} resizeMode='cover' source={require("../assets/images/dealpic.png")} />
+            <Image style={styles.img} resizeMode='cover' source={image.dealpic} />
 
             <View style={styles.contWrap}>
                 <View style={styles.topItemWrap}>

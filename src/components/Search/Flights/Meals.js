@@ -1,6 +1,7 @@
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { b1, blue } from '../../../config/colors';
+import icon from '../../../config/IconAssets';
 
 const Meals = ({ width }) => {
     return (
@@ -14,13 +15,13 @@ const Meals = ({ width }) => {
                             <Image
                                 style={{ width: (width / 2) - 28 }}
                                 resizeMode='stretch'
-                                source={require("../assets/icons/food1.png")}
+                                source={icon.food1}
                             />
 
                             <View style={{ flexDirection: "row", marginTop: 10, flex: 1 }}>
                                 <Image
                                     style={{ width: 18, height: 18 }}
-                                    source={require("../assets/icons/veg.png")}
+                                    source={icon.veg}
                                 />
 
                                 <Text style={[styles.ns600, { fontSize: 14, marginLeft: 7 }]}>
@@ -47,13 +48,13 @@ const Meals = ({ width }) => {
                             <Image
                                 style={{ width: (width / 2) - 28 }}
                                 resizeMode='stretch'
-                                source={require("../assets/icons/food2.png")}
+                                source={icon.food2}
                             />
 
                             <View style={{ flexDirection: "row", marginTop: 10, flex: 1 }}>
                                 <Image
                                     style={{ width: 18, height: 18 }}
-                                    source={require("../assets/icons/non-veg.jpg")}
+                                    source={icon.nonveg}
                                 />
 
                                 <Text style={[styles.ns600, { fontSize: 14, marginLeft: 7 }]}>

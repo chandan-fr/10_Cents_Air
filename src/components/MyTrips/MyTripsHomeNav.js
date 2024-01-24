@@ -3,6 +3,9 @@ import UpcomingBooking from './core/UpcomingBooking';
 import CompletedBooking from './core/CompletedBooking';
 import CancelledBooking from './core/CancelledBooking';
 import MyTripsBooking from './core/MyTripsBooking';
+import MtFlights from './common/MtFlights';
+import MtHotels from './common/MtHotels';
+import MtRentalCars from './common/MtRentalCars';
 
 const MyTripsHomeNavStack = createNativeStackNavigator();
 
@@ -16,6 +19,9 @@ const MyTripsHomeNav = () => {
             <MyTripsHomeNavStack.Screen name="upcmnbkn" component={UpcomingBooking} />
             <MyTripsHomeNavStack.Screen name="cmpltdbkn" component={CompletedBooking} />
             <MyTripsHomeNavStack.Screen name="cncldbkn" component={CancelledBooking} />
+            <MyTripsHomeNavStack.Screen name="mtflights" component={MtFlights} />
+            <MyTripsHomeNavStack.Screen name="mthotels" component={MtHotels} />
+            <MyTripsHomeNavStack.Screen name="mtrntlcars" component={MtRentalCars} />
         </MyTripsHomeNavStack.Navigator>
     )
 };

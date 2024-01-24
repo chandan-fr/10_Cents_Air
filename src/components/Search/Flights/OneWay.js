@@ -1,6 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../../../config/colors';
+import icon from '../../../config/IconAssets';
 
 const OneWay = ({ navigation }) => {
     const [isClass, setIsClass] = useState(false);
@@ -21,7 +22,7 @@ const OneWay = ({ navigation }) => {
                 </View>
 
                 <TouchableOpacity style={styles.imgWrap}>
-                    <Image style={styles.img} source={require("../assets/icons/exchange.png")} />
+                    <Image style={styles.img} source={icon.exchange} />
                 </TouchableOpacity>
 
                 <View style={styles.right}>
@@ -133,7 +134,7 @@ const OneWay = ({ navigation }) => {
                     <View style={styles.right}>
                         <View style={{ flexDirection: 'row', alignItems: "center" }}>
                             <Text style={styles.tbTxt}>Class</Text>
-                            <Image style={styles.imgCls} source={require("../assets/icons/right-arrow.png")} />
+                            <Image style={styles.imgCls} source={icon.rightArrow} />
                         </View>
 
                         <TouchableOpacity onPress={() => setIsClass(true)}>

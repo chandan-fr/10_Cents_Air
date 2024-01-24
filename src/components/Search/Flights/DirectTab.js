@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native'
 import React from 'react'
 import { b1, gs3, white } from '../../../config/colors';
+import image from '../../../config/ImageAssets';
+import icon from '../../../config/IconAssets';
 
 const DirectTab = () => {
     return (
@@ -8,7 +10,7 @@ const DirectTab = () => {
             <ImageBackground
                 style={{ flex: 1 }}
                 resizeMode='stretch'
-                source={require("../assets/images/planeimg.png")}
+                source={image.planeimg}
             />
 
             <View
@@ -17,7 +19,7 @@ const DirectTab = () => {
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
                     <Image
                         style={{ width: 25, height: 25 }}
-                        source={require("../assets/icons/ocupd.png")}
+                        source={icon.ocupd}
                     />
                     <Text style={[styles.ns400, { fontSize: 14, marginLeft: 15 }]}>Occupied</Text>
                 </View>
@@ -55,7 +57,7 @@ const DirectTab = () => {
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
                     <Image
                         style={{ width: 25, height: 25 }}
-                        source={require("../assets/icons/nc.png")}
+                        source={icon.nc}
                     />
                     <Text style={[styles.ns400, { fontSize: 14, marginLeft: 15 }]}>Non- reclining</Text>
                 </View>
@@ -63,7 +65,7 @@ const DirectTab = () => {
                 <View style={{ flexDirection: "row", alignItems: "center" }}>
                     <Image
                         style={{ width: 25, height: 25 }}
-                        source={require("../assets/icons/elr.png")}
+                        source={icon.elr}
                     />
                     <Text style={[styles.ns400, { fontSize: 14, marginLeft: 15 }]}>Extra leg-room</Text>
                 </View>

@@ -18,7 +18,7 @@ const MyTripsBooking = ({ navigation }) => {
                         <Text style={[commonStyles.ns400, { fontSize: 12, color: b2 }]}> 1 New</Text>
                         <Image
                             style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-                            source={require("../../assets/icons/right-arrow.png")}
+                            source={require("../../../assets/icons/right-arrow.png")}
                         />
                     </View>
                 </TouchableOpacity>
@@ -35,7 +35,7 @@ const MyTripsBooking = ({ navigation }) => {
                         <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
                         <Image
                             style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-                            source={require("../../assets/icons/right-arrow.png")}
+                            source={require("../../../assets/icons/right-arrow.png")}
                         />
                     </View>
                 </TouchableOpacity>
@@ -50,7 +50,7 @@ const MyTripsBooking = ({ navigation }) => {
                         <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
                         <Image
                             style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-                            source={require("../../assets/icons/right-arrow.png")}
+                            source={require("../../../assets/icons/right-arrow.png")}
                         />
                     </View>
                 </TouchableOpacity>

@@ -7,6 +7,7 @@ import OneWay from './OneWay';
 import RoundTrip from './RoundTrip';
 import MultiCity from './MultiCity';
 import DealItem from './DealItem';
+import icon from '../../../config/IconAssets';
 
 const Flights = ({ navigation, data, width, height }) => {
     const [selectedMidMenu, setSelectedMidMenu] = useState("o");
@@ -91,18 +92,18 @@ const Flights = ({ navigation, data, width, height }) => {
             <View style={{ marginHorizontal: 15, marginTop: 18, zIndex: -1 }}>
                 <View style={styles.pBarWrap}>
                     <View style={styles.proLogoWrap}>
-                        <Image style={{ marginHorizontal: 10 }} source={require("../assets/icons/prologo.png")} />
+                        <Image style={{ marginHorizontal: 10 }} source={icon.prologo} />
                         <Text style={styles.proLogoTxt}>Welcome Back, Kevin!</Text>
                     </View>
 
-                    <Image style={styles.arwImg} source={require("../assets/icons/right-arrow.png")} />
+                    <Image style={styles.arwImg} source={icon.rightArrow} />
                 </View>
             </View>
 
             {/* calling option */}
             <View style={{ marginHorizontal: 15, marginTop: 18, marginBottom: 10 }}>
                 <View style={styles.addBarWrap}>
-                    <Image style={{ marginLeft: 7 }} source={require("../assets/icons/proimg.png")} />
+                    <Image style={{ marginLeft: 7 }} source={icon.proimg} />
 
                     <View>
                         <Text style={styles.addTxtB}>Looking for last-minute deals?</Text>
@@ -110,7 +111,7 @@ const Flights = ({ navigation, data, width, height }) => {
                     </View>
 
                     <TouchableOpacity style={styles.callImgWrap}>
-                        <Image style={styles.callImg} source={require("../assets/icons/mobile.png")} />
+                        <Image style={styles.callImg} source={icon.mobile} />
                     </TouchableOpacity>
                 </View>
             </View>
