@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import commonStyles from '../../assets/css/CommonFonts';
-import { b2, white } from '../../config/colors';
+import commonStyles from '../../../assets/css/CommonFonts';
+import { b2, white } from '../../../config/colors';
 
 
 const MyTripsBooking = ({ navigation }) => {
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         elevation: 3,
         paddingHorizontal: 25,
-        paddingVertical: 8
+        paddingVertical: 8,
     },
     dot: {
         width: 7,

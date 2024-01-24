@@ -1,8 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import UpcomingBooking from './UpcomingBooking';
-import CompletedBooking from './CompletedBooking';
-import CancelledBooking from './CancelledBooking';
-import MyTripsBooking from './MyTripsBooking';
+import UpcomingBooking from './core/UpcomingBooking';
+import CompletedBooking from './core/CompletedBooking';
+import CancelledBooking from './core/CancelledBooking';
+import MyTripsBooking from './core/MyTripsBooking';
 
 const MyTripsHomeNavStack = createNativeStackNavigator();
 

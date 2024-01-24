@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import { b2, b3, white } from '../../config/colors';
-import commonStyles from '../../assets/css/CommonFonts';
+import { b2, b3, white } from '../../../config/colors';
+import commonStyles from '../../../assets/css/CommonFonts';
 
 const CompletedBooking = ({ navigation }) => {
   return (
@@ -15,7 +15,10 @@ const CompletedBooking = ({ navigation }) => {
 
       {/* bookings */}
       <View style={{ marginTop: 40, marginHorizontal: 6, rowGap: 10 }}>
-        <TouchableOpacity style={styles.booking} onPress={() => navigation.navigate("upcmnbkn")}>
+        <TouchableOpacity
+          style={styles.booking}
+          // onPress={() => navigation.navigate("upcmnbkn")}
+        >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
               <Image
@@ -39,7 +42,10 @@ const CompletedBooking = ({ navigation }) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.booking} onPress={() => navigation.navigate("cmpltdbkn")}>
+        <TouchableOpacity
+          style={styles.booking}
+          // onPress={() => navigation.navigate("cmpltdbkn")}
+        >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
               <Image
@@ -63,7 +69,10 @@ const CompletedBooking = ({ navigation }) => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.booking} onPress={() => navigation.navigate("cncldbkn")}>
+        <TouchableOpacity
+          style={styles.booking}
+          // onPress={() => navigation.navigate("cncldbkn")}
+        >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
               <Image
