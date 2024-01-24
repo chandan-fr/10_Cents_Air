@@ -53,6 +53,7 @@ const icon = {
     wallet: require("../assets/icons/wallet.png"),
     woman: require("../assets/icons/woman.png"),
     yesbank: require("../assets/icons/yes-bank.png"),
+    vistara: require("../assets/icons/vistara.png"),
 };
 
 module.exports = icon;

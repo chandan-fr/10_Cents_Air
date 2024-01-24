@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import { b2, b3, white } from '../../../config/colors';
 import commonStyles from '../../../assets/css/CommonFonts';
+import icon from '../../../config/IconAssets';
 
 const CompletedBooking = ({ navigation }) => {
   return (
@@ -17,13 +18,13 @@ const CompletedBooking = ({ navigation }) => {
       <View style={{ marginTop: 40, marginHorizontal: 6, rowGap: 10 }}>
         <TouchableOpacity
           style={styles.booking}
-          // onPress={() => navigation.navigate("upcmnbkn")}
+          onPress={() => navigation.navigate("mtflights", { srcName: "Complete Bookings" })}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
               <Image
                 style={{ width: 15, height: 15, tintColor: b2 }}
-                source={require("../../../assets/icons/airplane.png")}
+                source={icon.airplane}
               />
             </View>
 
@@ -37,20 +38,20 @@ const CompletedBooking = ({ navigation }) => {
             <Text style={[commonStyles.ns400, { fontSize: 12, color: b2 }]}> 1 New</Text>
             <Image
               style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-              source={require("../../../assets/icons/right-arrow.png")}
+              source={icon.rightArrow}
             />
           </View>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.booking}
-          // onPress={() => navigation.navigate("cmpltdbkn")}
+          onPress={() => navigation.navigate("mthotels", { srcName: "Complete Bookings" })}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
               <Image
                 style={{ width: 15, height: 15, tintColor: b2 }}
-                source={require("../../../assets/icons/resort.png")}
+                source={icon.resort}
               />
             </View>
 
@@ -64,20 +65,20 @@ const CompletedBooking = ({ navigation }) => {
             <Text style={[commonStyles.ns400, { fontSize: 12, color: b2 }]}> 2 New</Text>
             <Image
               style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-              source={require("../../../assets/icons/right-arrow.png")}
+              source={icon.rightArrow}
             />
           </View>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.booking}
-          // onPress={() => navigation.navigate("cncldbkn")}
+        onPress={() => navigation.navigate("mtrntlcars", { srcName: "Complete Bookings" })}
         >
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
               <Image
                 style={{ width: 15, height: 15, tintColor: b2 }}
-                source={require("../../../assets/icons/car-rental.png")}
+                source={icon.carRental}
               />
             </View>
 
@@ -91,7 +92,7 @@ const CompletedBooking = ({ navigation }) => {
               <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
             <Image
               style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-              source={require("../../../assets/icons/right-arrow.png")}
+              source={icon.rightArrow}
             />
           </View>
         </TouchableOpacity>

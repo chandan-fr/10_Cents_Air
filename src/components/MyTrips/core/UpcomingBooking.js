@@ -18,7 +18,7 @@ const UpcomingBooking = ({ navigation }) => {
             <View style={{ marginTop: 40, marginHorizontal: 6, rowGap: 10 }}>
                 <TouchableOpacity
                     style={styles.booking}
-                    onPress={() => navigation.navigate("upcmnbkn")}
+                    onPress={() => navigation.navigate("mtflights", {srcName: "Upcoming Bookings"})}
                 >
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
@@ -45,7 +45,7 @@ const UpcomingBooking = ({ navigation }) => {
 
                 <TouchableOpacity
                     style={styles.booking}
-                    onPress={() => navigation.navigate("cmpltdbkn")}
+                    onPress={() => navigation.navigate("mthotels", {srcName: "Upcoming Bookings"})}
                 >
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
@@ -72,7 +72,7 @@ const UpcomingBooking = ({ navigation }) => {
 
                 <TouchableOpacity
                     style={styles.booking}
-                    onPress={() => navigation.navigate("cncldbkn")}
+                    onPress={() => navigation.navigate("mtrntlcars", {srcName: "Upcoming Bookings"})}
                 >
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ padding: 5, borderWidth: 1, borderRadius: 20, borderColor: b2 }}>
@@ -106,7 +106,7 @@ export default UpcomingBooking;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: white,
+        backgroundColor: "#F4F4F4",
     },
     booking: {
         backgroundColor: white,

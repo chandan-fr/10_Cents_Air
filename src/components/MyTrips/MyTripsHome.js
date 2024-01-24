@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     parent: { flex: 1 },
     body: {
         marginTop: 25,
-        backgroundColor: white,
+        // backgroundColor: white,
+        backgroundColor: "#F4F4F4",
         marginHorizontal: 4,
         borderRadius: 8,
         elevation: 3,

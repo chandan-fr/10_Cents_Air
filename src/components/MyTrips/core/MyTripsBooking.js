@@ -2,6 +2,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import commonStyles from '../../../assets/css/CommonFonts';
 import { b2, white } from '../../../config/colors';
+import icon from '../../../config/IconAssets';
 
 
 const MyTripsBooking = ({ navigation }) => {
@@ -18,7 +19,7 @@ const MyTripsBooking = ({ navigation }) => {
                         <Text style={[commonStyles.ns400, { fontSize: 12, color: b2 }]}> 1 New</Text>
                         <Image
                             style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-                            source={require("../../../assets/icons/right-arrow.png")}
+                            source={icon.rightArrow}
                         />
                     </View>
                 </TouchableOpacity>
@@ -35,7 +36,7 @@ const MyTripsBooking = ({ navigation }) => {
                         <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
                         <Image
                             style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-                            source={require("../../../assets/icons/right-arrow.png")}
+                            source={icon.rightArrow}
                         />
                     </View>
                 </TouchableOpacity>
@@ -50,7 +51,7 @@ const MyTripsBooking = ({ navigation }) => {
                         <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
                         <Image
                             style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
-                            source={require("../../../assets/icons/right-arrow.png")}
+                            source={icon.rightArrow}
                         />
                     </View>
                 </TouchableOpacity>
@@ -64,7 +65,7 @@ export default MyTripsBooking;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: white,
+        backgroundColor: "#F4F4F4",
     },
     booking: {
         backgroundColor: white,
