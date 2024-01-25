@@ -42,5 +42,6 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         elevation: 3,
         minHeight: height * 0.7,
+        flex: 1,
     },
 });

@@ -6,6 +6,7 @@ import MyTripsBooking from './core/MyTripsBooking';
 import MtFlights from './common/MtFlights';
 import MtHotels from './common/MtHotels';
 import MtRentalCars from './common/MtRentalCars';
+import ManageBooking from './core/ManageBooking';
 
 const MyTripsHomeNavStack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ const MyTripsHomeNav = () => {
             <MyTripsHomeNavStack.Screen name="mtflights" component={MtFlights} />
             <MyTripsHomeNavStack.Screen name="mthotels" component={MtHotels} />
             <MyTripsHomeNavStack.Screen name="mtrntlcars" component={MtRentalCars} />
+            <MyTripsHomeNavStack.Screen name="mngbkn" component={ManageBooking} />
         </MyTripsHomeNavStack.Navigator>
     )
 };

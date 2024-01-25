@@ -54,6 +54,8 @@ const icon = {
     woman: require("../assets/icons/woman.png"),
     yesbank: require("../assets/icons/yes-bank.png"),
     vistara: require("../assets/icons/vistara.png"),
+    htlicon: require("../assets/icons/htlicon.png"),
+    mail: require("../assets/icons/mail.png"),
 };
 
 module.exports = icon;

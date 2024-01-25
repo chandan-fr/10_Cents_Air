@@ -106,7 +106,7 @@ export default CompletedBooking;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: white,
+    backgroundColor: "#F4F4F4",
   },
   booking: {
     backgroundColor: white,
