@@ -104,7 +104,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -190,7 +190,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -274,7 +274,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -358,7 +358,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -442,7 +442,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -526,7 +526,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -610,7 +610,7 @@ const MtHotels = ({ navigation, route }) => {
                   // onPress={() => navigation.navigate("payments")}
                   >
                     <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                      Manage
+                      {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                     </Text>
                   </TouchableOpacity>
                 </View>

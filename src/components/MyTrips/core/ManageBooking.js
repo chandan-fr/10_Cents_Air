@@ -420,7 +420,7 @@ const ManageBooking = ({ navigation, route }) => {
                         </View>
 
                         {/* refund break up */}
-                        <View style={{ paddingVertical: 15, borderRadius: 10, backgroundColor: white, marginTop: 15, elevation: 4 }}>
+                        {srcName === "Cancelled Bookings" && <View style={{ paddingVertical: 15, borderRadius: 10, backgroundColor: white, marginTop: 15, elevation: 4 }}>
                             <View style={{ paddingLeft: 10 }}>
                                 <Text style={[commonStyles.ns400, { fontSize: 20 }]}>Refund Breakup</Text>
                             </View>
@@ -460,7 +460,7 @@ const ManageBooking = ({ navigation, route }) => {
                                     </Text>
                                 </TouchableOpacity>
                             </View>
-                        </View>
+                        </View>}
 
                         {/* refund break up */}
                         {/* <View style={{ paddingVertical: 15, borderRadius: 10, backgroundColor: white, marginTop: 15, elevation: 4 }}>

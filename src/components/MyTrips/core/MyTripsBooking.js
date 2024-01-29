@@ -55,6 +55,36 @@ const MyTripsBooking = ({ navigation }) => {
                         />
                     </View>
                 </TouchableOpacity>
+
+                <TouchableOpacity style={styles.booking} onPress={() => navigation.navigate("mydetails")}>
+                    <View style={{}}>
+                        <Text style={[commonStyles.ns400, { fontSize: 16, color: b2 }]}>My Details</Text>
+                    </View>
+
+                    <View style={styles.bookingRight}>
+                        {/* <View style={styles.dot} />
+                        <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
+                        <Image
+                            style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
+                            source={icon.rightArrow}
+                        />
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.booking} onPress={() => navigation.navigate("mysettings")}>
+                    <View style={{}}>
+                        <Text style={[commonStyles.ns400, { fontSize: 16, color: b2 }]}>My Settings</Text>
+                    </View>
+
+                    <View style={styles.bookingRight}>
+                        {/* <View style={styles.dot} />
+                        <Text style={[commonStyles.ns400, {fontSize: 12, color: b2}]}> 1 New</Text> */}
+                        <Image
+                            style={{ width: 16, height: 16, tintColor: b2, marginLeft: 10 }}
+                            source={icon.rightArrow}
+                        />
+                    </View>
+                </TouchableOpacity>
             </View >
         </View>
     )

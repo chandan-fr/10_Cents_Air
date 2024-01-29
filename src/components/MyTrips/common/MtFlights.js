@@ -34,7 +34,7 @@ const MtFlights = ({ navigation, route }) => {
                                     One Way Flight
                                 </Text>
 
-                                {srcName === "Cancelled Bookings" && <View style={{flexDirection: "row", alignItems: "center"}}>
+                                {srcName === "Cancelled Bookings" && <View style={{ flexDirection: "row", alignItems: "center" }}>
                                     <Image
                                         style={{ width: 15, height: 15, tintColor: "#C6482C", marginRight: 6 }}
                                         source={icon.cross}
@@ -104,7 +104,7 @@ const MtFlights = ({ navigation, route }) => {
                                         onPress={() => navigation.navigate("mngbkn", { srcName: srcName })}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                                            Manage
+                                            {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                                         </Text>
                                     </TouchableOpacity>
                                 </View>
@@ -120,7 +120,7 @@ const MtFlights = ({ navigation, route }) => {
                                     One Way Flight
                                 </Text>
 
-                                {srcName === "Cancelled Bookings" && <View style={{flexDirection: "row", alignItems: "center"}}>
+                                {srcName === "Cancelled Bookings" && <View style={{ flexDirection: "row", alignItems: "center" }}>
                                     <Image
                                         style={{ width: 15, height: 15, tintColor: "#C6482C", marginRight: 6 }}
                                         source={icon.cross}
@@ -190,7 +190,7 @@ const MtFlights = ({ navigation, route }) => {
                                         onPress={() => navigation.navigate("mngbkn", { srcName: srcName })}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                                            Manage
+                                            {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                                         </Text>
                                     </TouchableOpacity>
                                 </View>
@@ -204,7 +204,7 @@ const MtFlights = ({ navigation, route }) => {
                                     One Way Flight
                                 </Text>
 
-                                {srcName === "Cancelled Bookings" && <View style={{flexDirection: "row", alignItems: "center"}}>
+                                {srcName === "Cancelled Bookings" && <View style={{ flexDirection: "row", alignItems: "center" }}>
                                     <Image
                                         style={{ width: 15, height: 15, tintColor: "#C6482C", marginRight: 6 }}
                                         source={icon.cross}
@@ -274,7 +274,7 @@ const MtFlights = ({ navigation, route }) => {
                                         onPress={() => navigation.navigate("mngbkn", { srcName: srcName })}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                                            Manage
+                                            {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                                         </Text>
                                     </TouchableOpacity>
                                 </View>
@@ -288,7 +288,7 @@ const MtFlights = ({ navigation, route }) => {
                                     One Way Flight
                                 </Text>
 
-                                {srcName === "Cancelled Bookings" && <View style={{flexDirection: "row", alignItems: "center"}}>
+                                {srcName === "Cancelled Bookings" && <View style={{ flexDirection: "row", alignItems: "center" }}>
                                     <Image
                                         style={{ width: 15, height: 15, tintColor: "#C6482C", marginRight: 6 }}
                                         source={icon.cross}
@@ -358,7 +358,7 @@ const MtFlights = ({ navigation, route }) => {
                                         onPress={() => navigation.navigate("mngbkn", { srcName: srcName })}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                                            Manage
+                                            {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                                         </Text>
                                     </TouchableOpacity>
                                 </View>
@@ -372,7 +372,7 @@ const MtFlights = ({ navigation, route }) => {
                                     One Way Flight
                                 </Text>
 
-                                {srcName === "Cancelled Bookings" && <View style={{flexDirection: "row", alignItems: "center"}}>
+                                {srcName === "Cancelled Bookings" && <View style={{ flexDirection: "row", alignItems: "center" }}>
                                     <Image
                                         style={{ width: 15, height: 15, tintColor: "#C6482C", marginRight: 6 }}
                                         source={icon.cross}
@@ -442,7 +442,7 @@ const MtFlights = ({ navigation, route }) => {
                                         onPress={() => navigation.navigate("mngbkn", { srcName: srcName })}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                                            Manage
+                                            {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                                         </Text>
                                     </TouchableOpacity>
                                 </View>
@@ -456,7 +456,7 @@ const MtFlights = ({ navigation, route }) => {
                                     One Way Flight
                                 </Text>
 
-                                {srcName === "Cancelled Bookings" && <View style={{flexDirection: "row", alignItems: "center"}}>
+                                {srcName === "Cancelled Bookings" && <View style={{ flexDirection: "row", alignItems: "center" }}>
                                     <Image
                                         style={{ width: 15, height: 15, tintColor: "#C6482C", marginRight: 6 }}
                                         source={icon.cross}
@@ -526,7 +526,7 @@ const MtFlights = ({ navigation, route }) => {
                                         onPress={() => navigation.navigate("mngbkn", { srcName: srcName })}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 14, color: white }]}>
-                                            Manage
+                                            {srcName === "Cancelled Bookings" ? "View" : "Manage"}
                                         </Text>
                                     </TouchableOpacity>
                                 </View>

@@ -56,6 +56,7 @@ const icon = {
     vistara: require("../assets/icons/vistara.png"),
     htlicon: require("../assets/icons/htlicon.png"),
     mail: require("../assets/icons/mail.png"),
+    info: require("../assets/icons/info.png"),
 };
 
 module.exports = icon;
