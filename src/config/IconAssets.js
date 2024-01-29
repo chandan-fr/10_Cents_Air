@@ -58,6 +58,9 @@ const icon = {
     mail: require("../assets/icons/mail.png"),
     info: require("../assets/icons/info.png"),
     star: require("../assets/icons/star.png"),
+    pencil: require("../assets/icons/pencil.png"),
+    leaf: require("../assets/icons/leaf.png"),
+    leafSolid: require("../assets/icons/leaf-solid.png"),
 };
 
 module.exports = icon;

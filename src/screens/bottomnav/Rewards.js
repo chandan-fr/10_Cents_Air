@@ -5,7 +5,7 @@ import { black } from '../../config/colors';
 const Rewards = () => {
     return (
         <View style={styles.parent}>
-            <Text style={{color: black}}>Rewards</Text>
+            <Text style={{color: black}}>Rewards Coming Soon</Text>
         </View>
     )
 };
