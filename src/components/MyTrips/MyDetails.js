@@ -22,7 +22,7 @@ const MyDetails = ({ navigation }) => {
                     </Text>
                 </View>
 
-                <View style={{ flex: 1, borderWidth: 0, marginTop: 10 }}>
+                <View style={{ flex: 1, marginTop: 10 }}>
                     <ScrollView showsVerticalScrollIndicator={false}>
                         <View style={{ paddingVertical: 5, rowGap: 10 }}>
                             {/* info */}
@@ -161,6 +161,7 @@ const MyDetails = ({ navigation }) => {
                                 </View>
                             </View>
 
+                            {/* save */}
                             <View style={{ alignItems: "center", marginTop: 20 }}>
                                 <TouchableOpacity
                                     style={styles.btn}>
