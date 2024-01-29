@@ -12,6 +12,7 @@ import FlightReview from './src/screens/stacknav/FlightReview';
 import AddOns from './src/screens/stacknav/AddOns';
 import Payments from './src/screens/stacknav/Payments';
 import Success from './src/screens/stacknav/Success';
+import HotelSearches from './src/components/Search/Hotels/HotelSearches';
 
 const RootStack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ const App = () => {
         <RootStack.Screen name='addons' component={AddOns} />
         <RootStack.Screen name='payments' component={Payments} />
         <RootStack.Screen name='success' component={Success} />
+        <RootStack.Screen name='hotelsearches' component={HotelSearches} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

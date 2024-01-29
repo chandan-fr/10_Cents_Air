@@ -57,6 +57,7 @@ const icon = {
     htlicon: require("../assets/icons/htlicon.png"),
     mail: require("../assets/icons/mail.png"),
     info: require("../assets/icons/info.png"),
+    star: require("../assets/icons/star.png"),
 };
 
 module.exports = icon;

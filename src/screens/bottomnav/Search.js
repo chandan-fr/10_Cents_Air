@@ -4,6 +4,7 @@ import BgGradient from '../../utility/BgGradient';
 import Header from '../../components/Header';
 import { white } from '../../config/colors';
 import Flights from '../../components/Search/Flights/Flights';
+import Hotels from '../../components/Search/Hotels/Hotels';
 
 const { width, height } = Dimensions.get("window");
 
@@ -71,6 +72,9 @@ const Search = ({ navigation }) => {
 
                 {/* Flights */}
                 {selectedHMenu === "f" && <Flights navigation={navigation} data={data} width={width} height={height} />}
+
+                {/* hotels */}
+                {selectedHMenu === "h" && <Hotels navigation={navigation} data={data} width={width} height={height} />}
             </View>
         </SafeAreaView>
     )

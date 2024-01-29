@@ -4,6 +4,7 @@ const image = {
     dealpic: require("../assets/images/dealpic.png"),
     success: require("../assets/images/success.png"),
     planeimg: require("../assets/images/planeimg.png"),
+    hotelimg: require("../assets/images/hotelimg.png"),
 };
 
 module.exports = image;
