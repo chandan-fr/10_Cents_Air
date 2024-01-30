@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b3, blue, white } from '../../../config/colors';
+import { b1, b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import HotelItem from './HotelItem';
 import image from '../../../config/ImageAssets';
@@ -46,7 +46,7 @@ const HotelSearches = ({ navigation }) => {
                         Hotels In Calgary
                     </Text>
 
-                    <View style={{ marginTop: 15 }}>
+                    <View style={{ marginTop: 15, flex: 1, marginHorizontal: 15 }}>
                         <ScrollView showsVerticalScrollIndicator={false}>
                             <View style={{ rowGap: 30 }}>
                                 {data.map((_, i) => (
@@ -100,6 +100,17 @@ const HotelSearches = ({ navigation }) => {
                             </View>
                         </ScrollView>
                     </View>
+
+                    <View style={{ backgroundColor: b1, alignItems: "flex-end", justifyContent: "center", paddingVertical: 8, paddingHorizontal: 10 }}>
+                        <TouchableOpacity
+                            style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
+                            onPress={()=> navigation.navigate("hotelfilter")}
+                        >
+                            <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
+                                Filter
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         </SafeAreaView>
@@ -127,8 +138,7 @@ const styles = StyleSheet.create({
     hotelItemWrap: {
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
-        paddingHorizontal: 15,
-        paddingVertical: 23,
+        paddingTop: 23,
         marginTop: -20,
         flex: 1,
         backgroundColor: white,

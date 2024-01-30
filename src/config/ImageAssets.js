@@ -6,6 +6,8 @@ const image = {
     planeimg: require("../assets/images/planeimg.png"),
     hotelimg: require("../assets/images/hotelimg.png"),
     privacy: require("../assets/images/privacy.png"),
+    priceBar: require("../assets/images/priceBar.png"),
+    map: require("../assets/images/map.png"),
 };
 
 module.exports = image;

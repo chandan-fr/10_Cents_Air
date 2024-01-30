@@ -61,6 +61,9 @@ const icon = {
     pencil: require("../assets/icons/pencil.png"),
     leaf: require("../assets/icons/leaf.png"),
     leafSolid: require("../assets/icons/leaf-solid.png"),
+    plus: require("../assets/icons/plus.png"),
+    minus: require("../assets/icons/minus.png"),
+    locDest: require("../assets/icons/locDest.png"),
 };
 
 module.exports = icon;
