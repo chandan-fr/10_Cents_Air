@@ -5,6 +5,7 @@ const image = {
     success: require("../assets/images/success.png"),
     planeimg: require("../assets/images/planeimg.png"),
     hotelimg: require("../assets/images/hotelimg.png"),
+    privacy: require("../assets/images/privacy.png"),
 };
 
 module.exports = image;

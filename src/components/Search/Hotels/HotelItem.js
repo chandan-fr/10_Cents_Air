@@ -21,7 +21,7 @@ const HotelItem = ({ navigation }) => {
                     </Text>
 
                     {/* leaf */}
-                    <View style={{ flexDirection: 'row', alignItems: "center" }}>
+                    <View style={{ flexDirection: 'row', alignItems: "center", backgroundColor: "#F1FEF6", borderRadius: 4, alignSelf: "flex-start", paddingHorizontal: 10, paddingVertical: 2 }}>
                         <Image
                             style={{ width: 20, height: 20, marginRight: 3, tintColor: "#1D8842" }}
                             source={icon.leafSolid}

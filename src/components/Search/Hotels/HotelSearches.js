@@ -6,6 +6,7 @@ import commonStyles from '../../../assets/css/CommonFonts';
 import { b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import HotelItem from './HotelItem';
+import image from '../../../config/ImageAssets';
 
 const { width, height } = Dimensions.get("window");
 
@@ -39,15 +40,52 @@ const HotelSearches = ({ navigation }) => {
 
                 {/* hotels */}
                 <View style={styles.hotelItemWrap}>
+                    {/* <View style={styles.bgWhite} /> */}
+
                     <Text style={[commonStyles.ns700, { fontSize: 24, textAlign: "center" }]}>
                         Hotels In Calgary
                     </Text>
 
-                    <View style={{ borderWidth: 0, marginTop: 23 }}>
+                    <View style={{ marginTop: 15 }}>
                         <ScrollView showsVerticalScrollIndicator={false}>
                             <View style={{ rowGap: 30 }}>
                                 {data.map((_, i) => (
-                                    <HotelItem key={i} navigation={navigation} />
+                                    <View key={i}>
+                                        <HotelItem navigation={navigation} />
+                                        {i < 1 && <View style={styles.privacy}>
+                                            <TouchableOpacity
+                                                style={{ alignSelf: 'flex-end' }}
+                                            >
+                                                <Image
+                                                    style={{ width: 18, height: 18 }}
+                                                    source={icon.cross}
+                                                />
+                                            </TouchableOpacity>
+
+                                            <View style={{ flexDirection: "row" }}>
+                                                <Image
+                                                    style={{}}
+                                                    source={image.privacy}
+                                                />
+
+                                                <View style={{ rowGap: 6, flex: 1, marginHorizontal: 15 }}>
+                                                    <Text style={commonStyles.ns600}>
+                                                        Looking for a space of your own?
+                                                    </Text>
+
+                                                    <Text style={[commonStyles.ns600, { fontSize: 14 }]}>
+                                                        Find privacy and peace of mind with an entire home or apartment to yourself
+                                                    </Text>
+
+                                                    <TouchableOpacity style={{ alignSelf: 'flex-start' }}>
+                                                        <Text style={[commonStyles.ns600, { fontSize: 14, color: blue }]}>
+                                                            Show entire homes & apartments
+                                                        </Text>
+                                                    </TouchableOpacity>
+                                                </View>
+                                            </View>
+                                        </View>}
+                                    </View>
                                 ))}
                             </View>
 
@@ -87,13 +125,14 @@ const styles = StyleSheet.create({
         paddingVertical: 10
     },
     hotelItemWrap: {
-        backgroundColor: white,
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
-        paddingHorizontal: 20,
+        paddingHorizontal: 15,
         paddingVertical: 23,
         marginTop: -20,
         flex: 1,
+        backgroundColor: white,
+        elevation: 4,
     },
     viewall: {
         borderWidth: 2,
@@ -103,4 +142,24 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         paddingVertical: 10,
     },
+    privacy: {
+        borderWidth: 1,
+        borderRadius: 8,
+        borderColor: "#D8D8D8",
+        backgroundColor: white,
+        marginTop: 40,
+        elevation: 4,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+    },
+    // bgWhite: {
+    //     backgroundColor: white,
+    //     // zIndex: -1,
+    //     height: height * 0.6,
+    //     // width: width,
+    //     // position: "absolute",
+    //     borderWidth: 1,
+    //     borderTopLeftRadius: 12,
+    //     borderTopRightRadius: 12,
+    // },
 });
