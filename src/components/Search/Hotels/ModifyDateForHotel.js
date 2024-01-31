@@ -3,22 +3,28 @@ import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 
-const HotelSearchOptn = ({ navigation }) => {
+const ModifyDateForHotel = ({ navigation }) => {
     const [isRoom, setIsRoom] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
     return (
         <View style={styles.main}>
             {/* top selection row */}
-            <View style={{ alignItems: 'flex-start' }}>
+            <View style={styles.topWrap}>
                 <View style={styles.left}>
-                    <Text style={styles.tbTxt}>Destination</Text>
+                    <Text style={styles.tbTxt}>Pick - Up</Text>
+
+                    <TouchableOpacity>
+                        <Text style={styles.midTxt}>Calgary, Alberta</Text>
+                    </TouchableOpacity>
+                </View>
+
+                <View style={styles.right}>
+                    <Text style={styles.tbTxt}>Drop- Off</Text>
 
                     <TouchableOpacity>
                         <Text style={styles.midTxt}>Enter Location</Text>
                     </TouchableOpacity>
-
-                    <Text style={styles.tbTxt}>Destination</Text>
                 </View>
             </View>
 
@@ -61,7 +67,7 @@ const HotelSearchOptn = ({ navigation }) => {
 
                         {isTravel && <View style={styles.travlOptnsWrap}>
                             <View style={styles.travelContWrap}>
-                                <View style={{}}>
+                                <View style={styles.travelTxtWrap}>
                                     <Text style={styles.travelHdTxt}>Adults</Text>
                                     <Text style={styles.travelSubHdTxt}>Aged 12+ years</Text>
                                 </View>
@@ -80,7 +86,7 @@ const HotelSearchOptn = ({ navigation }) => {
                             </View>
 
                             <View style={styles.travelContWrap}>
-                                <View style={{}}>
+                                <View style={styles.travelTxtWrap}>
                                     <Text style={styles.travelHdTxt}>Children</Text>
                                     <Text style={styles.travelSubHdTxt}>Aged 2-12 years</Text>
                                 </View>
@@ -103,7 +109,7 @@ const HotelSearchOptn = ({ navigation }) => {
                             </View>
 
                             <View style={styles.travelContWrap}>
-                                <View style={{}}>
+                                <View style={styles.travelTxtWrap}>
                                     <Text style={styles.travelHdTxt}>Infants</Text>
                                     <Text style={styles.travelSubHdTxt}>Bellow 2 years</Text>
                                 </View>
@@ -173,7 +179,7 @@ const HotelSearchOptn = ({ navigation }) => {
     )
 };
 
-export default HotelSearchOptn;
+export default ModifyDateForHotel;
 
 const styles = StyleSheet.create({
     main: {
@@ -200,12 +206,12 @@ const styles = StyleSheet.create({
     tbTxt: {
         color: b3,
         fontFamily: 'NunitoSans_10pt-Regular',
-        fontSize: 13,
+        fontSize: 14,
     },
     midTxt: {
         color: b1,
         fontFamily: 'NunitoSans_10pt-SemiBold',
-        fontSize: 18,
+        fontSize: 16,
         marginVertical: 8,
     },
     left: {

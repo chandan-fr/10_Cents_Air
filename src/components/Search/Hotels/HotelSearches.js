@@ -7,11 +7,13 @@ import { b1, b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import HotelItem from './HotelItem';
 import image from '../../../config/ImageAssets';
+import ModifyDateForHotel from './ModifyDateForHotel';
 
 const { width, height } = Dimensions.get("window");
 
 const HotelSearches = ({ navigation }) => {
     const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    const [isModify, setIsModify] = useState(false);
 
     return (
         <SafeAreaView style={styles.parent}>
@@ -20,26 +22,33 @@ const HotelSearches = ({ navigation }) => {
 
             <View style={styles.body}>
                 {/* Travel details */}
-                <View style={styles.tDetails}>
-                    <Text style={[commonStyles.ns400, { color: b3, lineHeight: 20 }]}>Destination</Text>
-
-                    <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
-                        <Text style={[commonStyles.ns400]}>Calgary,  23-25th Dec, 1 Adult</Text>
-
-                        <TouchableOpacity
-                            style={{ flexDirection: 'row', alignItems: "center" }}
-                        >
-                            <Image
-                                style={{ width: 12, height: 12, tintColor: blue }}
-                                source={icon.pencil}
-                            />
-                            <Text style={[commonStyles.lbB1, { fontSize: 12, color: blue }]}>Modify Date</Text>
-                        </TouchableOpacity>
+                {isModify ?
+                    <View style={[styles.tDetails, {zIndex: 1}]}>
+                        <ModifyDateForHotel navigation={navigation} />
                     </View>
-                </View>
+                    :
+                    <View style={styles.tDetails}>
+                        <Text style={[commonStyles.ns400, { color: b3, lineHeight: 20 }]}>Destination</Text>
+
+                        <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 20 }}>
+                            <Text style={[commonStyles.ns400]}>Calgary,  23-25th Dec, 1 Adult</Text>
+
+                            <TouchableOpacity
+                                style={{ flexDirection: 'row', alignItems: "center", paddingVertical: 4 }}
+                                onPress={() => setIsModify(true)}
+                            >
+                                <Image
+                                    style={{ width: 12, height: 12, tintColor: blue }}
+                                    source={icon.pencil}
+                                />
+                                <Text style={[commonStyles.lbB1, { fontSize: 12, color: blue }]}>Modify Date</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                }
 
                 {/* hotels */}
-                <View style={styles.hotelItemWrap}>
+                <View style={[styles.hotelItemWrap, isModify ? { marginTop: 10 } : { marginTop: -20, }]}>
                     {/* <View style={styles.bgWhite} /> */}
 
                     <Text style={[commonStyles.ns700, { fontSize: 24, textAlign: "center" }]}>
@@ -104,7 +113,7 @@ const HotelSearches = ({ navigation }) => {
                     <View style={{ backgroundColor: b1, alignItems: "flex-end", justifyContent: "center", paddingVertical: 8, paddingHorizontal: 10 }}>
                         <TouchableOpacity
                             style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-                            onPress={()=> navigation.navigate("hotelfilter")}
+                            onPress={() => navigation.navigate("hotelfilter")}
                         >
                             <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
                                 Filter
@@ -139,7 +148,6 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
         paddingTop: 23,
-        marginTop: -20,
         flex: 1,
         backgroundColor: white,
         elevation: 4,
