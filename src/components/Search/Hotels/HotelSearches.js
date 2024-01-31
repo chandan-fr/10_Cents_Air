@@ -23,7 +23,7 @@ const HotelSearches = ({ navigation }) => {
             <View style={styles.body}>
                 {/* Travel details */}
                 {isModify ?
-                    <View style={[styles.tDetails, {zIndex: 1}]}>
+                    <View style={[styles.tDetails, { zIndex: 1 }]}>
                         <ModifyDateForHotel navigation={navigation} />
                     </View>
                     :
@@ -55,6 +55,7 @@ const HotelSearches = ({ navigation }) => {
                         Hotels In Calgary
                     </Text>
 
+                    {/* hotel items */}
                     <View style={{ marginTop: 15, flex: 1, marginHorizontal: 15 }}>
                         <ScrollView showsVerticalScrollIndicator={false}>
                             <View style={{ rowGap: 30 }}>
@@ -110,6 +111,7 @@ const HotelSearches = ({ navigation }) => {
                         </ScrollView>
                     </View>
 
+                    {/* botttom filter */}
                     <View style={{ backgroundColor: b1, alignItems: "flex-end", justifyContent: "center", paddingVertical: 8, paddingHorizontal: 10 }}>
                         <TouchableOpacity
                             style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}

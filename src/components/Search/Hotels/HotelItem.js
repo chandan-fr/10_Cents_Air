@@ -116,6 +116,7 @@ const HotelItem = ({ navigation }) => {
 
                     <TouchableOpacity
                         style={styles.btn}
+                        onPress={() => navigation.navigate("hoteldetails")}
                     >
                         <Text style={[commonStyles.lbB1, { color: white }]}>
                             Book
