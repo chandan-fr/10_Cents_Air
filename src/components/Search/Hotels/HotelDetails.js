@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, black, blue, green, white } from '../../../config/colors';
+import { b1, b2, b3, black, blue, green, gs2, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 import CompletedBooking from '../../MyTrips/core/CompletedBooking';
@@ -794,7 +794,7 @@ const HotelDetails = ({ navigation }) => {
 
                         {/* faq */}
                         <View style={styles.faq}>
-                            <Text style={[commonStyles.ns600, { fontSize: 18, textAlign: "center" }]}>
+                            <Text style={[commonStyles.ns600, { fontSize: 18, textAlign: "center", marginTop: 15 }]}>
                                 Travellers are asking
                             </Text>
 
@@ -917,6 +917,384 @@ const HotelDetails = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
                             </View>
+
+                            <View style={{ paddingHorizontal: 20, paddingVertical: 20, borderColor: "#E7E7E7", borderWidth: 1, borderRadius: 4, marginTop: 10 }}>
+                                <View style={{ alignItems: "center", rowGap: 20, marginTop: 50 }}>
+                                    <Text style={[commonStyles.ns600, { fontSize: 22 }]}>
+                                        Still looking?
+                                    </Text>
+
+                                    <View>
+                                        <TouchableOpacity style={styles.blueBtn}>
+                                            <Text style={[commonStyles.ns600, { color: blue }]}>
+                                                Ask a question
+                                            </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 15 }]}>
+                                        We have an instant answer to most questions
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={{ marginVertical: 10, alignItems: "center" }}>
+                                <TouchableOpacity style={styles.blueBtn}>
+                                    <Text style={[commonStyles.ns600, { color: blue }]}>
+                                        See other questions (20)
+                                    </Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+
+                        {/* house rules */}
+                        <View style={styles.houseRules}>
+                            <View style={{ paddingHorizontal: 10, rowGap: 20 }}>
+                                <Text style={[commonStyles.ns700, { textAlign: "center" }]}>
+                                    House Rules
+                                </Text>
+
+                                <Text style={[commonStyles.ns400, { color: b3 }]}>
+                                    Ramada Plaza by Wyndham Calgary Downtown takes special requests - add in the next step!
+                                </Text>
+                            </View>
+
+                            <View style={styles.rules}>
+                                {/* check in */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.checkin}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Check-in
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={commonStyles.ns400}>
+                                            From 15:00
+                                        </Text>
+
+                                        <Text style={[commonStyles.ns400, { fontSize: 12, color: b3 }]}>
+                                            Guests are required to show a photo identification and credit card upon check-in
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* check out */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.checkout}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Check-out
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={commonStyles.ns400}>
+                                            Until 11:00
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* cancel */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.info}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Cancellation/prepayment
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            Cancellation and prepayment policies vary according to accommodation type. Please check what <Text style={[commonStyles.ns700, { fontSize: 12, color: blue }]}>conditions</Text> may apply to each option when making your selection.
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* refund */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.info}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Refundable damage deposit
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            A damage deposit of CAD 100 is required on arrival. That's about 73.54USD. This will be collected by credit card. You should be reimbursed on check-out. Your deposit will be refunded in full via credit card, subject to an inspection of the property.
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* child beds */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.family}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Children and beds
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={commonStyles.ns400}>
+                                            Child policies
+                                        </Text>
+
+                                        <View style={{ rowGap: 3 }}>
+                                            <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                                Children of any age are welcome.
+                                            </Text>
+                                            <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                                Children 18 years and above will be charged as adults at this property.
+                                            </Text>
+                                            <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                                To see correct prices and occupancy information, please add the number of children in your group and their ages to your search.
+                                            </Text>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                {/* cot & extra policies */}
+                                <View style={{ marginVertical: 10, rowGap: 10 }}>
+                                    <Text style={[commonStyles.ns600, { fontSize: 14, textAlign: "center" }]}>
+                                        Cot and extra bed policies
+                                    </Text>
+
+                                    {/* box 1 */}
+                                    <View style={styles.box}>
+                                        <Text style={[commonStyles.ns600, { fontSize: 14, marginLeft: 10 }]}>
+                                            0 - 2 years
+                                        </Text>
+
+                                        <View style={styles.hr} />
+
+                                        <View style={{ marginHorizontal: 10, rowGap: 15 }}>
+                                            <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 20 }}>
+                                                <Image
+                                                    style={{ width: 15, height: 15 }}
+                                                    source={icon.bed}
+                                                />
+
+                                                <Text style={[commonStyles.ns400, { flex: 1, fontSize: 12 }]}>
+                                                    Extra bed upon request
+                                                </Text>
+
+                                                <Text style={[commonStyles.ns400, { flex: 1, fontSize: 12 }]}>
+                                                    CAD 10 per child, per night
+                                                </Text>
+                                            </View>
+
+                                            <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 20 }}>
+                                                <Image
+                                                    style={{ width: 15, height: 15 }}
+                                                    source={icon.barrier}
+                                                />
+
+                                                <Text style={[commonStyles.ns400, { flex: 1, fontSize: 12 }]}>
+                                                    Cot upon request
+                                                </Text>
+
+                                                <Text style={[commonStyles.ns400, { flex: 1, fontSize: 12, color: "#008009" }]}>
+                                                    Free
+                                                </Text>
+                                            </View>
+                                        </View>
+                                    </View>
+
+                                    {/* box 2 */}
+                                    <View style={styles.box}>
+                                        <Text style={[commonStyles.ns600, { fontSize: 14, marginLeft: 10 }]}>
+                                            3+ years
+                                        </Text>
+
+                                        <View style={styles.hr} />
+
+                                        <View style={{ marginHorizontal: 10, rowGap: 15 }}>
+                                            <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 20 }}>
+                                                <Image
+                                                    style={{ width: 15, height: 15 }}
+                                                    source={icon.bed}
+                                                />
+
+                                                <Text style={[commonStyles.ns400, { flex: 1, fontSize: 12 }]}>
+                                                    Extra bed upon request
+                                                </Text>
+
+                                                <Text style={[commonStyles.ns400, { flex: 1, fontSize: 12 }]}>
+                                                    CAD 10 per child, per night
+                                                </Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                {/* cot price */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <View style={{ width: 15, height: 15 }} />
+
+                                    <View style={{ width: 80 }} />
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 3 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            Prices for cots and extra beds are not included in the total price, and will have to be paid for separately during your stay.
+                                        </Text>
+
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            The number of extra beds and cots allowed is dependent on the option you choose. Please check your selected option for more information.
+                                        </Text>
+
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            All cots and extra beds are subject to availability.
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* age */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.child}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Age restriction
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            The minimum age for check-in is 18
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* pets */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15, tintColor: b1 }}
+                                        source={icon.pawprint}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Pets
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            Pets are allowed on request. Charges may be applicable.
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* groups */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15, tintColor: b1 }}
+                                        source={icon.group}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Groups
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            When booking more than 9 rooms, different policies and additional supplements may apply.
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.hr} />
+
+                                {/* cards */}
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", columnGap: 25 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15, tintColor: b1 }}
+                                        source={icon.card}
+                                    />
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 12, width: 80 }]}>
+                                        Cards accepted at this hotel
+                                    </Text>
+
+                                    <View style={{ flex: 1, marginLeft: 10, rowGap: 8 }}>
+                                        <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                            Ramada Plaza by Wyndham Calgary Downtown accepts all debit/credit cards and reserves the right to temporarily hold an amount prior to arrival.
+                                        </Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </View>
+
+                        {/* the fine print */}
+                        <View style={styles.tfp}>
+                            <Text style={[commonStyles.ns600, { fontSize: 18, textAlign: "center" }]}>
+                                The fine print
+                            </Text>
+
+                            {/* the final print rules */}
+                            <View style={styles.tfpRule}>
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Please note, this property is 100% non-smoking.
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Secure, heated valet parking is available at a cost of CAD 23 per night (all weekdays).
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Please note, a valid credit card is required at checkin for all rooms, including prepaid reservations.
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    In response to Coronavirus (COVID-19), additional safety and sanitation measures are in effect at this property.
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Food & beverage services at this property may be limited or unavailable due to Coronavirus (COVID-19).
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Due to Coronavirus (COVID-19), this property is taking steps to help protect the safety of guests and staff. Certain services and amenities may be reduced or unavailable as a result.
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Guests are required to show a photo identification and credit card upon check-in. Please note that all Special Requests are subject to availability and additional charges may apply.
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    Swimming pool #1 is closed from Sat 30 Sept 2023 until Thu 30 May 2024
+                                </Text>
+
+                                <Text style={[commonStyles.ns600, { fontSize: 12 }]}>
+                                    A damage deposit of CAD 100 is required on arrival. That's about 73.54USD. This will be collected by credit card. You should be reimbursed on check-out. Your deposit will be refunded in full via credit card, subject to an inspection of the property.
+                                </Text>
+                            </View>
                         </View>
                     </View>
                 </ScrollView>
@@ -941,8 +1319,8 @@ const HotelDetails = ({ navigation }) => {
                         </Text>
                     </TouchableOpacity>
                 </View>
-            </View>
-        </SafeAreaView>
+            </View >
+        </SafeAreaView >
     )
 };
 
@@ -1066,9 +1444,11 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
     },
     faq: {
-        // backgroundColor: blue,
         rowGap: 10,
         marginTop: 6,
+        paddingHorizontal: 10,
+        backgroundColor: white,
+        paddingBottom: 10,
     },
     leafStand: {
         borderRadius: 2,
@@ -1093,5 +1473,51 @@ const styles = StyleSheet.create({
         backgroundColor: '#E7E7E7',
         height: 1,
         marginVertical: 2,
+    },
+    blueBtn: {
+        borderWidth: 1,
+        borderColor: blue,
+        borderRadius: 2,
+        paddingHorizontal: 25,
+        paddingVertical: 10,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+    houseRules: {
+        backgroundColor: white,
+        paddingVertical: 10,
+        rowGap: 20,
+    },
+    rules: {
+        borderWidth: 1,
+        borderRadius: 4,
+        borderColor: "#D8D8D8",
+        paddingHorizontal: 10,
+        paddingVertical: 12,
+    },
+    hr: {
+        backgroundColor: '#D8D8D8',
+        height: 1,
+        marginVertical: 10,
+    },
+    box: {
+        borderWidth: 1,
+        borderColor: "#D8D8D8",
+        borderRadius: 3,
+        marginHorizontal: 20,
+        paddingVertical: 8,
+    },
+    tfp: {
+        marginBottom: 10,
+    },
+    tfpRule: {
+        marginTop: 20,
+        backgroundColor: "#EBF3FF",
+        borderWidth: 1,
+        borderColor: "#D8D8D8",
+        borderRadius: 4,
+        paddingHorizontal: 10,
+        paddingVertical: 10,
+        rowGap: 10,
     },
 });

@@ -88,6 +88,14 @@ const icon = {
     ledTv: require("../assets/icons/led-tv.png"),
     user: require("../assets/icons/user.png"),
     chat: require("../assets/icons/chat.png"),
+    checkin: require("../assets/icons/check-in.png"),
+    checkout: require("../assets/icons/check-out.png"),
+    group: require("../assets/icons/group.png"),
+    family: require("../assets/icons/family.png"),
+    bed: require("../assets/icons/bed.png"),
+    child: require("../assets/icons/child.png"),
+    card: require("../assets/icons/card.png"),
+    barrier: require("../assets/icons/barrier.png"),
 };
 
 module.exports = icon;
