@@ -17,6 +17,9 @@ import HotelFilter from './src/components/Search/Hotels/HotelFilter';
 import HotelDetails from './src/components/Search/Hotels/HotelDetails';
 import HotelReview from './src/components/Search/Hotels/HotelReview';
 import HotelGallery from './src/components/Search/Hotels/HotelGallery';
+import HotelUserDetails from './src/components/Search/Hotels/HotelUserDetails';
+import HotelPriceSum from './src/components/Search/Hotels/HotelPriceSum';
+import HotelSummary from './src/components/Search/Hotels/HotelSummary';
 
 const RootStack = createNativeStackNavigator();
 
@@ -40,7 +43,10 @@ const App = () => {
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />
         <RootStack.Screen name='hoteldetails' component={HotelDetails} /> */}
         {/* <RootStack.Screen name='hotelreview' component={HotelReview} /> */}
-        <RootStack.Screen name='hotelgallery' component={HotelGallery} />
+        {/* <RootStack.Screen name='hotelgallery' component={HotelGallery} /> */}
+        <RootStack.Screen name='hotelud' component={HotelUserDetails} />
+        <RootStack.Screen name='hotelps' component={HotelPriceSum} />
+        <RootStack.Screen name='hotelsum' component={HotelSummary} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
