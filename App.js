@@ -15,6 +15,8 @@ import Success from './src/screens/stacknav/Success';
 import HotelSearches from './src/components/Search/Hotels/HotelSearches';
 import HotelFilter from './src/components/Search/Hotels/HotelFilter';
 import HotelDetails from './src/components/Search/Hotels/HotelDetails';
+import HotelReview from './src/components/Search/Hotels/HotelReview';
+import HotelGallery from './src/components/Search/Hotels/HotelGallery';
 
 const RootStack = createNativeStackNavigator();
 
@@ -24,7 +26,7 @@ const App = () => {
     <NavigationContainer>
       <StatusBar translucent={true} backgroundColor={"transparent"} />
       <RootStack.Navigator initialRouteName='wlscrn' screenOptions={{ headerShown: false }}>
-        <RootStack.Screen name='wlscrn' component={WelcomeScreen} />
+        {/* <RootStack.Screen name='wlscrn' component={WelcomeScreen} />
         <RootStack.Screen name='tab' component={TabNavigation} />
         <RootStack.Screen name='traveldate' component={TravelDate} />
         <RootStack.Screen name='flightsearch' component={FlightSearch} />
@@ -36,7 +38,9 @@ const App = () => {
         <RootStack.Screen name='success' component={Success} />
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />
-        <RootStack.Screen name='hoteldetails' component={HotelDetails} />
+        <RootStack.Screen name='hoteldetails' component={HotelDetails} /> */}
+        <RootStack.Screen name='hotelreview' component={HotelReview} />
+        <RootStack.Screen name='hotelgallery' component={HotelGallery} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

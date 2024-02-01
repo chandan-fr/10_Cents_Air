@@ -16,6 +16,21 @@ const image = {
     image6: require("../assets/images/image6.png"),
     image7: require("../assets/images/image7.png"),
     ramada: require("../assets/images/ramada.png"),
+    gal1: require("../assets/images/gal1.png"),
+    gal2: require("../assets/images/gal2.png"),
+    gal3: require("../assets/images/gal3.png"),
+    gal4: require("../assets/images/gal4.png"),
+    gal5: require("../assets/images/gal5.png"),
+    gal6: require("../assets/images/gal6.png"),
+    gal7: require("../assets/images/gal7.png"),
+    gal8: require("../assets/images/gal8.png"),
+    gal9: require("../assets/images/gal9.png"),
+    gal10: require("../assets/images/gal10.png"),
+    gal11: require("../assets/images/gal11.png"),
+    gal12: require("../assets/images/gal12.png"),
+    si1: require("../assets/images/si1.png"),
+    si2: require("../assets/images/si2.png"),
+    si3: require("../assets/images/si3.png"),
 };
 
 module.exports = image;

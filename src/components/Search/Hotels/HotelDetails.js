@@ -3,10 +3,9 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, black, blue, green, gs2, w1, white } from '../../../config/colors';
+import { b1, b2, b3, black, blue, green, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
-import CompletedBooking from '../../MyTrips/core/CompletedBooking';
 
 const { width, height } = Dimensions.get("window");
 
@@ -298,6 +297,7 @@ const HotelDetails = ({ navigation }) => {
                                 </View>
                             </View>
 
+                            {/* reserve btn */}
                             <View style={{ marginVertical: 10 }}>
                                 <TouchableOpacity
                                     style={[styles.btn, { marginHorizontal: 50 }]}
