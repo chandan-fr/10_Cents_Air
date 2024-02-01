@@ -39,7 +39,7 @@ const App = () => {
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />
         <RootStack.Screen name='hoteldetails' component={HotelDetails} /> */}
-        <RootStack.Screen name='hotelreview' component={HotelReview} />
+        {/* <RootStack.Screen name='hotelreview' component={HotelReview} /> */}
         <RootStack.Screen name='hotelgallery' component={HotelGallery} />
       </RootStack.Navigator>
     </NavigationContainer>
