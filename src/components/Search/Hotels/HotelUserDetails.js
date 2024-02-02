@@ -110,7 +110,7 @@ const HotelUserDetails = ({ navigation }) => {
                                             Who are you booking for?
                                         </Text>
 
-                                        <View style={{ rowGap: 8 }}>
+                                        <View style={{ rowGap: 8, alignItems: "flex-start" }}>
                                             <TouchableOpacity
                                                 style={{ flexDirection: "row", alignItems: "center", columnGap: 8 }}
                                             >
