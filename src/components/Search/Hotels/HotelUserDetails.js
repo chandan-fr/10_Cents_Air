@@ -3,9 +3,8 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, white, blue, green, b3, } from '../../../config/colors';
+import { b1, white, blue, green, b3, } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
-import image from '../../../config/ImageAssets';
 
 const { width, height } = Dimensions.get("window");
 

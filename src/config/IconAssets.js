@@ -100,6 +100,9 @@ const icon = {
     reception: require("../assets/icons/reception.png"),
     people: require("../assets/icons/people.png"),
     clean: require("../assets/icons/clean.png"),
+    money: require("../assets/icons/money.png"),
+    cash: require("../assets/icons/cash.png"),
+    exchangeRate: require("../assets/icons/exchange-rate.png"),
 };
 
 module.exports = icon;
