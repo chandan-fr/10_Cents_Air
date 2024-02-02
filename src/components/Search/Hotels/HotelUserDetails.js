@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, white, blue, } from '../../../config/colors';
+import { b1, b2, white, blue, green, b3, } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 
@@ -163,6 +163,200 @@ const HotelUserDetails = ({ navigation }) => {
                                     </View>
                                 </View>
                             </View>
+
+                            {/* room details */}
+                            <View style={styles.uiWrap}>
+                                <Text style={commonStyles.ns600}>
+                                    Queen Room with Balcony - Non-Smoking
+                                </Text>
+
+                                <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                        source={icon.location}
+                                    />
+                                    <Text style={[commonStyles.ns600, { fontSize: 14, color: green }]}>
+                                        Free cancellation before 20 December 2023
+                                    </Text>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.danger}
+                                    />
+                                </View>
+
+                                <View style={{ flexDirection: "row", alignItems: "center", columnGap: 6 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.people}
+                                    />
+                                    <Text style={[commonStyles.ns400, { fontSize: 16 }]}>
+                                        Guests: 2 adults
+                                    </Text>
+                                    <Image
+                                        style={{ width: 15, height: 15, tintColor: blue }}
+                                        source={icon.question}
+                                    />
+                                </View>
+
+                                <View style={{ flexDirection: "row", alignItems: "center", columnGap: 6 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.clean}
+                                    />
+                                    <Text style={[commonStyles.ns400, { fontSize: 16 }]}>
+                                        Cleanliness score - 7.9
+                                    </Text>
+                                </View>
+
+                                <View style={{ flexDirection: "row", alignItems: "center", columnGap: 6 }}>
+                                    <Image
+                                        style={{ width: 15, height: 15, tintColor: b1 }}
+                                        source={icon.noSmoking}
+                                    />
+                                    <Text style={[commonStyles.ns400, { fontSize: 16 }]}>
+                                        No smoking
+                                    </Text>
+                                </View>
+
+                                <View style={{ flexDirection: "row", alignItems: 'center', flexWrap: "wrap", columnGap: 6, rowGap: 6 }}>
+                                    <View style={styles.perks}>
+                                        <Image
+                                            style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                            source={icon.plans}
+                                        />
+                                        <Text style={[commonStyles.ns400, { color: "#24AD53" }]}>
+                                            26 m²
+                                        </Text>
+                                    </View>
+
+                                    <View style={styles.perks}>
+                                        <Image
+                                            style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                            source={icon.coffeeShop}
+                                        />
+                                        <Text style={[commonStyles.ns400, { color: "#24AD53" }]}>
+                                            Balcony
+                                        </Text>
+                                    </View>
+
+                                    <View style={styles.perks}>
+                                        <Image
+                                            style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                            source={icon.ledTv}
+                                        />
+                                        <Text style={[commonStyles.ns400, { color: "#24AD53" }]}>
+                                            Flat-screen TV
+                                        </Text>
+                                    </View>
+
+                                    <View style={styles.perks}>
+                                        <Image
+                                            style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                            source={icon.coffeeShop}
+                                        />
+                                        <Text style={[commonStyles.ns400, { color: "#24AD53" }]}>
+                                            Terrace
+                                        </Text>
+                                    </View>
+
+                                    <View style={styles.perks}>
+                                        <Image
+                                            style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                            source={icon.swimming}
+                                        />
+                                        <Text style={[commonStyles.ns400, { color: "#24AD53" }]}>
+                                            Pool view
+                                        </Text>
+                                    </View>
+
+                                    <View style={styles.perks}>
+                                        <Image
+                                            style={{ width: 15, height: 15, tintColor: "#24AD53" }}
+                                            source={icon.swimming}
+                                        />
+                                        <Text style={[commonStyles.ns400, { color: "#24AD53" }]}>
+                                            Pool with a view
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={styles.inputGrp}>
+                                    <TextInput
+                                        style={[styles.inputBox, commonStyles.ns400]}
+                                        placeholder={"Full Guest Name*"}
+                                        placeholderTextColor={b1}
+                                    />
+                                </View>
+                            </View>
+
+                            {/* arrival time */}
+                            <View style={styles.uiWrap}>
+                                <Text style={[commonStyles.ns600, { fontSize: 18 }]}>
+                                    Your arrival time
+                                </Text>
+
+                                <View style={{ marginTop: 20, rowGap: 15 }}>
+                                    <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                        <View style={{ borderColor: "#24AD53", borderWidth: 2, alignItems: "center", justifyContent: "center", borderRadius: 20, width: 26, height: 26 }}>
+                                            <Image
+                                                style={{ width: 16, height: 16, tintColor: "#24AD53" }}
+                                                source={icon.check}
+                                            />
+                                        </View>
+
+                                        <Text style={[commonStyles.ns400, { fontSize: 15 }]}>
+                                            Your room will be ready for check-in at 15:00
+                                        </Text>
+                                    </View>
+
+                                    <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                        <Image
+                                            style={{ width: 26, height: 26, tintColor: "#24AD53" }}
+                                            source={icon.reception}
+                                        />
+
+                                        <Text style={[commonStyles.ns400, { fontSize: 15 }]}>
+                                            24-hour front desk - Help whenever you need it!
+                                        </Text>
+                                    </View>
+
+                                    <View style={{ flexDirection: "row", alignItems: "center", columnGap: 5 }}>
+                                        <Text style={[commonStyles.ns600, { fontSize: 14 }]}>
+                                            Add your estimated arrival time
+                                        </Text>
+
+                                        <Text style={[commonStyles.ns600, { fontSize: 12, color: b3 }]}>
+                                            (optional)
+                                        </Text>
+                                    </View>
+
+                                    <View style={{ rowGap: 4, marginBottom: 10 }}>
+                                        <View style={[styles.inputGrpTime]}>
+                                            <TextInput
+                                                style={[styles.inputBoxTime, commonStyles.ns400, { fontSize: 16 }]}
+                                                placeholder={"13:00 - 14:00"}
+                                                placeholderTextColor={b1}
+                                                editable={false}
+                                            />
+
+                                            <TouchableOpacity style={{flexDirection: 'row', alignItems: "center"}}>
+                                                <Image
+                                                    style={{ width: 20, height: 20, transform:[{rotate: "180deg"}] }}
+                                                    source={icon.rightArrow}
+                                                />
+                                                <Image
+                                                    style={{ width: 20, height: 20 }}
+                                                    source={icon.rightArrow}
+                                                />
+                                            </TouchableOpacity>
+                                        </View>
+
+                                        <Text style={[commonStyles.ns600, { fontSize: 12, color: b3 }]}>
+                                            Time is for Calgary time zone
+                                        </Text>
+                                    </View>
+                                </View>
+                            </View>
                         </View>
                     </ScrollView>
                 </View>
@@ -225,7 +419,7 @@ const styles = StyleSheet.create({
     },
     inputGrp: {
         rowGap: 6,
-        width: width * 0.75
+        width: width * 0.75,
     },
     inputBox: {
         backgroundColor: white,
@@ -235,11 +429,37 @@ const styles = StyleSheet.create({
         paddingLeft: 8,
         height: 40,
     },
+    inputGrpTime: {
+        width: width * 0.75,
+        borderRadius: 4,
+        borderWidth: 1,
+        borderColor: "#D8D8D8",
+        flexDirection: "row",
+        alignItems: "center"
+    },
+    inputBoxTime: {
+        backgroundColor: white,
+        borderRadius: 4,
+        paddingLeft: 8,
+        height: 40,
+        flex: 1
+    },
     circle: {
         width: 18,
         height: 18,
         borderRadius: 20,
         borderWidth: 1,
         borderColor: blue,
+    },
+    perks: {
+        flexDirection: "row",
+        alignItems: "center",
+        columnGap: 8,
+        backgroundColor: "#E7FDE9",
+        paddingVertical: 3,
+        paddingHorizontal: 4,
+        borderColor: "#97E59C",
+        borderWidth: 1,
+        borderRadiusL: 4,
     },
 });

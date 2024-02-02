@@ -96,6 +96,10 @@ const icon = {
     child: require("../assets/icons/child.png"),
     card: require("../assets/icons/card.png"),
     barrier: require("../assets/icons/barrier.png"),
+    question: require("../assets/icons/question.png"),
+    reception: require("../assets/icons/reception.png"),
+    people: require("../assets/icons/people.png"),
+    clean: require("../assets/icons/clean.png"),
 };
 
 module.exports = icon;
