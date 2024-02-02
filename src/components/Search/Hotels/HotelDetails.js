@@ -85,7 +85,10 @@ const HotelDetails = ({ navigation }) => {
                             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                                 <Image style={styles.galImg} source={image.image4} />
                                 <Image style={styles.galImg} source={image.image6} />
-                                <TouchableOpacity style={styles.showMorePics}>
+                                <TouchableOpacity
+                                    style={styles.showMorePics}
+                                    onPress={() => navigation.navigate("hotelgallery")}
+                                >
                                     <Image style={styles.galImg} source={image.image7} />
                                     <Text style={[commonStyles.ns700, { fontSize: 14, position: "absolute", color: white }]}>
                                         +46 photos
@@ -1312,7 +1315,7 @@ const HotelDetails = ({ navigation }) => {
 
                     <TouchableOpacity
                         style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-                    // onPress={() => navigation.navigate("hotelfilter")}
+                        onPress={() => navigation.navigate("hotelud")}
                     >
                         <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
                             Reserve

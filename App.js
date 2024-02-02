@@ -29,7 +29,7 @@ const App = () => {
     <NavigationContainer>
       <StatusBar translucent={true} backgroundColor={"transparent"} />
       <RootStack.Navigator initialRouteName='wlscrn' screenOptions={{ headerShown: false }}>
-        {/* <RootStack.Screen name='wlscrn' component={WelcomeScreen} />
+        <RootStack.Screen name='wlscrn' component={WelcomeScreen} />
         <RootStack.Screen name='tab' component={TabNavigation} />
         <RootStack.Screen name='traveldate' component={TravelDate} />
         <RootStack.Screen name='flightsearch' component={FlightSearch} />
@@ -45,7 +45,7 @@ const App = () => {
         <RootStack.Screen name='hotelreview' component={HotelReview} />
         <RootStack.Screen name='hotelgallery' component={HotelGallery} />
         <RootStack.Screen name='hotelud' component={HotelUserDetails} />
-        <RootStack.Screen name='hotelps' component={HotelPriceSum} /> */}
+        <RootStack.Screen name='hotelps' component={HotelPriceSum} />
         <RootStack.Screen name='hotelsum' component={HotelSummary} />
       </RootStack.Navigator>
     </NavigationContainer>

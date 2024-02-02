@@ -389,7 +389,7 @@ const HotelSummary = ({ navigation }) => {
 
           <TouchableOpacity
             style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-            onPress={() => navigation.navigate("hotelsum")}
+            onPress={() => navigation.navigate("hotelpay")}
           >
             <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
               proceed
