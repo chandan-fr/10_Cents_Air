@@ -103,6 +103,7 @@ const icon = {
     money: require("../assets/icons/money.png"),
     cash: require("../assets/icons/cash.png"),
     exchangeRate: require("../assets/icons/exchange-rate.png"),
+    alarm: require("../assets/icons/alarm.png"),
 };
 
 module.exports = icon;

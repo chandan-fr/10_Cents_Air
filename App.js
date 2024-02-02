@@ -41,11 +41,11 @@ const App = () => {
         <RootStack.Screen name='success' component={Success} />
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />
-        <RootStack.Screen name='hoteldetails' component={HotelDetails} /> */}
-        {/* <RootStack.Screen name='hotelreview' component={HotelReview} /> */}
-        {/* <RootStack.Screen name='hotelgallery' component={HotelGallery} /> */}
+        <RootStack.Screen name='hoteldetails' component={HotelDetails} />
+        <RootStack.Screen name='hotelreview' component={HotelReview} />
+        <RootStack.Screen name='hotelgallery' component={HotelGallery} />
         <RootStack.Screen name='hotelud' component={HotelUserDetails} />
-        <RootStack.Screen name='hotelps' component={HotelPriceSum} />
+        <RootStack.Screen name='hotelps' component={HotelPriceSum} /> */}
         <RootStack.Screen name='hotelsum' component={HotelSummary} />
       </RootStack.Navigator>
     </NavigationContainer>

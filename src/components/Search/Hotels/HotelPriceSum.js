@@ -1,9 +1,9 @@
-import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, white, blue, green, b3, } from '../../../config/colors';
+import { b1, white, blue, b3, } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 
 const { width, height } = Dimensions.get("window");
@@ -24,7 +24,7 @@ const HotelPriceSum = ({ navigation }) => {
               <Text style={[commonStyles.ns600, { fontSize: 18, textAlign: "center" }]}>
                 Price Summary
               </Text>
-              
+
               {/* price details */}
               <View style={styles.main}>
 
@@ -180,7 +180,7 @@ const HotelPriceSum = ({ navigation }) => {
           </ScrollView>
         </View>
 
-        {/* Reserve */}
+        {/* proceed */}
         <View style={{ backgroundColor: b1, alignItems: "center", justifyContent: "space-between", paddingVertical: 8, paddingHorizontal: 10, flexDirection: "row" }}>
           <View style={{ rowGap: 3 }}>
             <Text style={[commonStyles.ns600, { fontSize: 14, color: white }]}>
@@ -193,7 +193,7 @@ const HotelPriceSum = ({ navigation }) => {
 
           <TouchableOpacity
             style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-            onPress={() => navigation.navigate("hotelps")}
+            onPress={() => navigation.navigate("hotelsum")}
           >
             <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
               proceed
@@ -230,5 +230,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: 'space-between',
-  }
+  },
 });
