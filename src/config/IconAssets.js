@@ -116,6 +116,9 @@ const icon = {
     gpay: require("../assets/icons/gpay.png"),
     cvv: require("../assets/icons/cvv.png"),
     addcard: require("../assets/icons/addcard.png"),
+    speedometer: require("../assets/icons/speedometer.png"),
+    gearshift: require("../assets/icons/gearshift.png"),
+    filters: require("../assets/icons/filters.png"),
 };
 
 module.exports = icon;

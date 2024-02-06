@@ -32,6 +32,11 @@ const image = {
     si2: require("../assets/images/si2.png"),
     si3: require("../assets/images/si3.png"),
     bi1: require("../assets/images/bi1.png"),
+    car1: require("../assets/images/car1.png"),
+    car2: require("../assets/images/car2.png"),
+    car3: require("../assets/images/car3.png"),
+    car4: require("../assets/images/car4.png"),
+    alamo: require("../assets/images/alamo.png"),
 };
 
 module.exports = image;

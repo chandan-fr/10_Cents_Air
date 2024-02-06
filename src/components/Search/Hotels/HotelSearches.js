@@ -114,9 +114,13 @@ const HotelSearches = ({ navigation }) => {
                     {/* botttom filter */}
                     <View style={{ backgroundColor: b1, alignItems: "flex-end", justifyContent: "center", paddingVertical: 8, paddingHorizontal: 10 }}>
                         <TouchableOpacity
-                            style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
+                            style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 120, alignItems: "center", justifyContent: "center", paddingVertical: 8, flexDirection: "row", columnGap: 10 }}
                             onPress={() => navigation.navigate("hotelfilter")}
                         >
+                            <Image
+                                style={{ width: 15, height: 15, tintColor: blue }}
+                                source={icon.filters}
+                            />
                             <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
                                 Filter
                             </Text>
