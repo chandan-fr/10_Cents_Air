@@ -104,6 +104,18 @@ const icon = {
     cash: require("../assets/icons/cash.png"),
     exchangeRate: require("../assets/icons/exchange-rate.png"),
     alarm: require("../assets/icons/alarm.png"),
+    mastercard: require("../assets/icons/mastercard.png"),
+    visa: require("../assets/icons/visa.png"),
+    discover: require("../assets/icons/discover.png"),
+    amex: require("../assets/icons/amex.png"),
+    paypal: require("../assets/icons/paypal.png"),
+    paypallogo: require("../assets/icons/paypallogo.png"),
+    paypalcompltlogo: require("../assets/icons/paypalcompltlogo.png"),
+    diners: require("../assets/icons/diners.png"),
+    carteBlanche: require("../assets/icons/carte-blanche.png"),
+    gpay: require("../assets/icons/gpay.png"),
+    cvv: require("../assets/icons/cvv.png"),
+    addcard: require("../assets/icons/addcard.png"),
 };
 
 module.exports = icon;
