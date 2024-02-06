@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import { white } from '../../config/colors';
 import Flights from '../../components/Search/Flights/Flights';
 import Hotels from '../../components/Search/Hotels/Hotels';
+import Cars from '../../components/Search/Cars/Cars';
 
 const { width, height } = Dimensions.get("window");
 
@@ -75,6 +76,9 @@ const Search = ({ navigation }) => {
 
                 {/* hotels */}
                 {selectedHMenu === "h" && <Hotels navigation={navigation} data={data} width={width} height={height} />}
+
+                {/* cars */}
+                {selectedHMenu === "c" && <Cars navigation={navigation} />}
             </View>
         </SafeAreaView>
     )
