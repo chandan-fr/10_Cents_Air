@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, black, blue, green, white } from '../../../config/colors';
+import { b1, b2, b3, black, blue, green, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 
@@ -1488,7 +1488,7 @@ const styles = StyleSheet.create({
     },
     houseRules: {
         backgroundColor: white,
-        paddingVertical: 10,
+        paddingTop: 10,
         rowGap: 20,
     },
     rules: {

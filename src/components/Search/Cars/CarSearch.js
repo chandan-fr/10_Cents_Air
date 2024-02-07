@@ -207,7 +207,7 @@ const CarSearch = ({ navigation }) => {
                                     </View>
 
                                     {/* car perks */}
-                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10, marginLeft: 15, }}>
+                                    <View style={styles.carPerks}>
                                         <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
                                             <Image
                                                 style={{ width: 15, height: 15, tintColor: blue }}
@@ -215,7 +215,7 @@ const CarSearch = ({ navigation }) => {
                                             />
 
                                             <Text style={commonStyles.ns400}>
-                                                Chevrolet Spark Or Similar
+                                                Unlimited mileage
                                             </Text>
                                         </View>
 
@@ -272,7 +272,7 @@ const CarSearch = ({ navigation }) => {
 
                                         <TouchableOpacity
                                             style={styles.btn}
-                                            onPress={() => navigation.navigate("hoteldetails")}
+                                            onPress={() => navigation.navigate("cardetails")}
                                         >
                                             <Text style={[commonStyles.lbB1, { color: white }]}>
                                                 Book
@@ -343,7 +343,7 @@ const CarSearch = ({ navigation }) => {
                                     </View>
 
                                     {/* car perks */}
-                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10, marginLeft: 15, }}>
+                                    <View style={styles.carPerks}>
                                         <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
                                             <Image
                                                 style={{ width: 15, height: 15, tintColor: blue }}
@@ -351,7 +351,7 @@ const CarSearch = ({ navigation }) => {
                                             />
 
                                             <Text style={commonStyles.ns400}>
-                                                Chevrolet Spark Or Similar
+                                                Unlimited mileage
                                             </Text>
                                         </View>
 
@@ -408,7 +408,7 @@ const CarSearch = ({ navigation }) => {
 
                                         <TouchableOpacity
                                             style={styles.btn}
-                                            onPress={() => navigation.navigate("hoteldetails")}
+                                            onPress={() => navigation.navigate("cardetails")}
                                         >
                                             <Text style={[commonStyles.lbB1, { color: white }]}>
                                                 Book
@@ -479,7 +479,7 @@ const CarSearch = ({ navigation }) => {
                                     </View>
 
                                     {/* car perks */}
-                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10, marginLeft: 15, }}>
+                                    <View style={styles.carPerks}>
                                         <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
                                             <Image
                                                 style={{ width: 15, height: 15, tintColor: blue }}
@@ -487,7 +487,7 @@ const CarSearch = ({ navigation }) => {
                                             />
 
                                             <Text style={commonStyles.ns400}>
-                                                Chevrolet Spark Or Similar
+                                                Unlimited mileage
                                             </Text>
                                         </View>
 
@@ -544,7 +544,7 @@ const CarSearch = ({ navigation }) => {
 
                                         <TouchableOpacity
                                             style={styles.btn}
-                                            onPress={() => navigation.navigate("hoteldetails")}
+                                            onPress={() => navigation.navigate("cardetails")}
                                         >
                                             <Text style={[commonStyles.lbB1, { color: white }]}>
                                                 Book
@@ -673,5 +673,14 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         marginVertical: 10,
         borderStyle: "dashed",
+    },
+    carPerks: {
+        flexDirection: "row",
+        flexWrap: 'wrap',
+        marginTop: 15,
+        justifyContent: "space-between",
+        rowGap: 10,
+        marginLeft: 15,
+        width: 250,
     },
 });
