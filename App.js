@@ -24,6 +24,7 @@ import HotelPayment from './src/components/Search/Hotels/HotelPayment';
 import CarSearch from './src/components/Search/Cars/CarSearch';
 import CarFilter from './src/components/Search/Cars/CarFilter';
 import CarDetails from './src/components/Search/Cars/CarDetails';
+import CarFareDetails from './src/components/Search/Cars/CarFareDetails';
 
 const RootStack = createNativeStackNavigator();
 
@@ -55,6 +56,7 @@ const App = () => {
         <RootStack.Screen name='carsearch' component={CarSearch} />
         <RootStack.Screen name='carfilter' component={CarFilter} />
         <RootStack.Screen name='cardetails' component={CarDetails} />
+        <RootStack.Screen name='carfaredetails' component={CarFareDetails} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

@@ -119,6 +119,7 @@ const icon = {
     speedometer: require("../assets/icons/speedometer.png"),
     gearshift: require("../assets/icons/gearshift.png"),
     filters: require("../assets/icons/filters.png"),
+    cmiles: require("../assets/icons/cmiles.png"),
 };
 
 module.exports = icon;

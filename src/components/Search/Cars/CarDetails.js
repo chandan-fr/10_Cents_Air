@@ -1,9 +1,9 @@
-import { Alert, Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import React, { useState } from 'react'
+import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, black, blue, green, white } from '../../../config/colors';
+import { b1, b2, b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 
@@ -499,10 +499,11 @@ const CarDetails = ({ navigation }) => {
                                 By clicking 'Confirm & Book', I agree that I have read and accepted the above policies and 10 Cents Air.com's Terms and Conditions and Privacy Policy
                             </Text>
 
-                            <View style={{marginTop: 20}}>
+                            {/* Confirm & Book */}
+                            <View style={{ marginTop: 20 }}>
                                 <TouchableOpacity
                                     style={styles.btn}
-                                // onPress={() => navigation.navigate("cardetails")}
+                                    onPress={() => navigation.navigate("carfaredetails")}
                                 >
                                     <Text style={[commonStyles.lbB1, { color: white }]}>
                                         Confirm & Book
