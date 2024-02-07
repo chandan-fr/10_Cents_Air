@@ -120,6 +120,7 @@ const icon = {
     gearshift: require("../assets/icons/gearshift.png"),
     filters: require("../assets/icons/filters.png"),
     cmiles: require("../assets/icons/cmiles.png"),
+    lock: require("../assets/icons/lock.png"),
 };
 
 module.exports = icon;
