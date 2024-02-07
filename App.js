@@ -22,6 +22,7 @@ import HotelPriceSum from './src/components/Search/Hotels/HotelPriceSum';
 import HotelSummary from './src/components/Search/Hotels/HotelSummary';
 import HotelPayment from './src/components/Search/Hotels/HotelPayment';
 import CarSearch from './src/components/Search/Cars/CarSearch';
+import CarFilter from './src/components/Search/Cars/CarFilter';
 
 const RootStack = createNativeStackNavigator();
 
@@ -51,6 +52,7 @@ const App = () => {
         <RootStack.Screen name='hotelsum' component={HotelSummary} />
         <RootStack.Screen name='hotelpay' component={HotelPayment} />
         <RootStack.Screen name='carsearch' component={CarSearch} />
+        <RootStack.Screen name='carfilter' component={CarFilter} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
