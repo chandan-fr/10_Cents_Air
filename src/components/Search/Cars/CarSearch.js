@@ -184,9 +184,10 @@ const CarSearch = ({ navigation }) => {
                             </View>
 
                             {/* car items */}
-                            <View style={{ marginHorizontal: 8, borderRadius: 8, }}>
+                            <View style={{ marginHorizontal: 8, borderRadius: 8, rowGap: 10 }}>
                                 <View style={styles.carItem}>
-                                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                                    {/* car name & desp */}
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginLeft: 15, }}>
                                         <View style={{ flex: 2, rowGap: 10 }}>
                                             <Text style={[commonStyles.ns600, { fontSize: 20 }]}>
                                                 Economy ALAMO Car
@@ -205,7 +206,8 @@ const CarSearch = ({ navigation }) => {
                                         </View>
                                     </View>
 
-                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10 }}>
+                                    {/* car perks */}
+                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10, marginLeft: 15, }}>
                                         <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
                                             <Image
                                                 style={{ width: 15, height: 15, tintColor: blue }}
@@ -251,7 +253,8 @@ const CarSearch = ({ navigation }) => {
                                         </View>
                                     </View>
 
-                                    <View style={{ flexDirection: 'row', alignItems: "center", marginTop: 10, justifyContent: "space-between" }}>
+                                    {/* price & book */}
+                                    <View style={{ flexDirection: 'row', alignItems: "center", marginTop: 10, justifyContent: "space-between", marginLeft: 15, }}>
                                         <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 10 }}>
                                             <View style={{ flexDirection: "row" }}>
                                                 <Text style={[commonStyles.ns400, { fontSize: 20 }]}>
@@ -276,6 +279,318 @@ const CarSearch = ({ navigation }) => {
                                             </Text>
                                         </TouchableOpacity>
                                     </View>
+
+                                    <View style={styles.dottedLine} />
+
+                                    {/* bottom part */}
+                                    <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-between", marginLeft: 15, marginBottom: 8 }}>
+                                        <View>
+                                            <Image
+                                                style={{}}
+                                                source={image.alamo}
+                                            />
+                                        </View>
+
+                                        <View style={{ flexDirection: "row", alignItems: "center", marginRight: 10, columnGap: 20 }}>
+                                            <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                                <View style={[styles.seatWrap, { width: 35, height: 35 }]}>
+                                                    <Image
+                                                        style={{ width: 25, height: 25, tintColor: blue }}
+                                                        source={icon.baggage}
+                                                    />
+                                                </View>
+
+                                                <Text style={[commonStyles.ns600, { fontSize: 13, color: b3 }]}>
+                                                    2 Bags
+                                                </Text>
+                                            </View>
+
+                                            <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                                <View style={[styles.seatWrap, { width: 35, height: 35 }]}>
+                                                    <Image
+                                                        style={{ width: 20, height: 20, tintColor: blue }}
+                                                        source={icon.seat}
+                                                    />
+                                                </View>
+
+                                                <Text style={[commonStyles.ns600, { fontSize: 13, color: b3 }]}>
+                                                    4 Seats
+                                                </Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                <View style={styles.carItem}>
+                                    {/* car name & desp */}
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginLeft: 15, }}>
+                                        <View style={{ flex: 2, rowGap: 10 }}>
+                                            <Text style={[commonStyles.ns600, { fontSize: 20 }]}>
+                                                Compact
+                                            </Text>
+
+                                            <Text style={commonStyles.ns400}>
+                                                Nissan Versa Or Similar
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flex: 1, alignItems: 'center', rowGap: 10 }}>
+                                            <Image
+                                                style={{ width: 90, height: 52 }}
+                                                source={image.car2}
+                                            />
+                                        </View>
+                                    </View>
+
+                                    {/* car perks */}
+                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10, marginLeft: 15, }}>
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.speedometer}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                Chevrolet Spark Or Similar
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.plane}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                At Airport
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.airConditioner}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                Air Conditioner
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.gearshift}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                Automatic
+                                            </Text>
+                                        </View>
+                                    </View>
+
+                                    {/* price & book */}
+                                    <View style={{ flexDirection: 'row', alignItems: "center", marginTop: 10, justifyContent: "space-between", marginLeft: 15, }}>
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 10 }}>
+                                            <View style={{ flexDirection: "row" }}>
+                                                <Text style={[commonStyles.ns400, { fontSize: 20 }]}>
+                                                    USD 500
+                                                </Text>
+                                                <Text style={[commonStyles.ns400, { fontSize: 12, alignSelf: "flex-start", top: 3 }]}>
+                                                    .99
+                                                </Text>
+                                            </View>
+
+                                            <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                                Per Day
+                                            </Text>
+                                        </View>
+
+                                        <TouchableOpacity
+                                            style={styles.btn}
+                                            onPress={() => navigation.navigate("hoteldetails")}
+                                        >
+                                            <Text style={[commonStyles.lbB1, { color: white }]}>
+                                                Book
+                                            </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={styles.dottedLine} />
+
+                                    {/* bottom part */}
+                                    <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-between", marginLeft: 15, marginBottom: 8 }}>
+                                        <View>
+                                            <Image
+                                                style={{}}
+                                                source={image.alamo}
+                                            />
+                                        </View>
+
+                                        <View style={{ flexDirection: "row", alignItems: "center", marginRight: 10, columnGap: 20 }}>
+                                            <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                                <View style={[styles.seatWrap, { width: 35, height: 35 }]}>
+                                                    <Image
+                                                        style={{ width: 25, height: 25, tintColor: blue }}
+                                                        source={icon.baggage}
+                                                    />
+                                                </View>
+
+                                                <Text style={[commonStyles.ns600, { fontSize: 13, color: b3 }]}>
+                                                    2 Bags
+                                                </Text>
+                                            </View>
+
+                                            <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                                <View style={[styles.seatWrap, { width: 35, height: 35 }]}>
+                                                    <Image
+                                                        style={{ width: 20, height: 20, tintColor: blue }}
+                                                        source={icon.seat}
+                                                    />
+                                                </View>
+
+                                                <Text style={[commonStyles.ns600, { fontSize: 13, color: b3 }]}>
+                                                    4 Seats
+                                                </Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+
+                                <View style={styles.carItem}>
+                                    {/* car name & desp */}
+                                    <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginLeft: 15, }}>
+                                        <View style={{ flex: 2, rowGap: 10 }}>
+                                            <Text style={[commonStyles.ns600, { fontSize: 20 }]}>
+                                                Economy ALAMO Car
+                                            </Text>
+
+                                            <Text style={commonStyles.ns400}>
+                                                Chevrolet Spark Or Similar
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flex: 1, alignItems: 'center', rowGap: 10 }}>
+                                            <Image
+                                                style={{ width: 90, height: 52 }}
+                                                source={image.car3}
+                                            />
+                                        </View>
+                                    </View>
+
+                                    {/* car perks */}
+                                    <View style={{ flexDirection: "row", flexWrap: 'wrap', marginTop: 15, columnGap: 20, rowGap: 10, marginLeft: 15, }}>
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.speedometer}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                Chevrolet Spark Or Similar
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.plane}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                At Airport
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.airConditioner}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                Air Conditioner
+                                            </Text>
+                                        </View>
+
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 8 }}>
+                                            <Image
+                                                style={{ width: 15, height: 15, tintColor: blue }}
+                                                source={icon.gearshift}
+                                            />
+
+                                            <Text style={commonStyles.ns400}>
+                                                Automatic
+                                            </Text>
+                                        </View>
+                                    </View>
+
+                                    {/* price & book */}
+                                    <View style={{ flexDirection: 'row', alignItems: "center", marginTop: 10, justifyContent: "space-between", marginLeft: 15, }}>
+                                        <View style={{ flexDirection: 'row', alignItems: "center", columnGap: 10 }}>
+                                            <View style={{ flexDirection: "row" }}>
+                                                <Text style={[commonStyles.ns400, { fontSize: 20 }]}>
+                                                    USD 500
+                                                </Text>
+                                                <Text style={[commonStyles.ns400, { fontSize: 12, alignSelf: "flex-start", top: 3 }]}>
+                                                    .99
+                                                </Text>
+                                            </View>
+
+                                            <Text style={[commonStyles.ns400, { fontSize: 12 }]}>
+                                                Per Day
+                                            </Text>
+                                        </View>
+
+                                        <TouchableOpacity
+                                            style={styles.btn}
+                                            onPress={() => navigation.navigate("hoteldetails")}
+                                        >
+                                            <Text style={[commonStyles.lbB1, { color: white }]}>
+                                                Book
+                                            </Text>
+                                        </TouchableOpacity>
+                                    </View>
+
+                                    <View style={styles.dottedLine} />
+
+                                    {/* bottom part */}
+                                    <View style={{ flexDirection: 'row', alignItems: "center", justifyContent: "space-between", marginLeft: 15, marginBottom: 8 }}>
+                                        <View>
+                                            <Image
+                                                style={{}}
+                                                source={image.alamo}
+                                            />
+                                        </View>
+
+                                        <View style={{ flexDirection: "row", alignItems: "center", marginRight: 10, columnGap: 20 }}>
+                                            <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                                <View style={[styles.seatWrap, { width: 35, height: 35 }]}>
+                                                    <Image
+                                                        style={{ width: 25, height: 25, tintColor: blue }}
+                                                        source={icon.baggage}
+                                                    />
+                                                </View>
+
+                                                <Text style={[commonStyles.ns600, { fontSize: 13, color: b3 }]}>
+                                                    2 Bags
+                                                </Text>
+                                            </View>
+
+                                            <View style={{ flexDirection: "row", alignItems: "center", columnGap: 10 }}>
+                                                <View style={[styles.seatWrap, { width: 35, height: 35 }]}>
+                                                    <Image
+                                                        style={{ width: 20, height: 20, tintColor: blue }}
+                                                        source={icon.seat}
+                                                    />
+                                                </View>
+
+                                                <Text style={[commonStyles.ns600, { fontSize: 13, color: b3 }]}>
+                                                    4 Seats
+                                                </Text>
+                                            </View>
+                                        </View>
+                                    </View>
                                 </View>
                             </View>
                         </View>
@@ -286,7 +601,7 @@ const CarSearch = ({ navigation }) => {
                 <View style={{ backgroundColor: b1, alignItems: "flex-end", justifyContent: "center", paddingVertical: 8, paddingHorizontal: 10 }}>
                     <TouchableOpacity
                         style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 120, alignItems: "center", justifyContent: "center", paddingVertical: 8, flexDirection: "row", columnGap: 10 }}
-                        onPress={() => navigation.navigate("hotelfilter")}
+                    // onPress={() => navigation.navigate("hotelfilter")}
                     >
                         <Image
                             style={{ width: 15, height: 15, tintColor: blue }}
@@ -342,7 +657,6 @@ const styles = StyleSheet.create({
         backgroundColor: white,
         elevation: 3,
         paddingTop: 15,
-        paddingLeft: 15,
         borderRadius: 8,
     },
     btn: {
@@ -353,5 +667,11 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 40,
         marginRight: 10,
+    },
+    dottedLine: {
+        borderColor: b3,
+        borderWidth: 1,
+        marginVertical: 10,
+        borderStyle: "dashed",
     },
 });
