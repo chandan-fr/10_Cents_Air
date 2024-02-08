@@ -5,6 +5,7 @@ import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
 import { b1, b2, b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
+import image from '../../../config/ImageAssets';
 
 const { width, height } = Dimensions.get("window");
 
@@ -173,7 +174,61 @@ const CarPayment = ({ navigation }) => {
                                 Easy monthly payments
                             </Text>
 
-                            <View></View>
+                            <View style={{ marginTop: 50, flexDirection: "row", alignItems: "flex-start", columnGap: 20 }}>
+                                <Image
+                                    style={{ width: 70, height: 30 }}
+                                    source={image.affirm}
+                                />
+
+                                <View style={{ rowGap: 6, flex: 1 }}>
+                                    <Text style={[commonStyles.ns600, { fontSize: 14 }]}>
+                                        Make easy monthly payments over 6, 12, or 18 months. As low as $150 /month with Affirm. No late fees. Ever. <Text style={[commonStyles.ns600, { fontSize: 14, color: blue }]}>
+                                            Learn more
+                                        </Text>
+                                    </Text>
+
+                                    <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>
+                                        Available only to US residents.
+                                    </Text>
+                                </View>
+                            </View>
+
+                            <View style={styles.hr} />
+
+                            <View style={{ flexDirection: "row", columnGap: 15 }}>
+                                <Image
+                                    style={{ width: 80, height: 80 }}
+                                    source={image.mcafe}
+                                    resizeMode='stretch'
+                                />
+
+                                <View style={{ flexDirection: "row", flexWrap: "wrap", flex: 1, columnGap: 20, rowGap: 10 }}>
+                                    <TouchableOpacity style={{}}>
+                                        <Text style={[commonStyles.ns600, { fontSize: 12, color: blue, textDecorationLine: "underline" }]}>
+                                            Payment Acceptance Policy
+                                        </Text>
+                                    </TouchableOpacity>
+
+                                    <TouchableOpacity
+                                        style={{ flexDirection: "row", alignItems: 'center', columnGap: 5 }}
+                                    >
+                                        <Image
+                                            style={{ width: 15, height: 15 }}
+                                            source={icon.lock}
+                                        />
+                                        
+                                        <Text style={[commonStyles.ns600, { fontSize: 12, color: blue, textDecorationLine: "underline" }]}>
+                                            Privacy Policy
+                                        </Text>
+                                    </TouchableOpacity>
+
+                                    <TouchableOpacity style={{}}>
+                                        <Text style={[commonStyles.ns600, { fontSize: 12, color: blue, textDecorationLine: "underline" }]}>
+                                            Safe Shopping Guarantee
+                                        </Text>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
                         </View>
                     </View>
                 </ScrollView>
@@ -227,5 +282,12 @@ const styles = StyleSheet.create({
         borderRadius: 4,
         height: 55,
         justifyContent: 'center'
+    },
+    hr: {
+        backgroundColor: "#D8D8D8",
+        height: 1,
+        marginVertical: 5,
+        borderTopWidth: 1,
+        borderTopColor: "#D8D8D8",
     },
 });

@@ -37,6 +37,8 @@ const image = {
     car3: require("../assets/images/car3.png"),
     car4: require("../assets/images/car4.png"),
     alamo: require("../assets/images/alamo.png"),
+    affirm: require("../assets/images/affirm.jpg"),
+    mcafe: require("../assets/images/mcafe.png"),
 };
 
 module.exports = image;
