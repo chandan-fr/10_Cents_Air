@@ -1,4 +1,4 @@
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
 import React, { useState } from 'react'
 import SearchButton from '../../SearchButton';
 import { b1, b3, black, blue, white } from '../../../config/colors';
@@ -61,13 +61,13 @@ const FlightAndHotels = ({ navigation, data, width, height }) => {
 
                 {/* trip option content */}
                 <View style={{ marginHorizontal: 10, marginTop: 0, }}>
-                    {selectedMidMenu === "o" && <OneWay navigation={navigation} />}
+                    {selectedMidMenu === "o" && <OneWay navigation={navigation} dest={"opt2"} />}
                     {selectedMidMenu === "r" && <RoundTrip navigation={navigation} dest={"opt2"} />}
                 </View>
             </View>
 
             {/* search button */}
-            <SearchButton navigation={navigation} screenName={"flightsearch"} />
+            <SearchButton navigation={navigation} screenName={"fhsearch"} />
 
             {/* prifile option */}
             <View style={{ marginHorizontal: 15, marginTop: 18, zIndex: -1 }}>
@@ -104,8 +104,7 @@ const FlightAndHotels = ({ navigation, data, width, height }) => {
                 <View style={styles.dealContWrap}>
                     {data.map((_, i) => (
                         <View key={i}>
-                            {/* <DealItem /> */}
-                            <HotelPromoOffers orgDest={"f&h"} />
+                            <HotelPromoOffers origin={"f&h"} />
                             {i == data.length - 1 ? <View style={{ marginBottom: 30 }} /> : null}
                         </View>
                     ))}

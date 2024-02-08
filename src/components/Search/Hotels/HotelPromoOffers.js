@@ -7,7 +7,7 @@ import icon from '../../../config/IconAssets';
 
 const { width } = Dimensions.get("window");
 
-const HotelPromoOffers = ({ orgDest, screenName }) => {
+const HotelPromoOffers = ({ origin, screenName }) => {
     return (
         <View style={styles.main}>
             <Image style={styles.img} resizeMode='cover' source={image.hotelimg} />
@@ -19,7 +19,7 @@ const HotelPromoOffers = ({ orgDest, screenName }) => {
                     </Text>
 
                     {/* destination glimpse */}
-                    {orgDest === "f&h" && <View style={{ rowGap: 4 }}>
+                    {origin === "f&h" && <View style={{ rowGap: 4 }}>
                         <View style={{ flexDirection: "row", columnGap: 10, alignItems: 'center' }}>
                             <Image
                                 style={{ width: 13, height: 13, tintColor: b1, transform: [{ rotate: "45deg" }] }}

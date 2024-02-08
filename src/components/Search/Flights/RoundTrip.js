@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 
+
 const RoundTrip = ({ navigation, dest }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
@@ -75,7 +76,7 @@ const RoundTrip = ({ navigation, dest }) => {
 
                         {isTravel && <View style={styles.travlOptnsWrap}>
                             <View style={styles.travelContWrap}>
-                                <View style={styles.travelTxtWrap}>
+                                <View>
                                     <Text style={styles.travelHdTxt}>Adults</Text>
                                     <Text style={styles.travelSubHdTxt}>Aged 12+ years</Text>
                                 </View>
@@ -94,7 +95,7 @@ const RoundTrip = ({ navigation, dest }) => {
                             </View>
 
                             <View style={styles.travelContWrap}>
-                                <View style={styles.travelTxtWrap}>
+                                <View>
                                     <Text style={styles.travelHdTxt}>Children</Text>
                                     <Text style={styles.travelSubHdTxt}>Aged 2-12 years</Text>
                                 </View>
@@ -117,7 +118,7 @@ const RoundTrip = ({ navigation, dest }) => {
                             </View>
 
                             <View style={styles.travelContWrap}>
-                                <View style={styles.travelTxtWrap}>
+                                <View>
                                     <Text style={styles.travelHdTxt}>Infants</Text>
                                     <Text style={styles.travelSubHdTxt}>Bellow 2 years</Text>
                                 </View>
@@ -151,35 +152,67 @@ const RoundTrip = ({ navigation, dest }) => {
                             <Text style={styles.midTxt}>{dest === "opt2" ? "1 Room" : "Class"}</Text>
                         </TouchableOpacity>
 
-                        {isClass && <View style={styles.classOptnsWrap}>
-                            <TouchableOpacity
-                                style={styles.classOptnTxtWrapActive}
-                                onPress={() => setIsClass(false)}
-                            >
-                                <Text style={styles.classOptnTxtActive}>Economy</Text>
-                            </TouchableOpacity>
+                        {dest === "opt2" ?
+                            isClass && <View style={styles.classOptnsWrap}>
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrapActive}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxtActive}>1 Room</Text>
+                                </TouchableOpacity>
 
-                            <TouchableOpacity
-                                style={styles.classOptnTxtWrap}
-                                onPress={() => setIsClass(false)}
-                            >
-                                <Text style={styles.classOptnTxt}>Premium Economy</Text>
-                            </TouchableOpacity>
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrap}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxt}>2 Room</Text>
+                                </TouchableOpacity>
 
-                            <TouchableOpacity
-                                style={styles.classOptnTxtWrap}
-                                onPress={() => setIsClass(false)}
-                            >
-                                <Text style={styles.classOptnTxt}>Business</Text>
-                            </TouchableOpacity>
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrap}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxt}>3 Room</Text>
+                                </TouchableOpacity>
 
-                            <TouchableOpacity
-                                style={styles.classOptnTxtWrap}
-                                onPress={() => setIsClass(false)}
-                            >
-                                <Text style={styles.classOptnTxt}>First Class</Text>
-                            </TouchableOpacity>
-                        </View>}
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrap}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxt}>4 Room</Text>
+                                </TouchableOpacity>
+                            </View>
+                            :
+                            isClass && <View style={styles.classOptnsWrap}>
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrapActive}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxtActive}>Economy</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrap}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxt}>Premium Economy</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrap}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxt}>Business</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity
+                                    style={styles.classOptnTxtWrap}
+                                    onPress={() => setIsClass(false)}
+                                >
+                                    <Text style={styles.classOptnTxt}>First Class</Text>
+                                </TouchableOpacity>
+                            </View>
+                        }
                     </View>
                 </View>
             </View>
@@ -360,8 +393,6 @@ const styles = StyleSheet.create({
         marginHorizontal: 6,
         paddingVertical: 4,
         marginTop: 5,
-    },
-    travelTxtWrap: {
     },
     travelHdTxt: {
         color: b1,
