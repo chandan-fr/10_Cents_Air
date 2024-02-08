@@ -6,6 +6,7 @@ import { white } from '../../config/colors';
 import Flights from '../../components/Search/Flights/Flights';
 import Hotels from '../../components/Search/Hotels/Hotels';
 import Cars from '../../components/Search/Cars/Cars';
+import GroupTickets from '../../components/Search/GroupTickets/GroupTickets';
 
 const { width, height } = Dimensions.get("window");
 
@@ -51,7 +52,7 @@ const Search = ({ navigation }) => {
                 </View>
 
                 {/* extra nav bar */}
-                {/* <View style={[styles.headMenuWrap, { marginHorizontal: 100 }]}>
+                <View style={[styles.headMenuWrap, { marginHorizontal: 100 }]}>
                     <TouchableOpacity
                         style={selectedHMenu == "hp" ? styles.hMenuItemActive : styles.hMenuItem}
                         onPress={() => setSelectedHMenu("hp")}
@@ -69,16 +70,25 @@ const Search = ({ navigation }) => {
                             Group Tickets
                         </Text>
                     </TouchableOpacity>
-                </View> */}
+                </View>
 
                 {/* Flights */}
                 {selectedHMenu === "f" && <Flights navigation={navigation} data={data} width={width} height={height} />}
+
+                {/* Flights + hotels */}
+                {/* {selectedHMenu === "f&h" && <FlightsHtls navigation={navigation} data={data} width={width} height={height} />} */}
 
                 {/* hotels */}
                 {selectedHMenu === "h" && <Hotels navigation={navigation} data={data} width={width} height={height} />}
 
                 {/* cars */}
                 {selectedHMenu === "c" && <Cars navigation={navigation} />}
+
+                {/* holiday packages */}
+                {/* {selectedHMenu === "hp" && <HolidayPacks navigation={navigation} />} */}
+
+                {/* group tickets */}
+                {selectedHMenu === "gt" && <GroupTickets navigation={navigation} data={data} width={width} height={height} />}
             </View>
         </SafeAreaView>
     )

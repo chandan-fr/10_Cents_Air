@@ -26,6 +26,7 @@ import CarFilter from './src/components/Search/Cars/CarFilter';
 import CarDetails from './src/components/Search/Cars/CarDetails';
 import CarFareDetails from './src/components/Search/Cars/CarFareDetails';
 import CarPayment from './src/components/Search/Cars/CarPayment';
+import GtDisclaimer from './src/components/Search/GroupTickets/GtDisclaimer';
 
 const RootStack = createNativeStackNavigator();
 
@@ -45,6 +46,7 @@ const App = () => {
         <RootStack.Screen name='addons' component={AddOns} />
         <RootStack.Screen name='payments' component={Payments} />
         <RootStack.Screen name='success' component={Success} />
+        {/* hotels */}
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />
         <RootStack.Screen name='hoteldetails' component={HotelDetails} />
@@ -54,11 +56,14 @@ const App = () => {
         <RootStack.Screen name='hotelps' component={HotelPriceSum} />
         <RootStack.Screen name='hotelsum' component={HotelSummary} />
         <RootStack.Screen name='hotelpay' component={HotelPayment} />
+        {/* cars */}
         <RootStack.Screen name='carsearch' component={CarSearch} />
         <RootStack.Screen name='carfilter' component={CarFilter} />
         <RootStack.Screen name='cardetails' component={CarDetails} />
         <RootStack.Screen name='carfaredetails' component={CarFareDetails} />
         <RootStack.Screen name='carpayment' component={CarPayment} />
+        {/* group tickets */}
+        <RootStack.Screen name='gtdisclaimer' component={GtDisclaimer} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

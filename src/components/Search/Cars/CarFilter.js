@@ -2,7 +2,7 @@ import { SafeAreaView, StyleSheet, Text, View, StatusBar, TouchableOpacity, Imag
 import React from 'react'
 import icon from '../../../config/IconAssets';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b2, b3, blue, white } from '../../../config/colors';
+import { b2, blue, white } from '../../../config/colors';
 
 
 const CarFilter = ({ navigation }) => {
