@@ -1,11 +1,9 @@
-import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Dimensions, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, blue, white } from '../../../config/colors';
-import icon from '../../../config/IconAssets';
-import image from '../../../config/ImageAssets';
+import { b2, white } from '../../../config/colors';
 
 const { width, height } = Dimensions.get("window");
 
@@ -66,7 +64,7 @@ const GtDisclaimer = ({ navigation }) => {
                             <View style={{marginTop: 30, marginHorizontal: 60}}>
                                 <TouchableOpacity
                                     style={styles.btn}
-                                    onPress={() => navigation.navigate("carfaredetails")}
+                                    onPress={() => navigation.navigate("gtcreatereq")}
                                 >
                                     <Text style={[commonStyles.lbB1, { fontSize: 16, color: white }]}>
                                         PROCEED
@@ -76,8 +74,8 @@ const GtDisclaimer = ({ navigation }) => {
                         </View>
                     </View>
                 </ScrollView>
-            </View >
-        </SafeAreaView >
+            </View>
+        </SafeAreaView>
     )
 };
 

@@ -3,7 +3,7 @@ import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, blue, white } from '../../../config/colors';
+import { b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 
@@ -203,7 +203,7 @@ const CarPayment = ({ navigation }) => {
                                 />
 
                                 <View style={{ flexDirection: "row", flexWrap: "wrap", flex: 1, columnGap: 20, rowGap: 10 }}>
-                                    <TouchableOpacity style={{}}>
+                                    <TouchableOpacity>
                                         <Text style={[commonStyles.ns600, { fontSize: 12, color: blue, textDecorationLine: "underline" }]}>
                                             Payment Acceptance Policy
                                         </Text>
@@ -216,13 +216,13 @@ const CarPayment = ({ navigation }) => {
                                             style={{ width: 15, height: 15 }}
                                             source={icon.lock}
                                         />
-                                        
+
                                         <Text style={[commonStyles.ns600, { fontSize: 12, color: blue, textDecorationLine: "underline" }]}>
                                             Privacy Policy
                                         </Text>
                                     </TouchableOpacity>
 
-                                    <TouchableOpacity style={{}}>
+                                    <TouchableOpacity>
                                         <Text style={[commonStyles.ns600, { fontSize: 12, color: blue, textDecorationLine: "underline" }]}>
                                             Safe Shopping Guarantee
                                         </Text>

@@ -27,6 +27,7 @@ import CarDetails from './src/components/Search/Cars/CarDetails';
 import CarFareDetails from './src/components/Search/Cars/CarFareDetails';
 import CarPayment from './src/components/Search/Cars/CarPayment';
 import GtDisclaimer from './src/components/Search/GroupTickets/GtDisclaimer';
+import GtCreateReq from './src/components/Search/GroupTickets/GtCreateReq';
 
 const RootStack = createNativeStackNavigator();
 
@@ -64,6 +65,7 @@ const App = () => {
         <RootStack.Screen name='carpayment' component={CarPayment} />
         {/* group tickets */}
         <RootStack.Screen name='gtdisclaimer' component={GtDisclaimer} />
+        <RootStack.Screen name='gtcreatereq' component={GtCreateReq} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
