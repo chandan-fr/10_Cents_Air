@@ -1,22 +1,61 @@
 import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { b1, b2, b3, green, white } from '../../../config/colors';
+import { b1, b2, b3, white } from '../../../config/colors';
 import image from '../../../config/ImageAssets';
 import commonStyles from '../../../assets/css/CommonFonts';
 import icon from '../../../config/IconAssets';
 
 const { width } = Dimensions.get("window");
 
-const HotelPromoOffers = () => {
+const HotelPromoOffers = ({ orgDest, screenName }) => {
     return (
         <View style={styles.main}>
             <Image style={styles.img} resizeMode='cover' source={image.hotelimg} />
 
-            <View style={{}}>
-                <View style={{ rowGap: 6 }}>
+            <View style={{ marginTop: 5 }}>
+                <View style={{ rowGap: 8 }}>
                     <Text style={[commonStyles.ns600, { fontSize: 18 }]}>
                         DoubleTree by Hilton Hotel & Suites
                     </Text>
+
+                    {/* destination glimpse */}
+                    {orgDest === "f&h" && <View style={{ rowGap: 4 }}>
+                        <View style={{ flexDirection: "row", columnGap: 10, alignItems: 'center' }}>
+                            <Image
+                                style={{ width: 13, height: 13, tintColor: b1, transform: [{ rotate: "45deg" }] }}
+                                source={icon.plane}
+                            />
+
+                            <Text style={commonStyles.ns400}>
+                                Roundtrip flight + Taxes and fees
+                            </Text>
+                        </View>
+
+                        <View style={{ flexDirection: "row", columnGap: 10, alignItems: 'center' }}>
+                            <Text style={[commonStyles.ns400, { fontSize: 12, color: b3 }]}>
+                                Los Angeles
+                            </Text>
+
+                            <View style={{ backgroundColor: b3, width: 16, height: 16, borderRadius: 16, alignItems: 'center', justifyContent: 'center' }}>
+                                <Image
+                                    style={{ width: 10, height: 10, tintColor: white }}
+                                    source={icon.exchange}
+                                />
+                            </View>
+
+                            <Text style={[commonStyles.ns400, { fontSize: 12, color: b3 }]}>
+                                Las Vegas
+                            </Text>
+                        </View>
+
+                        <Text style={[commonStyles.ns400, { fontSize: 12, color: b3 }]}>
+                            (Dec 17, 2023 - Dec 21, 2023)
+                        </Text>
+
+                        <Text style={[commonStyles.ns400, { fontSize: 12, color: b3 }]}>
+                            Class - Economy
+                        </Text>
+                    </View>}
 
                     {/* star */}
                     <View style={{ flexDirection: 'row', alignItems: "center" }}>

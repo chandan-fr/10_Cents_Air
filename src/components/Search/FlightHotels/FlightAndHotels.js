@@ -1,12 +1,12 @@
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
-import BgGradient from '../../../utility/BgGradient';
 import SearchButton from '../../SearchButton';
 import { b1, b3, black, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import OneWay from '../Flights/OneWay';
 import RoundTrip from '../Flights/RoundTrip';
-import DealItem from '../Flights/DealItem';
+import HotelPromoOffers from '../Hotels/HotelPromoOffers';
+import commonStyles from '../../../assets/css/CommonFonts';
 
 
 const FlightAndHotels = ({ navigation, data, width, height }) => {
@@ -99,15 +99,37 @@ const FlightAndHotels = ({ navigation, data, width, height }) => {
 
             {/* deals option */}
             {selectedMidMenu === "r" && <View style={styles.dealWrap}>
-                <Text style={styles.dealHeadTxt}>Explore Deals from San Jose</Text>
+                <Text style={styles.dealHeadTxt}>Flight + Hotel Packages</Text>
 
                 <View style={styles.dealContWrap}>
                     {data.map((_, i) => (
                         <View key={i}>
-                            <DealItem />
+                            {/* <DealItem /> */}
+                            <HotelPromoOffers orgDest={"f&h"} />
                             {i == data.length - 1 ? <View style={{ marginBottom: 30 }} /> : null}
                         </View>
                     ))}
+                </View>
+
+                <View style={{ marginHorizontal: 10 }}>
+                    <Text style={[commonStyles.ns400, { color: b3, lineHeight: 19 }]}>
+                        *All fares above were last found on: <Text style={{ color: "#CB3926", fontFamily: "Arial" }}>Oct 02, 2023 at 12:10:59 AM</Text>.
+                        These are based on average nightly rates and airfare includes all fuel surcharges,
+                        taxes & fees and our service fees. Hotels, rental cars and activities may have
+                        additional taxes and fees. Displayed rates are based on historical data,
+                        are subject to change, and cannot be guaranteed at the time of booking.
+                        See all booking <Text onPress={() => Alert.alert("t&c")} style={{ color: blue, fontFamily: "Arial", textDecorationLine: "underline" }}>terms and conditions</Text>
+                    </Text>
+
+                    <View style={{ marginVertical: 20, marginHorizontal: 15 }}>
+                        <TouchableOpacity
+                            style={styles.viewall}
+                        >
+                            <Text style={[commonStyles.lbB1, { fontSize: 22, color: blue }]}>
+                                View All
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>}
         </ScrollView>
@@ -219,8 +241,8 @@ const styles = StyleSheet.create({
         marginTop: 12,
     },
     dealHeadTxt: {
-        fontFamily: "NunitoSans_10pt-Bold",
-        fontSize: 17,
+        fontFamily: "NunitoSans_10pt-SemiBold",
+        fontSize: 22,
         color: b1,
         textAlign: "center",
         marginTop: 25,
@@ -230,5 +252,13 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         flex: 1,
         rowGap: 20,
+    },
+    viewall: {
+        borderWidth: 2,
+        borderColor: blue,
+        borderRadius: 4,
+        alignItems: 'center',
+        justifyContent: "center",
+        paddingVertical: 10,
     },
 });
