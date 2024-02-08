@@ -28,6 +28,7 @@ import CarFareDetails from './src/components/Search/Cars/CarFareDetails';
 import CarPayment from './src/components/Search/Cars/CarPayment';
 import GtDisclaimer from './src/components/Search/GroupTickets/GtDisclaimer';
 import GtCreateReq from './src/components/Search/GroupTickets/GtCreateReq';
+import FlightAndHotels from './src/components/Search/FlightHotels/FlightAndHotels';
 
 const RootStack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ const App = () => {
         <RootStack.Screen name='wlscrn' component={WelcomeScreen} />
         <RootStack.Screen name='tab' component={TabNavigation} />
         <RootStack.Screen name='traveldate' component={TravelDate} />
+        {/* flights */}
         <RootStack.Screen name='flightsearch' component={FlightSearch} />
         <RootStack.Screen name='filters' component={Filters} />
         <RootStack.Screen name='selectfair' component={SelectFair} />
@@ -47,6 +49,8 @@ const App = () => {
         <RootStack.Screen name='addons' component={AddOns} />
         <RootStack.Screen name='payments' component={Payments} />
         <RootStack.Screen name='success' component={Success} />
+        {/* flight and hotel */}
+        {/* <RootStack.Screen name='flghthtls' component={FlightAndHotels} /> */}
         {/* hotels */}
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />

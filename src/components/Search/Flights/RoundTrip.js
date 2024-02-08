@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { b1, b3, blue, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 
-const RoundTrip = ({ navigation }) => {
+const RoundTrip = ({ navigation, dest }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
@@ -143,12 +143,12 @@ const RoundTrip = ({ navigation }) => {
 
                     <View style={styles.right}>
                         <View style={{ flexDirection: 'row', alignItems: "center" }}>
-                            <Text style={styles.tbTxt}>Class</Text>
+                            <Text style={styles.tbTxt}>{dest === "opt2" ? "Room" : "Class"}</Text>
                             <Image style={styles.imgCls} source={icon.rightArrow} />
                         </View>
 
                         <TouchableOpacity onPress={() => setIsClass(true)}>
-                            <Text style={styles.midTxt}>Class</Text>
+                            <Text style={styles.midTxt}>{dest === "opt2" ? "1 Room" : "Class"}</Text>
                         </TouchableOpacity>
 
                         {isClass && <View style={styles.classOptnsWrap}>
@@ -185,73 +185,83 @@ const RoundTrip = ({ navigation }) => {
             </View>
 
             {/* extra search option section */}
-            <View style={styles.searchWrap}>
-                <View
-                    style={{
-                        flexDirection: "row",
-                        borderBottomWidth: 1,
-                        alignItems: 'center',
-                        borderColor: b3,
-                        paddingRight: 10,
-                    }}
-                >
-                    <Image
-                        style={{ width: 20, height: 20, tintColor: blue, }}
-                        source={icon.search}
-                    />
+            {
+                dest !== "opt2" ?
+                    <View style={styles.searchWrap}>
+                        <View
+                            style={{
+                                flexDirection: "row",
+                                borderBottomWidth: 1,
+                                alignItems: 'center',
+                                borderColor: b3,
+                                paddingRight: 10,
+                            }}
+                        >
+                            <Image
+                                style={{ width: 20, height: 20, tintColor: blue, }}
+                                source={icon.search}
+                            />
 
-                    <TextInput
-                        placeholder='Search Preferred Airline'
-                        placeholderTextColor={b3}
-                        style={{
-                            height: 35,
-                            alignItems: "center",
-                            justifyContent: "center",
-                            marginLeft: 10,
-                            color: b1,
-                        }}
-                    />
-                </View>
+                            <TextInput
+                                placeholder='Search Preferred Airline'
+                                placeholderTextColor={b3}
+                                style={{
+                                    height: 35,
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    marginLeft: 10,
+                                    color: b1,
+                                }}
+                            />
+                        </View>
 
-                <View style={{ marginTop: 20, marginLeft: 8, alignItems: "flex-start" }}>
-                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
-                        <View style={styles.radio} />
-                        <Text style={styles.searchTxt}>Return to or from another city/airport?</Text>
-                    </TouchableOpacity>
+                        {/* radio options */}
+                        <View style={{ marginTop: 20, marginLeft: 8, alignItems: "flex-start" }}>
+                            <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                                <View style={styles.radio} />
+                                <Text style={styles.searchTxt}>Return to or from another city/airport?</Text>
+                            </TouchableOpacity>
 
-                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
-                        <View style={styles.radio} />
-                        <Text style={styles.searchTxt}>Direct Flights</Text>
-                    </TouchableOpacity>
-                </View>
+                            <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                                <View style={styles.radio} />
+                                <Text style={styles.searchTxt}>Direct Flights</Text>
+                            </TouchableOpacity>
+                        </View>
 
-                <View style={{ marginTop: 20, alignItems: "flex-start", marginBottom: 15 }}>
-                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
-                        <Text style={styles.searchTxt}>Select Group Type</Text>
-                        <Image
-                            style={styles.arrow}
-                            source={icon.rightArrow}
-                        />
-                    </TouchableOpacity>
+                        {/* group types & currency */}
+                        <View style={{ marginTop: 20, alignItems: "flex-start", marginBottom: 15 }}>
+                            {/* group types */}
+                            <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                                <Text style={styles.searchTxt}>Select Group Type</Text>
+                                <Image
+                                    style={styles.arrow}
+                                    source={icon.rightArrow}
+                                />
+                            </TouchableOpacity>
 
-                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
-                        <Text style={styles.searchTxt}>Select currency</Text>
-                        <Image
-                            style={styles.arrow}
-                            source={icon.rightArrow}
-                        />
-                    </TouchableOpacity>
-                </View>
-            </View>
+                            {/* currency */}
+                            <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                                <Text style={styles.searchTxt}>Select currency</Text>
+                                <Image
+                                    style={styles.arrow}
+                                    source={icon.rightArrow}
+                                />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                    :
+                    null
+            }
         </View>
     )
-}
+};
 
-export default RoundTrip
+export default RoundTrip;
 
 const styles = StyleSheet.create({
     main: {
         marginTop: 10,
+        marginBottom: 10,
     },
     topWrap: {
         flexDirection: 'row',
@@ -278,7 +288,7 @@ const styles = StyleSheet.create({
     },
     midTxt: {
         color: b1,
-        fontFamily: 'NunitoSans_10pt-Bold',
+        fontFamily: 'NunitoSans_10pt-SemiBold',
         fontSize: 18,
         marginVertical: 8,
     },

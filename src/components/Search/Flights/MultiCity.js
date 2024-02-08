@@ -9,7 +9,7 @@ const MultiCity = ({ navigation }) => {
 
     return (
         <View>
-            <View style={[styles.main, { marginTop: -25 }]}>
+            <View style={[styles.main, { marginTop: -25, paddingBottom: 10 }]}>
                 <Text style={styles.fHdTxt}>Flight 1</Text>
                 {/* top selection row */}
                 <View style={styles.topWrap}>
@@ -177,7 +177,7 @@ const MultiCity = ({ navigation }) => {
                 </View>
             </View>
 
-            <View style={[styles.main, { marginVertical: 20, }]}>
+            <View style={[styles.main, { marginVertical: 20, paddingBottom: 10 }]}>
                 <Text style={styles.fHdTxt}>Flight 2</Text>
 
                 {/* top selection row */}
@@ -353,7 +353,6 @@ export default MultiCity;
 
 const styles = StyleSheet.create({
     main: {
-        // borderWidth: 1,
         backgroundColor: white,
         marginHorizontal: 7,
         paddingHorizontal: 10,
@@ -384,7 +383,7 @@ const styles = StyleSheet.create({
     },
     midTxt: {
         color: b1,
-        fontFamily: 'NunitoSans_10pt-Bold',
+        fontFamily: 'NunitoSans_10pt-SemiBold',
         fontSize: 18,
         marginVertical: 8,
     },

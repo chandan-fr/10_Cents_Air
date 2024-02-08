@@ -182,6 +182,7 @@ export default OneWay;
 const styles = StyleSheet.create({
     main: {
         marginTop: 10,
+        marginBottom: 10,
     },
     topWrap: {
         flexDirection: 'row',
@@ -208,7 +209,7 @@ const styles = StyleSheet.create({
     },
     midTxt: {
         color: b1,
-        fontFamily: 'NunitoSans_10pt-Bold',
+        fontFamily: 'NunitoSans_10pt-SemiBold',
         fontSize: 18,
         marginVertical: 8,
     },
