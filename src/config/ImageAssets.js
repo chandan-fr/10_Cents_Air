@@ -39,6 +39,7 @@ const image = {
     alamo: require("../assets/images/alamo.png"),
     affirm: require("../assets/images/affirm.jpg"),
     mcafe: require("../assets/images/mcafe.png"),
+    hotelimg2: require("../assets/images/hotelimg2.jpg"),
 };
 
 module.exports = image;

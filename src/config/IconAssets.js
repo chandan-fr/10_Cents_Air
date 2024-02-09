@@ -121,6 +121,9 @@ const icon = {
     filters: require("../assets/icons/filters.png"),
     cmiles: require("../assets/icons/cmiles.png"),
     lock: require("../assets/icons/lock.png"),
+    calendarDate: require("../assets/icons/calendar-date.png"),
+    priceTag: require("../assets/icons/price-tag.png"),
+    clock: require("../assets/icons/clock.png"),
 };
 
 module.exports = icon;
