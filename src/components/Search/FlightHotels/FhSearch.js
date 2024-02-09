@@ -30,7 +30,7 @@ const FhSearch = ({ navigation }) => {
                             <View style={{ rowGap: 30 }}>
                                 {data.map((_, i) => (
                                     <View key={i}>
-                                        <HotelItem navigation={navigation} />
+                                        <HotelItem navigation={navigation} srcName={"fhdetails"} />
                                         {i < 1 && <View style={styles.privacy}>
                                             <TouchableOpacity
                                                 style={{ alignSelf: 'flex-end' }}

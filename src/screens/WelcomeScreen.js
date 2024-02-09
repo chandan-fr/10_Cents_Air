@@ -31,7 +31,7 @@ const WelcomeScreen = ({ navigation }) => {
           resizeMode='cover'
           style={styles.imgBkgrnd}
         >
-          <TouchableOpacity style={styles.skipWrap} onPress={()=> navigation.replace("tab")}>
+          <TouchableOpacity style={styles.skipWrap} onPress={() => navigation.replace("tab")}>
             <Text style={styles.skip}>Skip</Text>
           </TouchableOpacity>
 
@@ -150,15 +150,15 @@ const WelcomeScreen = ({ navigation }) => {
                   </Text>
 
                   <View style={{ flex: 1, justifyContent: 'center' }}>
-                      <View style={[styles.outer, styles.centerAlign]}>
-                        <View style={[styles.middle, styles.centerAlign]}>
-                          <View style={[styles.inner, styles.centerAlign]}>
-                            <View style={styles.contWrap}>
-                              <Image style={{width: 30, height: 30}} source={require("../assets/icons/location.png")} />
-                            </View>
+                    <View style={[styles.outer, styles.centerAlign]}>
+                      <View style={[styles.middle, styles.centerAlign]}>
+                        <View style={[styles.inner, styles.centerAlign]}>
+                          <View style={styles.contWrap}>
+                            <Image style={{ width: 30, height: 30 }} source={require("../assets/icons/location.png")} />
                           </View>
                         </View>
                       </View>
+                    </View>
                   </View>
 
                   <TouchableOpacity
@@ -212,6 +212,7 @@ const styles = StyleSheet.create({
   skip: {
     fontFamily: "Rubik-Regular",
     fontSize: 16,
+    color: white,
   },
   skipWrap: {
     marginTop: 40,
@@ -231,7 +232,7 @@ const styles = StyleSheet.create({
   logoText: {
     fontSize: 48,
     fontFamily: "LondonBetween",
-    width: width/1.6,
+    width: width / 1.6,
     textAlign: "center",
     color: white,
     marginBottom: 20,
@@ -370,7 +371,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     position: 'relative'
   },
-  contWrap:{
+  contWrap: {
     width: 50,
     height: 50,
     alignItems: 'center',
@@ -378,22 +379,22 @@ const styles = StyleSheet.create({
     backgroundColor: white,
     borderRadius: 50,
   },
-  outer:{
+  outer: {
     width: 202,
     height: 202,
     borderColor: "rgba(255,255,255, 0.2)"
   },
-  middle:{
+  middle: {
     width: 154,
     height: 154,
     borderColor: "rgba(255,255,255, 0.5)",
   },
-  inner:{
+  inner: {
     width: 106,
     height: 106,
     borderColor: "rgba(255,255,255, 0.7)"
   },
-  centerAlign:{
+  centerAlign: {
     alignItems: "center",
     justifyContent: 'center',
     borderRadius: 100,

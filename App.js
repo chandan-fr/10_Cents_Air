@@ -31,6 +31,10 @@ import GtCreateReq from './src/components/Search/GroupTickets/GtCreateReq';
 import FlightAndHotels from './src/components/Search/FlightHotels/FlightAndHotels';
 import FhSearch from './src/components/Search/FlightHotels/FhSearch';
 import FhFilter from './src/components/Search/FlightHotels/FhFilter';
+import FhDetails from './src/components/Search/FlightHotels/FhDetails';
+import FhFlightDetails from './src/components/Search/FlightHotels/FhFlightDetails';
+import FhBaseReview from './src/components/Search/FlightHotels/FhBaseReview';
+import FhFinalReview from './src/components/Search/FlightHotels/FhFinalReview';
 
 const RootStack = createNativeStackNavigator();
 
@@ -54,6 +58,10 @@ const App = () => {
         {/* flight and hotel */}
         <RootStack.Screen name='fhsearch' component={FhSearch} />
         <RootStack.Screen name='fhfilter' component={FhFilter} />
+        <RootStack.Screen name='fhdetails' component={FhDetails} />
+        <RootStack.Screen name='fhfdetails' component={FhFlightDetails} />
+        <RootStack.Screen name='fhbr' component={FhBaseReview} />
+        <RootStack.Screen name='fhfr' component={FhFinalReview} />
         {/* hotels */}
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />

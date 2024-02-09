@@ -7,7 +7,7 @@ import { white, b1, b2, b3 } from '../../../config/colors';
 
 const { width } = Dimensions.get("window");
 
-const HotelItem = ({ navigation }) => {
+const HotelItem = ({ navigation, srcName }) => {
     return (
         <View style={styles.main}>
             <View style={{ alignItems: "center" }}>
@@ -116,7 +116,7 @@ const HotelItem = ({ navigation }) => {
 
                     <TouchableOpacity
                         style={styles.btn}
-                        onPress={() => navigation.navigate("hoteldetails")}
+                        onPress={() => navigation.navigate(srcName)}
                     >
                         <Text style={[commonStyles.lbB1, { color: white }]}>
                             Book
