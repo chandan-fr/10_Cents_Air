@@ -29,7 +29,7 @@ const FhFlightDetails = ({ navigation }) => {
             style={{ flex: 1, }}
             showsVerticalScrollIndicator={false}
           >
-            <View style={{ rowGap: 16, marginHorizontal: 5, backgroundColor: white, paddingTop: 20, paddingHorizontal: 15, paddingBottom: 10, marginBottom: 5 }}>
+            <View style={{ rowGap: 16, marginHorizontal: 5, backgroundColor: white, paddingTop: 20, paddingHorizontal: 15, paddingBottom: 10, marginBottom: 5, borderRadius: 8 }}>
               {/* Depart */}
               <Text style={[commonStyles.ns600]}>
                 Depart Fri, Dec 22

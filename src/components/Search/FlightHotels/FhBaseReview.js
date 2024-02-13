@@ -879,7 +879,7 @@ const FhBaseReview = ({ navigation }) => {
           </ScrollView>
         </View>
 
-        {/* Reserve */}
+        {/* PROCEED */}
         <View style={{ backgroundColor: b1, alignItems: "center", justifyContent: "space-between", paddingVertical: 8, paddingHorizontal: 10, flexDirection: "row" }}>
           <View style={{ rowGap: 3 }}>
             <Text style={[commonStyles.ns600, { fontSize: 14, color: white }]}>
@@ -892,7 +892,7 @@ const FhBaseReview = ({ navigation }) => {
 
           <TouchableOpacity
             style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-            onPress={() => navigation.navigate("fhbr")}
+            onPress={() => navigation.navigate("fhfr")}
           >
             <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
               PROCEED
