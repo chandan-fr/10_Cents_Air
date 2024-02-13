@@ -124,6 +124,9 @@ const icon = {
     calendarDate: require("../assets/icons/calendar-date.png"),
     priceTag: require("../assets/icons/price-tag.png"),
     clock: require("../assets/icons/clock.png"),
+    canada: require("../assets/icons/canada.png"),
+    longArrow: require("../assets/icons/long-arrow.png"),
+    duffleBag: require("../assets/icons/duffle-bag.png"),
 };
 
 module.exports = icon;

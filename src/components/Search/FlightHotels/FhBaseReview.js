@@ -324,7 +324,8 @@ const FhBaseReview = ({ navigation }) => {
                   </View>
                 </View>
 
-                <View style={{ marginTop: 20, paddingHorizontal: 5 }}>
+                {/* tickets */}
+                <View style={{ marginTop: 20, paddingHorizontal: 5, rowGap: 10 }}>
                   <View style={styles.comWrap}>
                     <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: "space-between" }}>
                       {/* left */}
@@ -395,6 +396,468 @@ const FhBaseReview = ({ navigation }) => {
                             Book
                           </Text>
                         </TouchableOpacity>
+                      </View>
+                    </View>
+
+                    {/* flight details */}
+                    <View style={{ alignItems: "flex-end" }}>
+                      <TouchableOpacity
+                        style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}
+                        onPress={() => navigation.navigate("fhfdetails")}
+                      >
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                          Flight Details
+                        </Text>
+
+                        <Image
+                          style={{ width: 10, height: 10, transform: [{ rotate: "90deg" }], tintColor: blue }}
+                          source={icon.rightArrow}
+                        />
+                      </TouchableOpacity>
+                    </View>
+
+                    {/* footer */}
+                    <View style={{ flexDirection: "row", alignItems: "center", flexWrap: "wrap", columnGap: 15, rowGap: 8 }}>
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                        Fare Rules
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: "#EB2A2A" }]}>
+                        NON-REFUNDABLE
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: b2 }]}>
+                        ECONOMY
+                      </Text>
+
+                      {/* bag */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.baggage}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          2 Checked Bags
+                        </Text>
+                      </View>
+
+                      {/* seat */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.seat}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          8 Seats
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View style={styles.comWrap}>
+                    <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: "space-between" }}>
+                      {/* left */}
+                      <View style={{ width: "70%", rowGap: 15 }}>
+                        <View style={{ rowGap: 10 }}>
+                          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
+                            <Image
+                              style={{ width: 15, height: 15 }}
+                              source={icon.vistara}
+                            />
+
+                            <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
+                              Vistara
+                            </Text>
+                          </View>
+
+                          <View style={{ width: "90%", rowGap: 6 }}>
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>DAC</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>-BOM + LHR-</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>YYC</Text>
+                            </View>
+
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>01:00</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 10 }]}>1d 09h 45m</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>09:45</Text>
+                            </View>
+                          </View>
+                        </View>
+
+                        <View style={{ rowGap: 10 }}>
+                          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
+                            <Image
+                              style={{ width: 15, height: 15 }}
+                              source={icon.vistara}
+                            />
+
+                            <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
+                              Air Canada
+                            </Text>
+                          </View>
+
+                          <View style={{ width: "90%", rowGap: 6 }}>
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>DAC</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>-LHR + BOM-</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>YYC</Text>
+                            </View>
+
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>01:00</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 10 }]}>2d 0h 5m</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>09:45</Text>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+
+                      {/* right */}
+                      <View style={{ rowGap: 10 }}>
+                        <Text style={[commonStyles.ns600, { textAlign: 'center' }]}>$430</Text>
+
+                        <TouchableOpacity
+                          style={styles.btn}
+                        >
+                          <Text style={[commonStyles.lbB1, { color: white, fontSize: 18 }]}>
+                            Book
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+
+                    {/* flight details */}
+                    <View style={{ alignItems: "flex-end" }}>
+                      <TouchableOpacity
+                        style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}
+                        onPress={() => navigation.navigate("fhfdetails")}
+                      >
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                          Flight Details
+                        </Text>
+
+                        <Image
+                          style={{ width: 10, height: 10, transform: [{ rotate: "90deg" }], tintColor: blue }}
+                          source={icon.rightArrow}
+                        />
+                      </TouchableOpacity>
+                    </View>
+
+                    {/* footer */}
+                    <View style={{ flexDirection: "row", alignItems: "center", flexWrap: "wrap", columnGap: 15, rowGap: 8 }}>
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                        Fare Rules
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: "#EEB522" }]}>
+                        PARTIAL REFUNDABLE
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: b2 }]}>
+                        ECONOMY
+                      </Text>
+
+                      {/* bag */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.baggage}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          2 Checked Bags
+                        </Text>
+                      </View>
+
+                      {/* seat */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.seat}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          8 Seats
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View style={styles.comWrap}>
+                    <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: "space-between" }}>
+                      {/* left */}
+                      <View style={{ width: "70%", rowGap: 15 }}>
+                        <View style={{ rowGap: 10 }}>
+                          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
+                            <Image
+                              style={{ width: 15, height: 15 }}
+                              source={icon.vistara}
+                            />
+
+                            <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
+                              Vistara
+                            </Text>
+                          </View>
+
+                          <View style={{ width: "90%", rowGap: 6 }}>
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>DAC</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>-BOM + LHR-</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>YYC</Text>
+                            </View>
+
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>01:00</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 10 }]}>1d 09h 45m</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>09:45</Text>
+                            </View>
+                          </View>
+                        </View>
+
+                        <View style={{ rowGap: 10 }}>
+                          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
+                            <Image
+                              style={{ width: 15, height: 15 }}
+                              source={icon.vistara}
+                            />
+
+                            <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
+                              Air Canada
+                            </Text>
+                          </View>
+
+                          <View style={{ width: "90%", rowGap: 6 }}>
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>DAC</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>-LHR + BOM-</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>YYC</Text>
+                            </View>
+
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>01:00</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 10 }]}>2d 0h 5m</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>09:45</Text>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+
+                      {/* right */}
+                      <View style={{ rowGap: 10 }}>
+                        <Text style={[commonStyles.ns600, { textAlign: 'center' }]}>$430</Text>
+
+                        <TouchableOpacity
+                          style={styles.btn}
+                        >
+                          <Text style={[commonStyles.lbB1, { color: white, fontSize: 18 }]}>
+                            Book
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+
+                    {/* flight details */}
+                    <View style={{ alignItems: "flex-end" }}>
+                      <TouchableOpacity
+                        style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}
+                        onPress={() => navigation.navigate("fhfdetails")}
+                      >
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                          Flight Details
+                        </Text>
+
+                        <Image
+                          style={{ width: 10, height: 10, transform: [{ rotate: "90deg" }], tintColor: blue }}
+                          source={icon.rightArrow}
+                        />
+                      </TouchableOpacity>
+                    </View>
+
+                    {/* footer */}
+                    <View style={{ flexDirection: "row", alignItems: "center", flexWrap: "wrap", columnGap: 15, rowGap: 8 }}>
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                        Fare Rules
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: "#34AE39" }]}>
+                        REFUNDABLE
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: b2 }]}>
+                        ECONOMY
+                      </Text>
+
+                      {/* bag */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.baggage}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          2 Checked Bags
+                        </Text>
+                      </View>
+
+                      {/* seat */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.seat}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          8 Seats
+                        </Text>
+                      </View>
+                    </View>
+                  </View>
+
+                  <View style={styles.comWrap}>
+                    <View style={{ flexDirection: "row", alignItems: 'center', justifyContent: "space-between" }}>
+                      {/* left */}
+                      <View style={{ width: "70%", rowGap: 15 }}>
+                        <View style={{ rowGap: 10 }}>
+                          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
+                            <Image
+                              style={{ width: 15, height: 15 }}
+                              source={icon.vistara}
+                            />
+
+                            <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
+                              Vistara
+                            </Text>
+                          </View>
+
+                          <View style={{ width: "90%", rowGap: 6 }}>
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>DAC</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>-BOM + LHR-</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>YYC</Text>
+                            </View>
+
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>01:00</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 10 }]}>1d 09h 45m</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>09:45</Text>
+                            </View>
+                          </View>
+                        </View>
+
+                        <View style={{ rowGap: 10 }}>
+                          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
+                            <Image
+                              style={{ width: 15, height: 15 }}
+                              source={icon.vistara}
+                            />
+
+                            <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
+                              Air Canada
+                            </Text>
+                          </View>
+
+                          <View style={{ width: "90%", rowGap: 6 }}>
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>DAC</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>-LHR + BOM-</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14, color: b3 }]}>YYC</Text>
+                            </View>
+
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>01:00</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 10 }]}>2d 0h 5m</Text>
+                              <Text style={[commonStyles.ns600, { fontSize: 14 }]}>09:45</Text>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+
+                      {/* right */}
+                      <View style={{ rowGap: 10 }}>
+                        <Text style={[commonStyles.ns600, { textAlign: 'center' }]}>$430</Text>
+
+                        <TouchableOpacity
+                          style={styles.btn}
+                        >
+                          <Text style={[commonStyles.lbB1, { color: white, fontSize: 18 }]}>
+                            Book
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+
+                    {/* flight details */}
+                    <View style={{ alignItems: "flex-end" }}>
+                      <TouchableOpacity
+                        style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}
+                        onPress={() => navigation.navigate("fhfdetails")}
+                      >
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                          Flight Details
+                        </Text>
+
+                        <Image
+                          style={{ width: 10, height: 10, transform: [{ rotate: "90deg" }], tintColor: blue }}
+                          source={icon.rightArrow}
+                        />
+                      </TouchableOpacity>
+                    </View>
+
+                    {/* footer */}
+                    <View style={{ flexDirection: "row", alignItems: "center", flexWrap: "wrap", columnGap: 15, rowGap: 8 }}>
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: blue }]}>
+                        Fare Rules
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: "#EEB522" }]}>
+                        PARTIAL REFUNDABLE
+                      </Text>
+
+                      <Text style={[commonStyles.ns600, { fontSize: 10, color: b2 }]}>
+                        ECONOMY
+                      </Text>
+
+                      {/* bag */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.baggage}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          2 Checked Bags
+                        </Text>
+                      </View>
+
+                      {/* seat */}
+                      <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
+                        <View style={[styles.seatWrap, { width: 15, height: 15 }]}>
+                          <Image
+                            style={{ width: 10, height: 10, tintColor: blue }}
+                            source={icon.seat}
+                          />
+                        </View>
+
+                        <Text style={[commonStyles.ns600, { fontSize: 10, color: b3 }]}>
+                          8 Seats
+                        </Text>
                       </View>
                     </View>
                   </View>
@@ -570,5 +1033,13 @@ const styles = StyleSheet.create({
   sbBorderR: {
     borderTopRightRadius: 4,
     borderBottomRightRadius: 4,
+  },
+  seatWrap: {
+    backgroundColor: "rgba(33, 180, 226, 0.1)",
+    borderRadius: 22,
+    width: 22,
+    height: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
