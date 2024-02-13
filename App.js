@@ -35,6 +35,7 @@ import FhDetails from './src/components/Search/FlightHotels/FhDetails';
 import FhFlightDetails from './src/components/Search/FlightHotels/FhFlightDetails';
 import FhBaseReview from './src/components/Search/FlightHotels/FhBaseReview';
 import FhFinalReview from './src/components/Search/FlightHotels/FhFinalReview';
+import FhTripFilter from './src/components/Search/FlightHotels/FhTripFilter';
 
 const RootStack = createNativeStackNavigator();
 
@@ -58,6 +59,7 @@ const App = () => {
         {/* flight and hotel */}
         <RootStack.Screen name='fhsearch' component={FhSearch} />
         <RootStack.Screen name='fhfilter' component={FhFilter} />
+        <RootStack.Screen name='fhtripfilter' component={FhTripFilter} />
         <RootStack.Screen name='fhdetails' component={FhDetails} />
         <RootStack.Screen name='fhfdetails' component={FhFlightDetails} />
         <RootStack.Screen name='fhbr' component={FhBaseReview} />

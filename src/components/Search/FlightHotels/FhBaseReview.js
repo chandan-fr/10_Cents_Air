@@ -228,7 +228,10 @@ const FhBaseReview = ({ navigation }) => {
                 {/* sort scroll */}
                 <View style={{}}>
                   <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                    <TouchableOpacity style={[styles.sortBox, styles.sbBorderL]}>
+                    <TouchableOpacity
+                      style={[styles.sortBox, styles.sbBorderL]}
+                      onPress={() => navigation.navigate("fhtripfilter")}
+                    >
                       <View style={{ flexDirection: "row", alignItems: "center", columnGap: 4 }}>
                         <Image
                           style={{ width: 15, height: 15, tintColor: b1 }}
@@ -255,7 +258,10 @@ const FhBaseReview = ({ navigation }) => {
                       </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.sortBox]}>
+                    <TouchableOpacity
+                      style={[styles.sortBox]}
+                      onPress={() => navigation.navigate("fhtripfilter")}
+                    >
                       <View style={{ flexDirection: "row", alignItems: "center", columnGap: 5 }}>
                         <Image
                           style={{ width: 15, height: 15 }}
@@ -276,7 +282,10 @@ const FhBaseReview = ({ navigation }) => {
                       </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.sortBox]}>
+                    <TouchableOpacity
+                      style={[styles.sortBox]}
+                      onPress={() => navigation.navigate("fhtripfilter")}
+                    >
                       <View style={{ flexDirection: "row", alignItems: "center", columnGap: 8 }}>
                         <Image
                           style={{ width: 15, height: 15 }}
@@ -297,7 +306,10 @@ const FhBaseReview = ({ navigation }) => {
                       </View>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styles.sortBox, styles.sbBorderR, { borderRightWidth: 0 }]}>
+                    <TouchableOpacity
+                      style={[styles.sortBox, styles.sbBorderR, { borderRightWidth: 0 }]}
+                      onPress={() => navigation.navigate("fhtripfilter")}
+                    >
                       <View style={{ flexDirection: "row", alignItems: "center", columnGap: 8 }}>
                         <Image
                           style={{ width: 15, height: 15 }}
@@ -361,7 +373,7 @@ const FhBaseReview = ({ navigation }) => {
                           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
                             <Image
                               style={{ width: 15, height: 15 }}
-                              source={icon.vistara}
+                              source={icon.canada}
                             />
 
                             <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
@@ -393,7 +405,7 @@ const FhBaseReview = ({ navigation }) => {
                           style={styles.btn}
                         >
                           <Text style={[commonStyles.lbB1, { color: white, fontSize: 18 }]}>
-                            Book
+                            Selected
                           </Text>
                         </TouchableOpacity>
                       </View>
@@ -495,7 +507,7 @@ const FhBaseReview = ({ navigation }) => {
                           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
                             <Image
                               style={{ width: 15, height: 15 }}
-                              source={icon.vistara}
+                              source={icon.canada}
                             />
 
                             <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
@@ -629,7 +641,7 @@ const FhBaseReview = ({ navigation }) => {
                           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
                             <Image
                               style={{ width: 15, height: 15 }}
-                              source={icon.vistara}
+                              source={icon.canada}
                             />
 
                             <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
@@ -763,7 +775,7 @@ const FhBaseReview = ({ navigation }) => {
                           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "flex-start", columnGap: 8, alignSelf: "flex-start" }}>
                             <Image
                               style={{ width: 15, height: 15 }}
-                              source={icon.vistara}
+                              source={icon.canada}
                             />
 
                             <Text style={[commonStyles.lbB1, { fontSize: 16 }]}>
