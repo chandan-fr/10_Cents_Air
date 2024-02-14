@@ -3,20 +3,21 @@ import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, blue, white } from '../../../config/colors';
+import { b3, blue, white, b1, b2 } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
+import image from '../../../config/ImageAssets';
 
 const { width, height } = Dimensions.get("window");
 
-const CarFareDetails = ({ navigation }) => {
+const FhPayment = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.parent}>
-            <BgGradient width={width} height={height * 0.11} />
+            <BgGradient width={width} height={height * 0.1} />
             <Header />
 
             <View style={styles.body}>
                 <ScrollView
-                    style={{ marginHorizontal: 10, marginTop: 5 }}
+                    style={{ marginHorizontal: 10, marginTop: 5, flex: 1 }}
                     showsVerticalScrollIndicator={false}
                 >
                     <View style={{ paddingVertical: 5, rowGap: 15 }}>
@@ -39,42 +40,60 @@ const CarFareDetails = ({ navigation }) => {
                         <View style={styles.hr} />
 
                         {/* price breakdown */}
-                        <View style={{ rowGap: 10, marginBottom: 5 }}>
-                            <Text style={[commonStyles.ns600, { fontSize: 18 }]}>
-                                Price Breakdown (USD)
-                            </Text>
+                        <View style={{ rowGap: 15, marginBottom: 5 }}>
+                            <View>
+                                <Text style={[commonStyles.ns600, { fontSize: 20 }]}>
+                                    Price Breakdown (USD)
+                                </Text>
 
-                            <Text style={[commonStyles.ns600, { fontSize: 14 }]}>
-                                Car Rental: <Text style={[commonStyles.ns400, { color: b3 }]}>14 Days</Text>
-                            </Text>
+                                <Text style={[commonStyles.ns600, { fontSize: 14 }]}>
+                                    Dhaka(DAC) to Calgary(YYC)
+                                </Text>
+                            </View>
 
-                            <View style={{ rowGap: 4 }}>
+                            {/* price details */}
+                            <View style={{ rowGap: 4, marginTop: 10 }}>
                                 <View style={{ flexDirection: "row", alignItems: "flex-start", justifyContent: 'space-between' }}>
-                                    <Text style={[commonStyles.ns600, { fontSize: 16, width: 230 }]}>
-                                        Base Rental Price x 14 Day(s)
+                                    <Text style={[commonStyles.ns400, { fontSize: 16, width: 230 }]}>
+                                        Package Base Price(per person)
                                     </Text>
 
                                     <View style={{ flexDirection: "row" }}>
-                                        <Text style={[commonStyles.ns600, { fontSize: 16 }]}>
-                                            USD 567
+                                        <Text style={commonStyles.ns600}>
+                                            USD 2242
                                         </Text>
                                         <Text style={[commonStyles.ns600, { fontSize: 11, textAlignVertical: "top" }]}>
-                                            .87
+                                            .08
                                         </Text>
                                     </View>
                                 </View>
 
                                 <View style={{ flexDirection: "row", alignItems: "flex-start", justifyContent: 'space-between' }}>
-                                    <Text style={[commonStyles.ns600, { fontSize: 16, width: 230 }]}>
-                                        Booking Fee
+                                    <Text style={[commonStyles.ns400, { fontSize: 16, width: 230 }]}>
+                                        Taxes and Fees
                                     </Text>
 
                                     <View style={{ flexDirection: "row" }}>
-                                        <Text style={[commonStyles.ns600, { fontSize: 16 }]}>
-                                            USD 0
+                                        <Text style={commonStyles.ns600}>
+                                            USD 350
                                         </Text>
                                         <Text style={[commonStyles.ns600, { fontSize: 11, textAlignVertical: "top" }]}>
-                                            .00
+                                            .91
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <View style={{ flexDirection: "row", alignItems: "flex-start", justifyContent: 'space-between' }}>
+                                    <Text style={[commonStyles.ns400, { fontSize: 16, width: 230 }]}>
+                                        Package Price(per person)
+                                    </Text>
+
+                                    <View style={{ flexDirection: "row" }}>
+                                        <Text style={commonStyles.ns600}>
+                                            USD 2593
+                                        </Text>
+                                        <Text style={[commonStyles.ns600, { fontSize: 11, textAlignVertical: "top" }]}>
+                                            .99
                                         </Text>
                                     </View>
                                 </View>
@@ -82,22 +101,75 @@ const CarFareDetails = ({ navigation }) => {
 
                             <View style={styles.dottedLine} />
 
+                            {/* add travel protection */}
+                            <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'space-between' }}>
+                                <View>
+                                    <Text style={[commonStyles.ns400, { fontSize: 16 }]}>
+                                        Travel Protection
+                                    </Text>
+
+                                    <View style={{ flexDirection: "row", alignItems: "center", columnGap: 6 }}>
+                                        <View style={{ flexDirection: "row" }}>
+                                            <Text style={commonStyles.ns400}>
+                                                USD 267
+                                            </Text>
+                                            <Text style={[commonStyles.ns400, { fontSize: 10, top: 1 }]}>
+                                                .95
+                                            </Text>
+                                        </View>
+
+                                        <Text style={commonStyles.ns400}>
+                                            per person
+                                        </Text>
+                                    </View>
+                                </View>
+
+                                <TouchableOpacity
+                                    style={{ flexDirection: "row", alignItems: "center", columnGap: 6, borderWidth: 1, borderColor: blue, backgroundColor: "rgba(33,180,226, 0.1)", borderRadius: 4, paddingHorizontal: 10, paddingVertical: 4, justifyContent: 'center' }}
+                                >
+                                    <Image
+                                        style={{ width: 11, height: 11, tintColor: blue }}
+                                        source={icon.plus}
+                                    />
+
+                                    <Text style={[commonStyles.lbB1, { fontSize: 16, color: blue }]}>
+                                        Add
+                                    </Text>
+                                </TouchableOpacity>
+                            </View>
+
+                            <View style={styles.dottedLine} />
+
+                            {/* total */}
                             <View style={{ flexDirection: "row", alignItems: "flex-start", justifyContent: 'space-between' }}>
-                                <Text style={[commonStyles.ns700, { fontSize: 16, width: 230 }]}>
-                                    Total Package Price (USD)
-                                </Text>
+                                <View style={{ flexDirection: "row", alignItems: "center", columnGap: 5 }}>
+                                    <Text style={[commonStyles.ns700, { fontSize: 16 }]}>
+                                        Total Package Price (USD)
+                                    </Text>
+                                    <Image
+                                        style={{ width: 15, height: 15 }}
+                                        source={icon.info}
+                                    />
+                                </View>
 
                                 <View style={{ flexDirection: "row" }}>
                                     <Text style={[commonStyles.ns700, { fontSize: 16 }]}>
-                                        USD 567
+                                        USD 2593
                                     </Text>
                                     <Text style={[commonStyles.ns700, { fontSize: 11, textAlignVertical: "top" }]}>
-                                        .87
+                                        .99
                                     </Text>
                                 </View>
                             </View>
 
-                            <View style={styles.dottedLine} />
+                            {/* add car */}
+                            <TouchableOpacity
+                                style={{ alignSelf: "flex-start", marginTop: 8, marginLeft: 4 }}
+                            >
+                                <Text style={[commonStyles.ns400, { color: blue }]}>
+                                    Add car to your trip
+                                </Text>
+                            </TouchableOpacity>
 
                             {/* Join ClubMiles and earn 2225 points or more on this booking */}
                             <View style={styles.clubMiles}>
@@ -124,7 +196,7 @@ const CarFareDetails = ({ navigation }) => {
 
                         <View style={styles.hr} />
 
-                        {/* promocode */}
+                        {/* apply promocode */}
                         <View style={styles.promo}>
                             <Image
                                 style={{ width: 25, height: 25, tintColor: blue }}
@@ -144,7 +216,7 @@ const CarFareDetails = ({ navigation }) => {
                             </TouchableOpacity>
                         </View>
 
-                        <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", columnGap: 10, marginTop: 10 }}>
+                        <TouchableOpacity style={{ flexDirection: "row", alignItems: "center", columnGap: 10, marginTop: 10, alignSelf: "flex-start" }}>
                             <Text style={[commonStyles.ns600, { color: blue }]}>
                                 Pay with credit from a previous booking
                             </Text>
@@ -160,35 +232,44 @@ const CarFareDetails = ({ navigation }) => {
                                 845-848-0211
                             </Text>
                         </Text>
-
-                        {/* Confirm & Book */}
-                        <View style={{ marginTop: 50, alignItems: 'center' }}>
-                            <TouchableOpacity
-                                style={styles.btnLrg}
-                                onPress={() => navigation.navigate("carpayment")}
-                            >
-                                <Text style={[commonStyles.lbB1, { color: white }]}>
-                                    Proceed To Payment
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
                     </View>
                 </ScrollView>
+
+                {/* PROCEED */}
+                <View style={{ backgroundColor: b1, alignItems: "center", justifyContent: "space-between", paddingVertical: 8, paddingHorizontal: 10, flexDirection: "row" }}>
+                    <View style={{ rowGap: 3 }}>
+                        <Text style={[commonStyles.ns600, { fontSize: 14, color: white }]}>
+                            Price
+                        </Text>
+                        <Text style={[commonStyles.ns600, { fontSize: 14, color: white }]}>
+                            $1320 + Taxes
+                        </Text>
+                    </View>
+
+                    <TouchableOpacity
+                        style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
+                    // onPress={() => navigation.navigate("fhfr")}
+                    >
+                        <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
+                            PROCEED
+                        </Text>
+                    </TouchableOpacity>
+                </View>
             </View >
         </SafeAreaView >
     )
 };
 
-export default CarFareDetails;
+export default FhPayment;
 
 const styles = StyleSheet.create({
     parent: {
         flex: 1,
     },
     body: {
-        marginTop: 25,
+        marginTop: 18,
         flex: 1,
-        backgroundColor: "#EFF2F7",
+        backgroundColor: white,
     },
     hr: {
         backgroundColor: "rgba(35, 32, 32, 0.15)",
@@ -196,7 +277,7 @@ const styles = StyleSheet.create({
         marginVertical: 5,
     },
     dottedLine: {
-        borderColor: b3,
+        borderColor: "#D8D8D8",
         borderWidth: 1,
         borderStyle: "dashed",
     },
@@ -205,7 +286,7 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         paddingHorizontal: 10,
         paddingVertical: 15,
-        marginTop: 8,
+        marginTop: -8,
     },
     signin: {
         backgroundColor: white,
