@@ -9,7 +9,9 @@ import image from '../../../config/ImageAssets';
 
 const { width, height } = Dimensions.get("window");
 
-const FhDetails = ({ navigation }) => {
+const FhDetails = ({ navigation, route }) => {
+    const { refName } = route?.params;
+
     return (
         <SafeAreaView style={styles.parent}>
             <BgGradient width={width} height={height * 0.1} />
@@ -1315,7 +1317,7 @@ const FhDetails = ({ navigation }) => {
 
                     <TouchableOpacity
                         style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-                        onPress={() => navigation.navigate("fhbr")}
+                        onPress={() => navigation.navigate(refName === "f&h" ? "fhbr" : "chpd")}
                     >
                         <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
                             Reserve

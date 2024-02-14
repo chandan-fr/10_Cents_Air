@@ -287,7 +287,7 @@ const RoundTrip = ({ navigation, dest, src }) => {
             }
 
             {/* hotel & car extra search option */}
-            {src = "h&c" && <View style={styles.searchWrap}>
+            {src === "h&c" && <View style={styles.searchWrap}>
                 <View
                     style={{
                         flexDirection: "row",

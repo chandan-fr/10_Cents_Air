@@ -10,8 +10,9 @@ import HotelItem from '../Hotels/HotelItem';
 
 const { width, height } = Dimensions.get("window");
 
-const FhSearch = ({ navigation }) => {
+const FhSearch = ({ navigation, route }) => {
     const data = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+    const { refName } = route?.params;
 
     return (
         <SafeAreaView style={styles.parent}>
@@ -30,7 +31,7 @@ const FhSearch = ({ navigation }) => {
                             <View style={{ rowGap: 30 }}>
                                 {data.map((_, i) => (
                                     <View key={i}>
-                                        <HotelItem navigation={navigation} srcName={"fhdetails"} />
+                                        <HotelItem navigation={navigation} srcName={"fhdetails"} refName={refName} />
                                         {i < 1 && <View style={styles.privacy}>
                                             <TouchableOpacity
                                                 style={{ alignSelf: 'flex-end' }}

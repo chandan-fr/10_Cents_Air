@@ -28,7 +28,6 @@ import CarFareDetails from './src/components/Search/Cars/CarFareDetails';
 import CarPayment from './src/components/Search/Cars/CarPayment';
 import GtDisclaimer from './src/components/Search/GroupTickets/GtDisclaimer';
 import GtCreateReq from './src/components/Search/GroupTickets/GtCreateReq';
-import FlightAndHotels from './src/components/Search/FlightHotels/FlightAndHotels';
 import FhSearch from './src/components/Search/FlightHotels/FhSearch';
 import FhFilter from './src/components/Search/FlightHotels/FhFilter';
 import FhDetails from './src/components/Search/FlightHotels/FhDetails';
@@ -37,6 +36,9 @@ import FhBaseReview from './src/components/Search/FlightHotels/FhBaseReview';
 import FhFinalReview from './src/components/Search/FlightHotels/FhFinalReview';
 import FhTripFilter from './src/components/Search/FlightHotels/FhTripFilter';
 import FhPayment from './src/components/Search/FlightHotels/FhPayment';
+import ChPackegeDetails from './src/components/Search/CarHotel/ChPackegeDetails';
+import ChReview from './src/components/Search/CarHotel/ChReview';
+import Chpayment from './src/components/Search/CarHotel/Chpayment';
 
 const RootStack = createNativeStackNavigator();
 
@@ -66,6 +68,11 @@ const App = () => {
         <RootStack.Screen name='fhbr' component={FhBaseReview} />
         <RootStack.Screen name='fhfr' component={FhFinalReview} />
         <RootStack.Screen name='fhpayment' component={FhPayment} />
+        {/* car and hotel */}
+        <RootStack.Screen name='chpd' component={ChPackegeDetails} />
+        <RootStack.Screen name='chreview' component={ChReview} />
+        <RootStack.Screen name='chpayment' component={Chpayment} />
+
         {/* hotels */}
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />

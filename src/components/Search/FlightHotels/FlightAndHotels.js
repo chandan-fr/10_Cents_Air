@@ -82,7 +82,7 @@ const FlightAndHotels = ({ navigation, data, width, height }) => {
             </View>
 
             {/* search button */}
-            <SearchButton navigation={navigation} screenName={"fhsearch"} />
+            <SearchButton navigation={navigation} screenName={"fhsearch"} refName={selectedTopMenu} />
 
             {/* prifile option */}
             <View style={{ marginHorizontal: 15, marginTop: 18, zIndex: -1 }}>
