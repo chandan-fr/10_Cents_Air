@@ -71,11 +71,11 @@ const FlightSearch = ({ navigation }) => {
 
                 {/* flight option scroll */}
                 <View style={styles.flightOptnWrap}>
-                    <ScrollView style={{}}>
+                    <ScrollView style={{}} showsVerticalScrollIndicator={false}>
                         <View style={{ rowGap: 10 }}>
                             <TouchableOpacity
                                 style={[styles.flightOptnCont, { marginTop: 5 }]}
-                                onPress={()=> navigation.navigate("selectfair")}
+                                onPress={() => navigation.navigate("selectfair")}
                             >
                                 <View
                                     style={{
@@ -691,15 +691,15 @@ const FlightSearch = ({ navigation }) => {
                                 style={[styles.filterBtnComn, { backgroundColor: "#848484" }]}
                                 onPress={() => sortRef.current.open()}
                             >
-                                <Text style={[styles.ns600,]}>Prices</Text>
+                                <Text style={[styles.ns600, { color: white }]}>Prices</Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity style={styles.filterBtnComn}>
-                                <Text style={[styles.ns600,]}>Non- stop only</Text>
+                                <Text style={[styles.ns600, { color: white }]}>Non- stop only</Text>
                             </TouchableOpacity>
 
                             <TouchableOpacity style={styles.filterBtnComn}>
-                                <Text style={[styles.ns600,]}>Morning 6.00 - 12PM</Text>
+                                <Text style={[styles.ns600, { color: white }]}>Morning 6.00 - 12PM</Text>
                             </TouchableOpacity>
                         </View>
 
