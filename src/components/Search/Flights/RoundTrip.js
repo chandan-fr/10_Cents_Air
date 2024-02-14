@@ -4,7 +4,7 @@ import { b1, b3, blue, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 
 
-const RoundTrip = ({ navigation, dest }) => {
+const RoundTrip = ({ navigation, dest, src }) => {
     const [isClass, setIsClass] = useState(false);
     const [isTravel, setIsTravel] = useState(false);
 
@@ -285,6 +285,61 @@ const RoundTrip = ({ navigation, dest }) => {
                     :
                     null
             }
+
+            {/* hotel & car extra search option */}
+            {src = "h&c" && <View style={styles.searchWrap}>
+                <View
+                    style={{
+                        flexDirection: "row",
+                        borderBottomWidth: 1,
+                        alignItems: 'center',
+                        borderColor: b3,
+                        paddingRight: 10,
+                    }}
+                >
+                    <Image
+                        style={{ width: 20, height: 20, tintColor: blue, }}
+                        source={icon.search}
+                    />
+
+                    <TextInput
+                        placeholder='Hotel Name'
+                        placeholderTextColor={b3}
+                        style={{
+                            height: 35,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            marginLeft: 10,
+                            color: b1,
+                        }}
+                    />
+                </View>
+
+                {/* radio options */}
+                <View style={{ marginTop: 20, marginLeft: 8, alignItems: "flex-start" }}>
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center' }}>
+                        <View style={styles.radio} />
+                        <Text style={styles.searchTxt}>I only need this hotel for part of my trip</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                        <View style={styles.radio} />
+                        <Text style={styles.searchTxt}>Homes & Apartments</Text>
+                    </TouchableOpacity>
+                </View>
+
+                {/* Hotel Rating */}
+                <View style={{ marginTop: 10, alignItems: "flex-start", marginBottom: 15 }}>
+                    {/* currency */}
+                    <TouchableOpacity style={{ flexDirection: "row", alignItems: 'center', marginTop: 8 }}>
+                        <Text style={styles.searchTxt}>Hotel Rating</Text>
+                        <Image
+                            style={styles.arrow}
+                            source={icon.rightArrow}
+                        />
+                    </TouchableOpacity>
+                </View>
+            </View>}
         </View>
     )
 };

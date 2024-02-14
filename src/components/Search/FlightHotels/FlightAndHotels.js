@@ -58,12 +58,27 @@ const FlightAndHotels = ({ navigation, data, width, height }) => {
                         </Text>
                     </TouchableOpacity>
                 </View>}
+                {selectedTopMenu == "h&c" && <View>
+                    <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', columnGap: 5, alignSelf: "flex-start", marginLeft: 3 }}>
+                        <Text style={[commonStyles.ns400, { fontSize: 16, color: b3 }]}>
+                            All Car Sizes
+                        </Text>
+                        <Image
+                            style={{ width: 11, height: 11, tintColor: b3, transform: [{ rotate: "90deg" }] }}
+                            source={icon.rightArrow}
+                        />
+                    </TouchableOpacity>
+                </View>}
 
                 {/* trip option content */}
-                <View style={{ marginHorizontal: 10, marginTop: 0, }}>
+                {selectedTopMenu == "f&h" && <View style={{ marginHorizontal: 10, marginTop: 0, }}>
                     {selectedMidMenu === "o" && <OneWay navigation={navigation} dest={"opt2"} />}
                     {selectedMidMenu === "r" && <RoundTrip navigation={navigation} dest={"opt2"} />}
-                </View>
+                </View>}
+
+                {selectedTopMenu == "h&c" && <View style={{ marginHorizontal: 10, marginTop: 0, }}>
+                    <RoundTrip navigation={navigation} dest={"opt2"} src={"h&c"} />
+                </View>}
             </View>
 
             {/* search button */}
