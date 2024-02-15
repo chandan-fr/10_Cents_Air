@@ -8,6 +8,7 @@ import Hotels from '../../components/Search/Hotels/Hotels';
 import Cars from '../../components/Search/Cars/Cars';
 import GroupTickets from '../../components/Search/GroupTickets/GroupTickets';
 import FlightAndHotels from '../../components/Search/FlightHotels/FlightAndHotels';
+import HolidayPackages from '../../components/Search/HolidayTickets/HolidayPackages';
 
 const { width, height } = Dimensions.get("window");
 
@@ -77,7 +78,7 @@ const Search = ({ navigation }) => {
                 {selectedHMenu === "f" && <Flights navigation={navigation} data={data} width={width} height={height} />}
 
                 {/* Flights + hotels */}
-                {selectedHMenu === "f&h" && <FlightAndHotels navigation={navigation} data={data} width={width} height={height} />}
+                {selectedHMenu === "f&h" && <FlightAndHotels navigation={navigation} data={data} />}
 
                 {/* hotels */}
                 {selectedHMenu === "h" && <Hotels navigation={navigation} data={data} width={width} height={height} />}
@@ -86,7 +87,7 @@ const Search = ({ navigation }) => {
                 {selectedHMenu === "c" && <Cars navigation={navigation} />}
 
                 {/* holiday packages */}
-                {/* {selectedHMenu === "hp" && <HolidayPacks navigation={navigation} />} */}
+                {selectedHMenu === "hp" && <HolidayPackages navigation={navigation} />}
 
                 {/* group tickets */}
                 {selectedHMenu === "gt" && <GroupTickets navigation={navigation} data={data} width={width} height={height} />}

@@ -72,7 +72,6 @@ const App = () => {
         <RootStack.Screen name='chpd' component={ChPackegeDetails} />
         <RootStack.Screen name='chreview' component={ChReview} />
         <RootStack.Screen name='chpayment' component={Chpayment} />
-
         {/* hotels */}
         <RootStack.Screen name='hotelsearches' component={HotelSearches} />
         <RootStack.Screen name='hotelfilter' component={HotelFilter} />
@@ -89,6 +88,8 @@ const App = () => {
         <RootStack.Screen name='cardetails' component={CarDetails} />
         <RootStack.Screen name='carfaredetails' component={CarFareDetails} />
         <RootStack.Screen name='carpayment' component={CarPayment} />
+        {/* holiday tickets */}
+        {/* <RootStack.Screen name='holidaytkts' component={HolidayTickets} /> */}
         {/* group tickets */}
         <RootStack.Screen name='gtdisclaimer' component={GtDisclaimer} />
         <RootStack.Screen name='gtcreatereq' component={GtCreateReq} />

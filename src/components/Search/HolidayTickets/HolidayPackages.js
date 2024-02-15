@@ -3,15 +3,11 @@ import React, { useState } from 'react'
 import SearchButton from '../../SearchButton';
 import { b1, b3, black, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
-import OneWay from '../Flights/OneWay';
-import RoundTrip from '../Flights/RoundTrip';
-import HotelPromoOffers from '../Hotels/HotelPromoOffers';
 import commonStyles from '../../../assets/css/CommonFonts';
+import HpSearchComp from './HpSearchComp';
 
-
-const FlightAndHotels = ({ navigation, data }) => {
-    const [selectedMidMenu, setSelectedMidMenu] = useState("r");
-    const [selectedTopMenu, setSelectedTopMenu] = useState("f&h");
+const HolidayPackages = ({ navigation, data }) => {
+    const [selectedTopMenu, setSelectedTopMenu] = useState("h&c");
 
     return (
         <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false} >
@@ -38,26 +34,6 @@ const FlightAndHotels = ({ navigation, data }) => {
                     </TouchableOpacity>
                 </View>
 
-                {/* trip option bottom nav bar */}
-                {selectedTopMenu == "f&h" && <View style={styles.mmContWrap}>
-                    <TouchableOpacity
-                        style={selectedMidMenu == "o" ? styles.mmBtnActive : styles.mmBtn}
-                        onPress={() => setSelectedMidMenu("o")}
-                    >
-                        <Text style={selectedMidMenu == "o" ? styles.mmBtnTxtActive : styles.mmBtnTxt}>
-                            One-way
-                        </Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={selectedMidMenu == "r" ? styles.mmBtnActive : styles.mmBtn}
-                        onPress={() => setSelectedMidMenu("r")}
-                    >
-                        <Text style={selectedMidMenu == "r" ? styles.mmBtnTxtActive : styles.mmBtnTxt}>
-                            Round-trip
-                        </Text>
-                    </TouchableOpacity>
-                </View>}
                 {selectedTopMenu == "h&c" && <View>
                     <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', columnGap: 5, alignSelf: "flex-start", marginLeft: 3 }}>
                         <Text style={[commonStyles.ns400, { fontSize: 16, color: b3 }]}>
@@ -71,18 +47,13 @@ const FlightAndHotels = ({ navigation, data }) => {
                 </View>}
 
                 {/* trip option content */}
-                {selectedTopMenu == "f&h" && <View style={{ marginHorizontal: 10, marginTop: 0, }}>
-                    {selectedMidMenu === "o" && <OneWay navigation={navigation} dest={"opt2"} />}
-                    {selectedMidMenu === "r" && <RoundTrip navigation={navigation} dest={"opt2"} />}
-                </View>}
-
-                {selectedTopMenu == "h&c" && <View style={{ marginHorizontal: 10, marginTop: 0, }}>
-                    <RoundTrip navigation={navigation} dest={"opt2"} src={"h&c"} />
-                </View>}
+                <View style={{ marginHorizontal: 10, marginTop: 0, }}>
+                    <HpSearchComp navigation={navigation} />
+                </View>
             </View>
 
             {/* search button */}
-            <SearchButton navigation={navigation} screenName={"fhsearch"} refName={selectedTopMenu} />
+            <SearchButton navigation={navigation} screenName={"hpsearch"} />
 
             {/* prifile option */}
             <View style={{ marginHorizontal: 15, marginTop: 18, zIndex: -1 }}>
@@ -113,17 +84,17 @@ const FlightAndHotels = ({ navigation, data }) => {
             </View>
 
             {/* deals option */}
-            {selectedMidMenu === "r" && <View style={styles.dealWrap}>
+            <View style={styles.dealWrap}>
                 <Text style={styles.dealHeadTxt}>Flight + Hotel Packages</Text>
 
-                <View style={styles.dealContWrap}>
+                {/* <View style={styles.dealContWrap}>
                     {data.map((_, i) => (
                         <View key={i}>
                             <HotelPromoOffers origin={"f&h"} />
                             {i == data.length - 1 ? <View style={{ marginBottom: 30 }} /> : null}
                         </View>
                     ))}
-                </View>
+                </View> */}
 
                 <View style={{ marginHorizontal: 10 }}>
                     <Text style={[commonStyles.ns400, { color: b3, lineHeight: 19 }]}>
@@ -145,12 +116,12 @@ const FlightAndHotels = ({ navigation, data }) => {
                         </TouchableOpacity>
                     </View>
                 </View>
-            </View>}
+            </View>
         </ScrollView>
     )
 };
 
-export default FlightAndHotels;
+export default HolidayPackages;
 
 const styles = StyleSheet.create({
     mainMenuWrap: {
