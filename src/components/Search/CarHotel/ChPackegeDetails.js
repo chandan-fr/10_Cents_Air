@@ -1,9 +1,9 @@
-import { Alert, Dimensions, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import { Alert, Dimensions, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, blue, gs1, white } from '../../../config/colors';
+import { b1, b2, b3, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 
@@ -1188,7 +1188,7 @@ const ChPackegeDetails = ({ navigation }) => {
               </View>
             </View>
 
-            {/* pazination */}
+            {/* pagination */}
             <View style={styles.pagination}>
               <TouchableOpacity
                 style={styles.pBox}
@@ -1254,7 +1254,7 @@ const ChPackegeDetails = ({ navigation }) => {
 
           <TouchableOpacity
             style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-            onPress={() => navigation.navigate("fhfr")}
+            onPress={() => navigation.navigate("chreview")}
           >
             <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
               PROCEED
