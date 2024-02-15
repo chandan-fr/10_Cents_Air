@@ -1,15 +1,17 @@
 import { SafeAreaView, StyleSheet, Text, View, TouchableOpacity, Image, StatusBar, Dimensions } from 'react-native'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { b1, b2, b3, blue, red, white } from '../../config/colors';
 import DirectTab from '../../components/Search/Flights/DirectTab';
 import Meals from '../../components/Search/Flights/Meals';
 import Extras from '../../components/Search/Flights/Extras';
+import FareBreakSheet from '../../utility/FareBreakSheet';
 
 const { width, height } = Dimensions.get("window");
 
 const AddOns = ({ navigation }) => {
     const [addOns, setAddOns] = useState("d");
     const [flight, setFlight] = useState("dac");
+    const addonFareRef = useRef();
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: white }}>
@@ -25,7 +27,10 @@ const AddOns = ({ navigation }) => {
                         <Text style={[styles.lbB1, { fontSize: 19, marginLeft: 45 }]}>Add Ons</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{}}>
+                    <TouchableOpacity
+                        style={{}}
+                        onPress={() => navigation.navigate("payments")}
+                    >
                         <Text style={[styles.lbB1, { fontSize: 16, color: blue }]}>
                             Skip to Payments
                         </Text>
@@ -147,10 +152,7 @@ const AddOns = ({ navigation }) => {
                             marginTop: 6, paddingBottom: 6, paddingHorizontal: 4,
                         }}
                     >
-                        <View
-                            style={{ alignItems: "flex-start", marginLeft: 15 }}
-                        // onPress={() => fareRef.current.open()}
-                        >
+                        <View style={{ alignItems: "flex-start", marginLeft: 15 }}>
                             <View style={{ flexDirection: 'row', alignItems: "center", marginBottom: 5 }}>
                                 <View style={{ flexDirection: 'row', alignItems: "center" }}>
                                     <Image
@@ -182,7 +184,10 @@ const AddOns = ({ navigation }) => {
                             </View>
 
                             {/* final price */}
-                            <TouchableOpacity style={{ flexDirection: 'row', alignItems: "center" }}>
+                            <TouchableOpacity
+                                style={{ flexDirection: 'row', alignItems: "center" }}
+                                onPress={() => addonFareRef.current.open()}
+                            >
                                 <Text style={[styles.ns700, { fontSize: 19, marginRight: 10 }]}>$ 495</Text>
                                 <Image
                                     style={{ width: 15, height: 15, transform: [{ rotate: "-90deg" }] }}
@@ -201,6 +206,9 @@ const AddOns = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                 </View>
+
+                {/* bottom sheet */}
+                <FareBreakSheet fareRef={addonFareRef} />
             </View>
         </SafeAreaView>
     )

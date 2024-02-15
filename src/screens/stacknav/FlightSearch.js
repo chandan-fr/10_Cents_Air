@@ -75,7 +75,7 @@ const FlightSearch = ({ navigation }) => {
                         <View style={{ rowGap: 10 }}>
                             <TouchableOpacity
                                 style={[styles.flightOptnCont, { marginTop: 5 }]}
-                                onPress={() => navigation.navigate("selectfair")}
+                                onPress={() => navigation.navigate("flightreview")}
                             >
                                 <View
                                     style={{
@@ -144,14 +144,11 @@ const FlightSearch = ({ navigation }) => {
                             </TouchableOpacity>
 
                             {/* ================================================================== */}
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -205,20 +202,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -272,20 +267,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -339,20 +332,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -406,20 +397,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -473,20 +462,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -540,20 +527,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={styles.flightOptnCont}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -607,20 +592,18 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
 
-                            <View style={[styles.flightOptnCont, { marginBottom: 10, }]}>
-                                <View
-                                    style={{
-                                        flexDirection: "row",
-                                        alignItems: "center",
-                                        justifyContent: "space-between"
-                                    }}
-                                >
+                            <TouchableOpacity
+                                style={[styles.flightOptnCont, { marginTop: 5 }]}
+                                onPress={() => navigation.navigate("flightreview")}
+                            >
+                                <View style={{flexDirection: "row",alignItems: "center",justifyContent: "space-between"}}>
                                     <View style={{ flex: 1 }}>
                                         <View style={{ flexDirection: "row", alignItems: "center" }}>
                                             <Image
@@ -674,11 +657,12 @@ const FlightSearch = ({ navigation }) => {
                                         style={{ width: 18, height: 18, tintColor: gs1 }}
                                         source={require("../../assets/icons/discount-solid.png")}
                                     />
+
                                     <Text style={[styles.ns400, { color: gs1, marginLeft: 6 }]}>
                                         Use CASUPER code to get special $50 OFF
                                     </Text>
                                 </View>
-                            </View>
+                            </TouchableOpacity>
                         </View>
                     </ScrollView>
                 </View>
@@ -694,11 +678,17 @@ const FlightSearch = ({ navigation }) => {
                                 <Text style={[styles.ns600, { color: white }]}>Prices</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.filterBtnComn}>
+                            <TouchableOpacity
+                                style={styles.filterBtnComn}
+                                onPress={() => navigation.navigate("filters")}
+                            >
                                 <Text style={[styles.ns600, { color: white }]}>Non- stop only</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.filterBtnComn}>
+                            <TouchableOpacity
+                                style={styles.filterBtnComn}
+                                onPress={() => navigation.navigate("filters")}
+                            >
                                 <Text style={[styles.ns600, { color: white }]}>Morning 6.00 - 12PM</Text>
                             </TouchableOpacity>
                         </View>
@@ -716,7 +706,7 @@ const FlightSearch = ({ navigation }) => {
                     <View style={styles.filterWrap}>
                         <TouchableOpacity
                             style={{ paddingVertical: 18, paddingHorizontal: 6 }}
-                            onPress={() => navigation.navigate("filters")}
+                            onPress={() => navigation.navigate("selectfair")}
                         >
                             <Image
                                 style={{ width: 28, height: 28, }}
