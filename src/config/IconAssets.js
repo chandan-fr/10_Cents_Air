@@ -127,6 +127,7 @@ const icon = {
     canada: require("../assets/icons/canada.png"),
     longArrow: require("../assets/icons/long-arrow.png"),
     duffleBag: require("../assets/icons/duffle-bag.png"),
+    entLogo: require("../assets/icons/entLogo.png"),
 };
 
 module.exports = icon;
