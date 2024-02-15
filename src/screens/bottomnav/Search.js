@@ -8,13 +8,13 @@ import Hotels from '../../components/Search/Hotels/Hotels';
 import Cars from '../../components/Search/Cars/Cars';
 import GroupTickets from '../../components/Search/GroupTickets/GroupTickets';
 import FlightAndHotels from '../../components/Search/FlightHotels/FlightAndHotels';
-import HolidayPackages from '../../components/Search/HolidayTickets/HolidayPackages';
+import HolidayPackages from '../../components/Search/HolidayPackages/HolidayPackages';
 
 const { width, height } = Dimensions.get("window");
 
 const Search = ({ navigation }) => {
     const [selectedHMenu, setSelectedHMenu] = useState("f");
-    const data = [1, 1, 1, 1, 1];
+    const data = [1, 1, 1, 1, 1, 1];
 
     return (
         <SafeAreaView style={styles.parent}>

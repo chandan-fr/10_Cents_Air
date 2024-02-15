@@ -5,8 +5,10 @@ import { b1, b3, black, blue, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import commonStyles from '../../../assets/css/CommonFonts';
 import HpSearchComp from './HpSearchComp';
+import HpOffers from './HpOffers';
+import { hpData } from '../../../config/StaticVars';
 
-const HolidayPackages = ({ navigation, data }) => {
+const HolidayPackages = ({ navigation }) => {
     const [selectedTopMenu, setSelectedTopMenu] = useState("h&c");
 
     return (
@@ -85,27 +87,24 @@ const HolidayPackages = ({ navigation, data }) => {
 
             {/* deals option */}
             <View style={styles.dealWrap}>
-                <Text style={styles.dealHeadTxt}>Flight + Hotel Packages</Text>
+                <Text style={styles.dealHeadTxt}>
+                    International Holiday Packages On Sale
+                </Text>
 
-                {/* <View style={styles.dealContWrap}>
-                    {data.map((_, i) => (
+                <Text style={[commonStyles.ns400, { color: b3, textAlign: "center", marginTop: 10 }]}>
+                    Get Flat 45% Off! Use code: 10CAHOLIDAY
+                </Text>
+
+                <View style={styles.dealContWrap}>
+                    {hpData.map((item, i) => (
                         <View key={i}>
-                            <HotelPromoOffers origin={"f&h"} />
-                            {i == data.length - 1 ? <View style={{ marginBottom: 30 }} /> : null}
+                            <HpOffers data={item} />
+                            {i == hpData.length - 1 ? <View style={{ marginBottom: 30 }} /> : null}
                         </View>
                     ))}
-                </View> */}
+                </View>
 
                 <View style={{ marginHorizontal: 10 }}>
-                    <Text style={[commonStyles.ns400, { color: b3, lineHeight: 19 }]}>
-                        *All fares above were last found on: <Text style={{ color: "#CB3926", fontFamily: "Arial" }}>Oct 02, 2023 at 12:10:59 AM</Text>.
-                        These are based on average nightly rates and airfare includes all fuel surcharges,
-                        taxes & fees and our service fees. Hotels, rental cars and activities may have
-                        additional taxes and fees. Displayed rates are based on historical data,
-                        are subject to change, and cannot be guaranteed at the time of booking.
-                        See all booking <Text onPress={() => Alert.alert("t&c")} style={{ color: blue, fontFamily: "Arial", textDecorationLine: "underline" }}>terms and conditions</Text>
-                    </Text>
-
                     <View style={{ marginVertical: 20, marginHorizontal: 15 }}>
                         <TouchableOpacity
                             style={styles.viewall}
@@ -227,7 +226,7 @@ const styles = StyleSheet.create({
     },
     dealHeadTxt: {
         fontFamily: "NunitoSans_10pt-SemiBold",
-        fontSize: 22,
+        fontSize: 18,
         color: b1,
         textAlign: "center",
         marginTop: 25,

@@ -40,6 +40,12 @@ const image = {
     affirm: require("../assets/images/affirm.jpg"),
     mcafe: require("../assets/images/mcafe.png"),
     hotelimg2: require("../assets/images/hotelimg2.jpg"),
+    hpo1: require("../assets/images/hpo1.png"),
+    hpo2: require("../assets/images/hpo2.png"),
+    hpo3: require("../assets/images/hpo3.png"),
+    hpo4: require("../assets/images/hpo4.png"),
+    hpo5: require("../assets/images/hpo5.png"),
+    hpo6: require("../assets/images/hpo6.png"),
 };
 
 module.exports = image;
