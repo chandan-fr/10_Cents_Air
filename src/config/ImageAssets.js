@@ -49,6 +49,13 @@ const image = {
     hpi1: require("../assets/images/hpi1.png"),
     hpi2: require("../assets/images/hpi2.png"),
     hpi3: require("../assets/images/hpi3.png"),
+    hpgal1: require("../assets/images/hpgal1.png"),
+    hpgal2: require("../assets/images/hpgal2.png"),
+    hpgal3: require("../assets/images/hpgal3.png"),
+    hpgal4: require("../assets/images/hpgal4.png"),
+    hpgal5: require("../assets/images/hpgal5.png"),
+    hpgal6: require("../assets/images/hpgal6.png"),
+    hpgal7: require("../assets/images/hpgal7.png"),
 };
 
 module.exports = image;

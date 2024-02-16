@@ -3,7 +3,7 @@ import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, black, blue, green, w1, white } from '../../../config/colors';
+import { b1, b2, b3, black, blue, green, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 
@@ -12,7 +12,7 @@ const { width, height } = Dimensions.get("window");
 const HotelDetails = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.parent}>
-            <BgGradient width={width} height={height * 0.11} />
+            <BgGradient width={width} height={height * 0.1} />
             <Header />
 
             <View style={styles.body}>
@@ -1334,7 +1334,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     body: {
-        marginTop: 25,
+        marginTop: 18,
         flex: 1,
         backgroundColor: white,
     },
