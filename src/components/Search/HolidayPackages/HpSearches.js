@@ -1,5 +1,5 @@
 import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import React, { useState } from 'react'
+import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
@@ -38,7 +38,10 @@ const HpSearches = ({ navigation }) => {
 
                             {/* content */}
                             <View style={styles.comWrap}>
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity
+                                    style={styles.packeges}
+                                    onPress={() => navigation.navigate("hppdetails")}
+                                >
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -121,7 +124,10 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity
+                                    style={styles.packeges}
+                                    onPress={() => navigation.navigate("hppdetails")}
+                                >
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -205,7 +211,10 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity
+                                    style={styles.packeges}
+                                    onPress={() => navigation.navigate("hppdetails")}
+                                >
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -300,7 +309,7 @@ const HpSearches = ({ navigation }) => {
 
                             {/* content2 */}
                             <View style={styles.comWrap}>
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -383,7 +392,7 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -467,7 +476,7 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -562,7 +571,7 @@ const HpSearches = ({ navigation }) => {
 
                             {/* content3 */}
                             <View style={styles.comWrap}>
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -645,7 +654,7 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -729,7 +738,7 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -824,7 +833,7 @@ const HpSearches = ({ navigation }) => {
 
                             {/* content4 */}
                             <View style={styles.comWrap}>
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -907,7 +916,7 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}
@@ -991,7 +1000,7 @@ const HpSearches = ({ navigation }) => {
                                     </View>
                                 </TouchableOpacity>
 
-                                <TouchableOpacity style={styles.packeges}>
+                                <TouchableOpacity style={styles.packeges} onPress={() => navigation.navigate("hppdetails")}>
                                     {/* top image */}
                                     <Image
                                         style={{ borderTopRightRadius: 40, width: "100%" }}

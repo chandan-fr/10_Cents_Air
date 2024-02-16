@@ -40,6 +40,8 @@ import ChPackegeDetails from './src/components/Search/CarHotel/ChPackegeDetails'
 import ChReview from './src/components/Search/CarHotel/ChReview';
 import Chpayment from './src/components/Search/CarHotel/Chpayment';
 import HpSearches from './src/components/Search/HolidayPackages/HpSearches';
+import HpFilter from './src/components/Search/HolidayPackages/HpFilter';
+import HpAssistance from './src/components/Search/HolidayPackages/HpAssistance';
 
 const RootStack = createNativeStackNavigator();
 
@@ -89,8 +91,10 @@ const App = () => {
         <RootStack.Screen name='cardetails' component={CarDetails} />
         <RootStack.Screen name='carfaredetails' component={CarFareDetails} />
         <RootStack.Screen name='carpayment' component={CarPayment} />
-        {/* holiday tickets */}
+        {/* holiday packages */}
         <RootStack.Screen name='hpsearch' component={HpSearches} />
+        <RootStack.Screen name='hpfilter' component={HpFilter} />
+        <RootStack.Screen name='hpassist' component={HpAssistance} />
         {/* group tickets */}
         <RootStack.Screen name='gtdisclaimer' component={GtDisclaimer} />
         <RootStack.Screen name='gtcreatereq' component={GtCreateReq} />
