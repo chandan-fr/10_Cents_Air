@@ -2,9 +2,8 @@ import { SafeAreaView, StyleSheet, Text, View, StatusBar, TouchableOpacity, Imag
 import React from 'react'
 import icon from '../../../config/IconAssets';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b2, b3, blue, white } from '../../../config/colors';
+import { b2, blue, white } from '../../../config/colors';
 import image from '../../../config/ImageAssets';
-import CarPayment from '../Cars/CarPayment';
 
 const HpFilter = ({ navigation }) => {
     return (
@@ -33,6 +32,7 @@ const HpFilter = ({ navigation }) => {
                     >
                         {/* filter by */}
                         <View style={styles.filterBy}>
+                            {/* search */}
                             <View style={{ rowGap: 10, marginTop: 10, marginBottom: 20 }}>
                                 <Text style={commonStyles.ns600}>
                                     Search by Property Name
@@ -49,6 +49,7 @@ const HpFilter = ({ navigation }) => {
                                 </View>
                             </View>
 
+                            {/* filter by */}
                             <View style={{ paddingHorizontal: 10, paddingTop: 5 }}>
                                 <Text style={[commonStyles.ns600, { fontSize: 18 }]}>
                                     Filter by:
@@ -376,13 +377,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#D8D8D8',
         borderRadius: 4,
-    },
-    filterWrap: {
-        borderWidth: 2,
-        borderRadius: 4,
-        borderColor: "#D8D8D8",
-        paddingVertical: 15,
-        marginBottom: 5,
     },
     hr: {
         backgroundColor: "#D8D8D8",

@@ -79,7 +79,7 @@ const HolidayPackages = ({ navigation }) => {
                         <Text style={styles.addTxt}>Speak to a travel expert and a get assistance 24/7</Text>
                     </View>
 
-                    <TouchableOpacity style={styles.callImgWrap}>
+                    <TouchableOpacity style={styles.callImgWrap} onPress={()=> navigation.navigate("hpassist")}>
                         <Image style={styles.callImg} source={icon.mobile} />
                     </TouchableOpacity>
                 </View>
