@@ -46,6 +46,9 @@ const image = {
     hpo4: require("../assets/images/hpo4.png"),
     hpo5: require("../assets/images/hpo5.png"),
     hpo6: require("../assets/images/hpo6.png"),
+    hpi1: require("../assets/images/hpi1.png"),
+    hpi2: require("../assets/images/hpi2.png"),
+    hpi3: require("../assets/images/hpi3.png"),
 };
 
 module.exports = image;

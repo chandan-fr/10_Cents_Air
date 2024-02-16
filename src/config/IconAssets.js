@@ -128,6 +128,8 @@ const icon = {
     longArrow: require("../assets/icons/long-arrow.png"),
     duffleBag: require("../assets/icons/duffle-bag.png"),
     entLogo: require("../assets/icons/entLogo.png"),
+    hiking: require("../assets/icons/hiking.png"),
+    transfer: require("../assets/icons/transfer.png"),
 };
 
 module.exports = icon;
