@@ -1,9 +1,9 @@
-import { Alert, Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, blue, blueShade2, green, w1, white } from '../../../config/colors';
+import { b1, b2, b3, blue, blueShade2, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
 import Policies from './core/Policies';
