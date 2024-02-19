@@ -3,9 +3,12 @@ import React, { useState } from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, b2, b3, blue, blueShade2, green, white } from '../../../config/colors';
+import { b1, b2, b3, blue, blueShade2, green, w1, white } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 import image from '../../../config/ImageAssets';
+import Policies from './core/Policies';
+import Summary from './core/Summary';
+import Itinerary from './core/Itinerary';
 
 const { width, height } = Dimensions.get("window");
 
@@ -287,7 +290,9 @@ const HpPkgDetails = ({ navigation }) => {
 
                             {/* content render */}
                             <View style={styles.contWrap}>
-
+                                {selectedChldMenu === "i" && <Itinerary selectedTopMenu={selectedTopMenu} />}
+                                {selectedChldMenu === "p" && <Policies />}
+                                {selectedChldMenu === "s" && <Summary />}
                             </View>
                         </View>
                     </ScrollView>
@@ -423,7 +428,8 @@ const styles = StyleSheet.create({
         textTransform: "uppercase",
     },
     contWrap: {
-        marginHorizontal: 6,
-        borderWidth: 1,
+        backgroundColor: w1,
+        marginTop: -15,
+        paddingTop: 15,
     },
 });
