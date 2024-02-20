@@ -7,12 +7,13 @@ const { width, height } = Dimensions.get("window");
 const WelcomeScreen = ({ navigation }) => {
   const [curInd, setcurInd] = useState(0);
   const data = [1, 2, 3, 4];
-  const ref = useRef();
+  const ref = useRef(null);
+  const scrWidth = width;
 
   const handleNext = () => {
     if (curInd < 3) {
+      ref.current?.scrollTo({ animated: true, x: Number(scrWidth) * (Number(curInd) + 1) });
       setcurInd(curInd + 1);
-      ref.current?.scrollTo({ animated: true, x: curInd + 1 });
     } else {
       navigation.replace("tab");
     }
@@ -40,6 +41,8 @@ const WelcomeScreen = ({ navigation }) => {
               ref={ref}
               horizontal={true}
               pagingEnabled={true}
+              scrollEventThrottle={16}
+              snapToStart={true}
               showsHorizontalScrollIndicator={false}
               onScroll={e => {
                 const x = e.nativeEvent.contentOffset.x;
