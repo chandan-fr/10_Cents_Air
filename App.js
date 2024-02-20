@@ -43,6 +43,10 @@ import HpSearches from './src/components/Search/HolidayPackages/HpSearches';
 import HpFilter from './src/components/Search/HolidayPackages/HpFilter';
 import HpAssistance from './src/components/Search/HolidayPackages/HpAssistance';
 import HpPkgDetails from './src/components/Search/HolidayPackages/HpPkgDetails';
+import HpSummary from './src/components/Search/HolidayPackages/HpSummary';
+import HpUserDetails from './src/components/Search/HolidayPackages/HpUserDetails';
+import HpPriceSum from './src/components/Search/HolidayPackages/HpPriceSum';
+import HpPayment from './src/components/Search/HolidayPackages/HpPayment';
 
 const RootStack = createNativeStackNavigator();
 
@@ -97,6 +101,10 @@ const App = () => {
         <RootStack.Screen name='hpfilter' component={HpFilter} />
         <RootStack.Screen name='hpassist' component={HpAssistance} />
         <RootStack.Screen name='hppdetails' component={HpPkgDetails} />
+        <RootStack.Screen name='hpsum' component={HpSummary} />
+        <RootStack.Screen name='hpud' component={HpUserDetails} />
+        <RootStack.Screen name='hppricesum' component={HpPriceSum} />
+        <RootStack.Screen name='hppayment' component={HpPayment} />
         {/* group tickets */}
         <RootStack.Screen name='gtdisclaimer' component={GtDisclaimer} />
         <RootStack.Screen name='gtcreatereq' component={GtCreateReq} />
