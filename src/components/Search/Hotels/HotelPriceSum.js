@@ -11,7 +11,7 @@ const { width, height } = Dimensions.get("window");
 const HotelPriceSum = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.parent}>
-      <BgGradient width={width} height={height * 0.11} />
+      <BgGradient width={width} height={height * 0.1} />
       <Header />
 
       <View style={styles.body}>
@@ -212,7 +212,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   body: {
-    marginTop: 25,
+    marginTop: 18,
     flex: 1,
     backgroundColor: white,
   },
