@@ -344,6 +344,7 @@ const HpPayment = ({ navigation }) => {
                             <View style={{ marginHorizontal: 20, marginBottom: 10 }}>
                                 <TouchableOpacity
                                     style={styles.btn}
+                                    onPress={()=> navigation.replace("success")}
                                 >
                                     <Text style={[commonStyles.lbB1, { color: white }]}>
                                         Complete Booking

@@ -213,9 +213,11 @@ const GtCreateReq = ({ navigation }) => {
                                     />
                                 </View>
 
+                                {/* submit */}
                                 <View style={{ width: width * 0.75, }}>
                                     <TouchableOpacity
                                         style={styles.btn}
+                                        onPress={() => navigation.popToTop("tab")}
                                     >
                                         <Text style={[commonStyles.lbB1, { fontSize: 26, color: white }]}>
                                             Submit
@@ -228,7 +230,7 @@ const GtCreateReq = ({ navigation }) => {
                 </View>
 
                 {/* proceed */}
-                <View style={{ backgroundColor: b1, alignItems: "center", justifyContent: "space-between", paddingVertical: 8, paddingHorizontal: 10, flexDirection: "row" }}>
+                {/* <View style={{ backgroundColor: b1, alignItems: "center", justifyContent: "space-between", paddingVertical: 8, paddingHorizontal: 10, flexDirection: "row" }}>
                     <View style={{ rowGap: 3 }}>
                         <Text style={[commonStyles.ns600, { fontSize: 14, color: white }]}>
                             Price
@@ -246,7 +248,7 @@ const GtCreateReq = ({ navigation }) => {
                             proceed
                         </Text>
                     </TouchableOpacity>
-                </View>
+                </View> */}
             </View>
         </SafeAreaView>
     )

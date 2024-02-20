@@ -22,7 +22,7 @@ const ChReview = ({ navigation }) => {
           style={{ marginHorizontal: 5, marginTop: 10, flex: 1 }}
           showsVerticalScrollIndicator={false}
         >
-          <View style={{ rowGap: 10 }}>
+          <View style={{ rowGap: 10, marginBottom: 5 }}>
             {/* ticket */}
             <View style={styles.comWrap}>
               {/* hotel name */}

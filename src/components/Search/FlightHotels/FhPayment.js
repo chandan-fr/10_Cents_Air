@@ -247,7 +247,7 @@ const FhPayment = ({ navigation }) => {
 
                     <TouchableOpacity
                         style={{ borderWidth: 2, borderRadius: 2, borderColor: blue, width: 150, alignItems: "center", justifyContent: "center", paddingVertical: 8 }}
-                    // onPress={() => navigation.navigate("fhfr")}
+                        onPress={() => navigation.replace("success")}
                     >
                         <Text style={[commonStyles.ns600, { fontSize: 14, color: blue, textTransform: "uppercase" }]}>
                             PROCEED

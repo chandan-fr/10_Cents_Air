@@ -1,10 +1,10 @@
-import { Alert, Image, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { b1, b3, blue, violet, white } from '../../config/colors';
 
 const Success = ({ navigation }) => {
     const mytrips = () => {
-        Alert.alert("Coming Soon");
+        navigation.navigate("tab", { screen: "My Trips" });
     };
 
     return (
@@ -30,7 +30,7 @@ const Success = ({ navigation }) => {
                     </Text>
                 </View>
 
-                <View style={{flex: 1, alignItems: "center", justifyContent: "flex-end"}}>
+                <View style={{ flex: 1, alignItems: "center", justifyContent: "flex-end" }}>
                     <TouchableOpacity
                         style={styles.backToHome}
                         onPress={() => navigation.popToTop("tab")}

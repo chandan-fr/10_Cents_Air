@@ -1,14 +1,14 @@
 import { Dimensions, Image, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View, TextInput } from 'react-native'
-import React, { useState } from 'react'
+import React from 'react'
 import BgGradient from '../../../utility/BgGradient';
 import Header from '../../Header';
 import commonStyles from '../../../assets/css/CommonFonts';
-import { b1, white, blue, b3, b2 } from '../../../config/colors';
+import { white, blue, b3, b2 } from '../../../config/colors';
 import icon from '../../../config/IconAssets';
 
 const { width, height } = Dimensions.get("window");
 
-const HotelPayment = () => {
+const HotelPayment = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.parent}>
             <BgGradient width={width} height={height * 0.1} />
@@ -317,6 +317,7 @@ const HotelPayment = () => {
                             <View style={{ marginHorizontal: 20, marginBottom: 10 }}>
                                 <TouchableOpacity
                                     style={styles.btn}
+                                    onPress={() => navigation.replace("success")}
                                 >
                                     <Text style={[commonStyles.lbB1, { color: white }]}>
                                         Complete Booking
