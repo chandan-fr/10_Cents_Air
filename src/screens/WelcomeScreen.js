@@ -1,6 +1,6 @@
 import { Alert, Dimensions, Image, ImageBackground, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useRef, useState } from 'react'
-import { black, blueShade1, blueShade2, bs1, white } from '../config/colors';
+import { blueShade1, blueShade2, bs1, white } from '../config/colors';
 
 const { width, height } = Dimensions.get("window");
 
@@ -8,12 +8,11 @@ const WelcomeScreen = ({ navigation }) => {
   const [curInd, setcurInd] = useState(0);
   const data = [1, 2, 3, 4];
   const ref = useRef(null);
-  const scrWidth = width;
 
   const handleNext = () => {
     if (curInd < 3) {
-      ref.current?.scrollTo({ animated: true, x: Number(scrWidth) * (Number(curInd) + 1) });
       setcurInd(curInd + 1);
+      ref.current?.scrollTo({ animated: true, x: width * (Number(curInd) + 1) });
     } else {
       navigation.replace("tab");
     }
@@ -41,7 +40,7 @@ const WelcomeScreen = ({ navigation }) => {
               ref={ref}
               horizontal={true}
               pagingEnabled={true}
-              scrollEventThrottle={16}
+              scrollEventThrottle={1}
               snapToStart={true}
               showsHorizontalScrollIndicator={false}
               onScroll={e => {
@@ -56,7 +55,7 @@ const WelcomeScreen = ({ navigation }) => {
 
                 <TouchableOpacity
                   style={styles.btnWrap}
-                  onPress={() => setcurInd(curInd + 1)}
+                  onPress={() => handleNext()}
                 >
                   <Text style={styles.btnText}>GET STARTED</Text>
                 </TouchableOpacity>
