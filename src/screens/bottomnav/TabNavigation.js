@@ -6,7 +6,6 @@ import Deals from './Deals';
 import MyTrips from './MyTrips';
 import Rewards from './Rewards';
 import { black } from '../../config/colors';
-import { Text } from 'react-native';
 import Label from '../../utility/Label';
 
 const BottomStack = createBottomTabNavigator();
